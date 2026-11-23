@@ -107,6 +107,7 @@ typedef enum {
 #define BTN3 (1 << 2)
 #define BTN4 (1 << 3)
 #define PASS_PERCENT 50
+#define HIT_WINDOW_TICKS 80
 
 typedef struct {
     uint32_t pitch;
@@ -299,34 +300,51 @@ const uint16_t laneColors[4] = {
     ST7735_YELLOW
 };
 
-void drawNoteLanes(void)
-{
-    Display_fillScreen(ST77XX_BLACK);
 
+void drawNoteHighway(uint32_t currentIndex)
+{
+    // Clear gameplay area, preserving the score at the top
+    Display_fillRect(0, 20, 160, 96, ST7735_BLACK);
+
+    // Draw four vertical lanes
     for (int i = 0; i < 4; i++)
     {
-        // Four lanes across the 160-pixel screen
-        Display_drawRect(i * 40, 20, 40, 95, ST7735_WHITE);
-
-        // Colored button indicators
-        Display_fillRect(i * 40 + 10, 92, 20, 15, laneColors[i]);
+        Display_drawRect(i * 40, 20, 40, 96, ST7735_WHITE);
     }
-}
 
-void drawCurrentNote(uint8_t buttons)
-{
-    // Clear previous note indicators
-    Display_fillRect(0, 35, 160, 45, ST7735_BLACK);
+    // Separate the three rows
+    Display_fillRect(0, 52, 160, 1, ST7735_WHITE);
+    Display_fillRect(0, 84, 160, 1, ST7735_WHITE);
 
-    // Draw every required button
-    for (int i = 0; i < 4; i++)
+    // Highlight the bottom row as the hit zone
+    Display_drawRect(0, 84, 160, 32, ST7735_YELLOW);
+
+    // Row 0: note after next
+    // Row 1: next note
+    // Row 2: current note (hit zone)
+    for (int row = 0; row < 3; row++)
     {
-        if (buttons & (1 << i))
+        uint32_t index = currentIndex + (2 - row);
+
+        // No more notes beyond the end of the song
+        if (index >= SONG_LENGTH)
+            continue;
+
+        uint8_t requiredButtons = song[index].buttons;
+        int y = 26 + row * 32;
+
+        // Draw every button required for this note
+        for (int lane = 0; lane < 4; lane++)
         {
-            Display_fillRect(i * 40 + 5, 45, 30, 25, laneColors[i]);
+            if (requiredButtons & (1 << lane))
+            {
+                int x = lane * 40 + 5;
+                Display_fillRect(x, y, 30, 20, laneColors[lane]);
+            }
         }
     }
 }
+
 
 void drawScore(uint32_t hits, uint32_t misses)
 {
@@ -514,9 +532,9 @@ int main(void)
         lastGuitarButtons = getButtonStates();
 
         // Draw gameplay screen
-        drawNoteLanes();
-        drawCurrentNote(song[noteIndex].buttons);
+        Display_fillScreen(ST77XX_BLACK);
         drawScore(hits, misses);
+        drawNoteHighway(noteIndex);
 
         // Start the first note
         noteStart = timer;
@@ -540,21 +558,21 @@ int main(void)
         uint32_t elapsed = timer - noteStart;
     uint32_t duration = song[noteIndex].duration;
 
-    // Check for correct button presses
-    if (!noteHit && elapsed < duration)
-    {
-        uint8_t expectedButtons = song[noteIndex].buttons;
+  // Check for correct button presses near the hit line
+  if (!noteHit && elapsed < HIT_WINDOW_TICKS &&
+      elapsed < duration)
+  {
+      uint8_t expectedButtons = song[noteIndex].buttons;
 
-        // All required buttons must be held together
-        // At least one must have been newly pressed
-        if ((guitarButtons & expectedButtons) == expectedButtons &&
-            (newPresses & expectedButtons))
-        {
-            hits++;
-            noteHit = 1;
-            drawScore(hits, misses);
-        }
-    }
+      // All required buttons must be pressed together
+      if ((guitarButtons & expectedButtons) == expectedButtons &&
+          (newPresses & expectedButtons))
+      {
+          hits++;
+          noteHit = 1;
+          drawScore(hits, misses);
+      }
+  }
 
     // Silence the final 8 ticks of the note
     if (noteSounding && (duration <= 8 || elapsed >= duration - 8))
@@ -600,7 +618,7 @@ int main(void)
             noteSounding = 1;
 
             // Display the next note
-            drawCurrentNote(song[noteIndex].buttons);
+            drawNoteHighway(noteIndex);
             drawScore(hits, misses);
           }
         }
