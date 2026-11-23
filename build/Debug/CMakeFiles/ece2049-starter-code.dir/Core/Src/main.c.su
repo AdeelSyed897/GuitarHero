@@ -1,3 +1,3 @@
 Core/Src/main.c:103:main	136	static
-Core/Src/main.c:251:SystemClock_Config	120	static
-Core/Src/main.c:648:Error_Handler	0	static
+Core/Src/main.c:272:SystemClock_Config	120	static
+Core/Src/main.c:669:Error_Handler	0	static

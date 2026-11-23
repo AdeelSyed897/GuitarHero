@@ -2,7 +2,7 @@ STMicroelectronics Memory Configuration
 
 Name     Origin   Length   Bytes-Used %age-Used Attributes
 RAM 0x20000000 0x044000 0x000ad8        0%  rwx     
-FLASH 0x8000000 0x080000 0x00b8b0        9%  rx      
+FLASH 0x8000000 0x080000 0x00b960        9%  rx      
 
      VMA      LMA     Size Align Out     In      Symbol
        0        0        0     1 _estack = ORIGIN(RAM) + LENGTH(RAM)
@@ -14,12 +14,12 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
  8000000  8000000      254     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.isr_vector)
  8000000  8000000      254     1                 g_pfnVectors
  8000254  8000254        0     1         . = ALIGN(4)
- 8000260  8000260     acb0    16 .text
+ 8000260  8000260     ad40    16 .text
  8000260  8000260        0     1         . = ALIGN(4)
- 8000260  8000260       14     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libclang_rt.builtins.a(aeabi_uldivmod.S.obj):(.text)
+ 8000260  8000260       14     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libclang_rt.builtins.a(aeabi_uldivmod.S.obj):(.text)
  8000260  8000260        0     1                 $t
  8000261  8000261       14     1                 __aeabi_uldivmod
- 8000274  8000274       10     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(strlen.S.o):(.text)
+ 8000274  8000274       10     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(strlen.S.o):(.text)
  8000274  8000274        0     1                 $t
  8000275  8000275       10     1                 strlen
  8000284  8000284       b4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.text.SystemInit)
@@ -448,669 +448,673 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
  8007364  8007364       30     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.__io_putchar)
  8007364  8007364        0     1                 $t
  8007365  8007365       30     1                 __io_putchar
- 8007394  8007394      4d2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.main)
+ 8007394  8007394      548     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.main)
  8007394  8007394        0     1                 $t
- 8007395  8007395      4d2     1                 main
- 8007868  8007868       b2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.SystemClock_Config)
- 8007868  8007868        0     1                 $t
- 8007869  8007869       b2     1                 SystemClock_Config
- 800791c  800791c        6     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.Error_Handler)
- 800791c  800791c        0     1                 $t
- 800791d  800791d        6     1                 Error_Handler
- 8007924  8007924        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.NMI_Handler)
- 8007924  8007924        0     1                 $t
- 8007925  8007925        2     1                 NMI_Handler
- 8007928  8007928        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.HardFault_Handler)
- 8007928  8007928        0     1                 $t
- 8007929  8007929        2     1                 HardFault_Handler
- 800792c  800792c        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.MemManage_Handler)
- 800792c  800792c        0     1                 $t
- 800792d  800792d        2     1                 MemManage_Handler
- 8007930  8007930        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.BusFault_Handler)
- 8007930  8007930        0     1                 $t
- 8007931  8007931        2     1                 BusFault_Handler
- 8007934  8007934        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.UsageFault_Handler)
- 8007934  8007934        0     1                 $t
- 8007935  8007935        2     1                 UsageFault_Handler
- 8007938  8007938        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SVC_Handler)
- 8007938  8007938        0     1                 $t
- 8007939  8007939        2     1                 SVC_Handler
- 800793c  800793c        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.DebugMon_Handler)
- 800793c  800793c        0     1                 $t
- 800793d  800793d        2     1                 DebugMon_Handler
- 8007940  8007940        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.PendSV_Handler)
- 8007940  8007940        0     1                 $t
- 8007941  8007941        2     1                 PendSV_Handler
- 8007944  8007944        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SysTick_Handler)
- 8007944  8007944        0     1                 $t
- 8007945  8007945        4     1                 SysTick_Handler
- 8007948  8007948        6     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.EXTI13_IRQHandler)
- 8007948  8007948        0     1                 $t
- 8007949  8007949        6     1                 EXTI13_IRQHandler
- 8007950  8007950        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel5_IRQHandler)
- 8007950  8007950        0     1                 $t
- 8007951  8007951        c     1                 GPDMA1_Channel5_IRQHandler
- 800795c  800795c        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel6_IRQHandler)
- 800795c  800795c        0     1                 $t
- 800795d  800795d        c     1                 GPDMA1_Channel6_IRQHandler
- 8007968  8007968        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel7_IRQHandler)
- 8007968  8007968        0     1                 $t
- 8007969  8007969        c     1                 GPDMA1_Channel7_IRQHandler
- 8007974  8007974        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.I2C1_EV_IRQHandler)
- 8007974  8007974        0     1                 $t
- 8007975  8007975        c     1                 I2C1_EV_IRQHandler
- 8007980  8007980        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.I2C1_ER_IRQHandler)
- 8007980  8007980        0     1                 $t
- 8007981  8007981        c     1                 I2C1_ER_IRQHandler
- 800798c  800798c        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SPI2_IRQHandler)
- 800798c  800798c        0     1                 $t
- 800798d  800798d        c     1                 SPI2_IRQHandler
- 8007998  8007998       1e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.HAL_SPI_TxCpltCallback)
+ 8007395  8007395      548     1                 main
+ 80078dc  80078dc       b2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.SystemClock_Config)
+ 80078dc  80078dc        0     1                 $t
+ 80078dd  80078dd       b2     1                 SystemClock_Config
+ 8007990  8007990        6     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.Error_Handler)
+ 8007990  8007990        0     1                 $t
+ 8007991  8007991        6     1                 Error_Handler
+ 8007998  8007998        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.NMI_Handler)
  8007998  8007998        0     1                 $t
- 8007999  8007999       1e     1                 HAL_SPI_TxCpltCallback
- 80079b8  80079b8        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_MspInit)
+ 8007999  8007999        2     1                 NMI_Handler
+ 800799c  800799c        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.HardFault_Handler)
+ 800799c  800799c        0     1                 $t
+ 800799d  800799d        2     1                 HardFault_Handler
+ 80079a0  80079a0        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.MemManage_Handler)
+ 80079a0  80079a0        0     1                 $t
+ 80079a1  80079a1        2     1                 MemManage_Handler
+ 80079a4  80079a4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.BusFault_Handler)
+ 80079a4  80079a4        0     1                 $t
+ 80079a5  80079a5        2     1                 BusFault_Handler
+ 80079a8  80079a8        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.UsageFault_Handler)
+ 80079a8  80079a8        0     1                 $t
+ 80079a9  80079a9        2     1                 UsageFault_Handler
+ 80079ac  80079ac        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SVC_Handler)
+ 80079ac  80079ac        0     1                 $t
+ 80079ad  80079ad        2     1                 SVC_Handler
+ 80079b0  80079b0        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.DebugMon_Handler)
+ 80079b0  80079b0        0     1                 $t
+ 80079b1  80079b1        2     1                 DebugMon_Handler
+ 80079b4  80079b4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.PendSV_Handler)
+ 80079b4  80079b4        0     1                 $t
+ 80079b5  80079b5        2     1                 PendSV_Handler
+ 80079b8  80079b8        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SysTick_Handler)
  80079b8  80079b8        0     1                 $t
- 80079b9  80079b9        2     1                 HAL_MspInit
- 80079bc  80079bc      162     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_I2C_MspInit)
+ 80079b9  80079b9        4     1                 SysTick_Handler
+ 80079bc  80079bc        6     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.EXTI13_IRQHandler)
  80079bc  80079bc        0     1                 $t
- 80079bd  80079bd      162     1                 HAL_I2C_MspInit
- 8007b20  8007b20       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_RNG_MspInit)
- 8007b20  8007b20        0     1                 $t
- 8007b21  8007b21       58     1                 HAL_RNG_MspInit
- 8007b78  8007b78      136     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_SPI_MspInit)
- 8007b78  8007b78        0     1                 $t
- 8007b79  8007b79      136     1                 HAL_SPI_MspInit
- 8007cb0  8007cb0       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_TIM_PWM_MspInit)
- 8007cb0  8007cb0        0     1                 $t
- 8007cb1  8007cb1       30     1                 HAL_TIM_PWM_MspInit
- 8007ce0  8007ce0       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_TIM_MspPostInit)
- 8007ce0  8007ce0        0     1                 $t
- 8007ce1  8007ce1       60     1                 HAL_TIM_MspPostInit
- 8007d40  8007d40       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text._exit)
- 8007d40  8007d40        0     1                 $t
- 8007d41  8007d41       14     1                 _exit
- 8007d41  8007d41       14     1                 exit
- 8007d50  8007d50        0     1                 $d
- 8007d54  8007d54        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text.starm_putc)
+ 80079bd  80079bd        6     1                 EXTI13_IRQHandler
+ 80079c4  80079c4        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel5_IRQHandler)
+ 80079c4  80079c4        0     1                 $t
+ 80079c5  80079c5        c     1                 GPDMA1_Channel5_IRQHandler
+ 80079d0  80079d0        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel6_IRQHandler)
+ 80079d0  80079d0        0     1                 $t
+ 80079d1  80079d1        c     1                 GPDMA1_Channel6_IRQHandler
+ 80079dc  80079dc        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel7_IRQHandler)
+ 80079dc  80079dc        0     1                 $t
+ 80079dd  80079dd        c     1                 GPDMA1_Channel7_IRQHandler
+ 80079e8  80079e8        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.I2C1_EV_IRQHandler)
+ 80079e8  80079e8        0     1                 $t
+ 80079e9  80079e9        c     1                 I2C1_EV_IRQHandler
+ 80079f4  80079f4        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.I2C1_ER_IRQHandler)
+ 80079f4  80079f4        0     1                 $t
+ 80079f5  80079f5        c     1                 I2C1_ER_IRQHandler
+ 8007a00  8007a00        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SPI2_IRQHandler)
+ 8007a00  8007a00        0     1                 $t
+ 8007a01  8007a01        c     1                 SPI2_IRQHandler
+ 8007a0c  8007a0c       1e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.HAL_SPI_TxCpltCallback)
+ 8007a0c  8007a0c        0     1                 $t
+ 8007a0d  8007a0d       1e     1                 HAL_SPI_TxCpltCallback
+ 8007a2c  8007a2c        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_MspInit)
+ 8007a2c  8007a2c        0     1                 $t
+ 8007a2d  8007a2d        2     1                 HAL_MspInit
+ 8007a30  8007a30      162     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_I2C_MspInit)
+ 8007a30  8007a30        0     1                 $t
+ 8007a31  8007a31      162     1                 HAL_I2C_MspInit
+ 8007b94  8007b94       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_RNG_MspInit)
+ 8007b94  8007b94        0     1                 $t
+ 8007b95  8007b95       58     1                 HAL_RNG_MspInit
+ 8007bec  8007bec      136     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_SPI_MspInit)
+ 8007bec  8007bec        0     1                 $t
+ 8007bed  8007bed      136     1                 HAL_SPI_MspInit
+ 8007d24  8007d24       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_TIM_PWM_MspInit)
+ 8007d24  8007d24        0     1                 $t
+ 8007d25  8007d25       30     1                 HAL_TIM_PWM_MspInit
+ 8007d54  8007d54       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_TIM_MspPostInit)
  8007d54  8007d54        0     1                 $t
- 8007d55  8007d55        c     1                 starm_putc
- 8007d60  8007d60        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text.starm_getc)
- 8007d60  8007d60        0     1                 $t
- 8007d61  8007d61        c     1                 starm_getc
- 8007d6c  8007d6c       5c     4         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.text.Reset_Handler)
- 8007d6c  8007d6c        0     1                 $t
- 8007d6d  8007d6d       3e     1                 Reset_Handler
- 8007d84  8007d84        0     1                 CopyDataInit
- 8007d8a  8007d8a        0     1                 LoopCopyDataInit
- 8007d98  8007d98        0     1                 FillZerobss
- 8007d9c  8007d9c        0     1                 LoopFillZerobss
- 8007da8  8007da8        0     1                 LoopForever
- 8007dac  8007dac        0     1                 $d
- 8007dc8  8007dc8        2     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.text.Default_Handler)
- 8007dc8  8007dc8        0     1                 Infinite_Loop
+ 8007d55  8007d55       60     1                 HAL_TIM_MspPostInit
+ 8007db4  8007db4       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text._exit)
+ 8007db4  8007db4        0     1                 $t
+ 8007db5  8007db5       14     1                 _exit
+ 8007db5  8007db5       14     1                 exit
+ 8007dc4  8007dc4        0     1                 $d
+ 8007dc8  8007dc8        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text.starm_putc)
  8007dc8  8007dc8        0     1                 $t
- 8007dc8  8007dc8        2     1                 Default_Handler
- 8007dc9  8007dc9        2     1                 SecureFault_Handler
- 8007dc9  8007dc9        2     1                 WWDG_IRQHandler
- 8007dc9  8007dc9        2     1                 PVD_AVD_IRQHandler
- 8007dc9  8007dc9        2     1                 RTC_IRQHandler
- 8007dc9  8007dc9        2     1                 RTC_S_IRQHandler
- 8007dc9  8007dc9        2     1                 TAMP_IRQHandler
- 8007dc9  8007dc9        2     1                 RAMCFG_IRQHandler
- 8007dc9  8007dc9        2     1                 FLASH_IRQHandler
- 8007dc9  8007dc9        2     1                 FLASH_S_IRQHandler
- 8007dc9  8007dc9        2     1                 GTZC_IRQHandler
- 8007dc9  8007dc9        2     1                 RCC_IRQHandler
- 8007dc9  8007dc9        2     1                 RCC_S_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI0_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI1_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI2_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI3_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI4_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI5_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI6_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI7_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI8_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI9_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI10_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI11_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI12_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI14_IRQHandler
- 8007dc9  8007dc9        2     1                 EXTI15_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA1_Channel0_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA1_Channel1_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA1_Channel2_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA1_Channel3_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA1_Channel4_IRQHandler
- 8007dc9  8007dc9        2     1                 IWDG_IRQHandler
- 8007dc9  8007dc9        2     1                 SAES_IRQHandler
- 8007dc9  8007dc9        2     1                 ADC1_IRQHandler
- 8007dc9  8007dc9        2     1                 DAC1_IRQHandler
- 8007dc9  8007dc9        2     1                 FDCAN1_IT0_IRQHandler
- 8007dc9  8007dc9        2     1                 FDCAN1_IT1_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM1_BRK_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM1_UP_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM1_TRG_COM_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM1_CC_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM3_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM4_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM5_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM6_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM7_IRQHandler
- 8007dc9  8007dc9        2     1                 I2C2_EV_IRQHandler
- 8007dc9  8007dc9        2     1                 I2C2_ER_IRQHandler
- 8007dc9  8007dc9        2     1                 SPI1_IRQHandler
- 8007dc9  8007dc9        2     1                 SPI3_IRQHandler
- 8007dc9  8007dc9        2     1                 USART1_IRQHandler
- 8007dc9  8007dc9        2     1                 USART2_IRQHandler
- 8007dc9  8007dc9        2     1                 USART3_IRQHandler
- 8007dc9  8007dc9        2     1                 UART4_IRQHandler
- 8007dc9  8007dc9        2     1                 UART5_IRQHandler
- 8007dc9  8007dc9        2     1                 LPUART1_IRQHandler
- 8007dc9  8007dc9        2     1                 LPTIM1_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM8_BRK_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM8_UP_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM8_TRG_COM_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM8_CC_IRQHandler
- 8007dc9  8007dc9        2     1                 ADC2_IRQHandler
- 8007dc9  8007dc9        2     1                 LPTIM2_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM15_IRQHandler
- 8007dc9  8007dc9        2     1                 USB_DRD_FS_IRQHandler
- 8007dc9  8007dc9        2     1                 CRS_IRQHandler
- 8007dc9  8007dc9        2     1                 UCPD1_IRQHandler
- 8007dc9  8007dc9        2     1                 FMC_IRQHandler
- 8007dc9  8007dc9        2     1                 OCTOSPI1_IRQHandler
- 8007dc9  8007dc9        2     1                 SDMMC1_IRQHandler
- 8007dc9  8007dc9        2     1                 I2C3_EV_IRQHandler
- 8007dc9  8007dc9        2     1                 I2C3_ER_IRQHandler
- 8007dc9  8007dc9        2     1                 SPI4_IRQHandler
- 8007dc9  8007dc9        2     1                 USART6_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel0_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel1_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel2_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel3_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel4_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel5_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel6_IRQHandler
- 8007dc9  8007dc9        2     1                 GPDMA2_Channel7_IRQHandler
- 8007dc9  8007dc9        2     1                 FPU_IRQHandler
- 8007dc9  8007dc9        2     1                 ICACHE_IRQHandler
- 8007dc9  8007dc9        2     1                 DCACHE1_IRQHandler
- 8007dc9  8007dc9        2     1                 DCMI_PSSI_IRQHandler
- 8007dc9  8007dc9        2     1                 FDCAN2_IT0_IRQHandler
- 8007dc9  8007dc9        2     1                 FDCAN2_IT1_IRQHandler
- 8007dc9  8007dc9        2     1                 DTS_IRQHandler
- 8007dc9  8007dc9        2     1                 RNG_IRQHandler
- 8007dc9  8007dc9        2     1                 OTFDEC1_IRQHandler
- 8007dc9  8007dc9        2     1                 AES_IRQHandler
- 8007dc9  8007dc9        2     1                 HASH_IRQHandler
- 8007dc9  8007dc9        2     1                 PKA_IRQHandler
- 8007dc9  8007dc9        2     1                 CEC_IRQHandler
- 8007dc9  8007dc9        2     1                 TIM12_IRQHandler
- 8007dc9  8007dc9        2     1                 I3C1_EV_IRQHandler
- 8007dc9  8007dc9        2     1                 I3C1_ER_IRQHandler
- 8007dc9  8007dc9        2     1                 I3C2_EV_IRQHandler
- 8007dc9  8007dc9        2     1                 I3C2_ER_IRQHandler
- 8007dcc  8007dcc       38     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFXC2Ess)
- 8007dcc  8007dcc        0     1                 $t
- 8007dcd  8007dcd       38     1                 Adafruit_GFX::Adafruit_GFX(short, short)
- 8007e04  8007e04       ce     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX9writeLineEsssst)
- 8007e04  8007e04        0     1                 $t
- 8007e05  8007e05       ce     1                 Adafruit_GFX::writeLine(short, short, short, short, unsigned short)
- 8007ed4  8007ed4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10startWriteEv)
- 8007ed4  8007ed4        0     1                 $t
- 8007ed5  8007ed5        2     1                 Adafruit_GFX::startWrite()
- 8007ed8  8007ed8        a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10writePixelEsst)
- 8007ed8  8007ed8        0     1                 $t
- 8007ed9  8007ed9        a     1                 Adafruit_GFX::writePixel(short, short, unsigned short)
- 8007ee4  8007ee4       18     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX14writeFastVLineEssst)
- 8007ee4  8007ee4        0     1                 $t
- 8007ee5  8007ee5       18     1                 Adafruit_GFX::writeFastVLine(short, short, short, unsigned short)
- 8007efc  8007efc       18     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX14writeFastHLineEssst)
- 8007efc  8007efc        0     1                 $t
- 8007efd  8007efd       18     1                 Adafruit_GFX::writeFastHLine(short, short, short, unsigned short)
- 8007f14  8007f14       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13writeFillRectEsssst)
- 8007f14  8007f14        0     1                 $t
- 8007f15  8007f15       1a     1                 Adafruit_GFX::writeFillRect(short, short, short, short, unsigned short)
- 8007f30  8007f30        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8endWriteEv)
- 8007f30  8007f30        0     1                 $t
- 8007f31  8007f31        2     1                 Adafruit_GFX::endWrite()
- 8007f34  8007f34       44     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13drawFastVLineEssst)
- 8007f34  8007f34        0     1                 $t
- 8007f35  8007f35       44     1                 Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
- 8007f78  8007f78       40     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13drawFastHLineEssst)
- 8007f78  8007f78        0     1                 $t
- 8007f79  8007f79       40     1                 Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
- 8007fb8  8007fb8       56     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8fillRectEsssst)
- 8007fb8  8007fb8        0     1                 $t
- 8007fb9  8007fb9       56     1                 Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
- 8008010  8008010       20     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10fillScreenEt)
- 8008010  8008010        0     1                 $t
- 8008011  8008011       20     1                 Adafruit_GFX::fillScreen(unsigned short)
- 8008030  8008030       82     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawLineEsssst)
- 8008030  8008030        0     1                 $t
- 8008031  8008031       82     1                 Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
- 80080b4  80080b4       7e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawRectEsssst)
- 80080b4  80080b4        0     1                 $t
- 80080b5  80080b5       7e     1                 Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
- 8008134  8008134      342     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawCharEsshtthh)
- 8008134  8008134        0     1                 $t
- 8008135  8008135      342     1                 Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char, unsigned char)
- 8008478  8008478      13e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX5writeEh)
- 8008478  8008478        0     1                 $t
- 8008479  8008479      13e     1                 Adafruit_GFX::write(unsigned char)
- 80085b8  80085b8       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX11setTextSizeEhh)
- 80085b8  80085b8        0     1                 $t
- 80085b9  80085b9       1a     1                 Adafruit_GFX::setTextSize(unsigned char, unsigned char)
- 80085d4  80085d4       20     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX11setRotationEh)
- 80085d4  80085d4        0     1                 $t
- 80085d5  80085d5       20     1                 Adafruit_GFX::setRotation(unsigned char)
- 80085de  80085de        0     1                 $d
- 80085e2  80085e2        0     1                 $t
- 80085f4  80085f4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13invertDisplayEb)
- 80085f4  80085f4        0     1                 $t
- 80085f5  80085f5        2     1                 Adafruit_GFX::invertDisplay(bool)
- 80085f8  80085f8        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN5Print17availableForWriteEv)
- 80085f8  80085f8        0     1                 $t
- 80085f9  80085f9        4     1                 Print::availableForWrite()
- 80085fc  80085fc        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN5Print5flushEv)
- 80085fc  80085fc        0     1                 $t
- 80085fd  80085fd        2     1                 Print::flush()
- 8008600  8008600       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFTC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
- 8008600  8008600        0     1                 $t
- 8008601  8008601       58     1                 Adafruit_SPITFT::Adafruit_SPITFT(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
- 8008658  8008658       3a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT7initSPIEj)
- 8008658  8008658        0     1                 $t
- 8008659  8008659       3a     1                 Adafruit_SPITFT::initSPI(unsigned int)
- 8008694  8008694       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT10startWriteEv)
- 8008694  8008694        0     1                 $t
- 8008695  8008695       14     1                 Adafruit_SPITFT::startWrite()
- 80086a8  80086a8       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT8endWriteEv)
- 80086a8  80086a8        0     1                 $t
- 80086a9  80086a9       14     1                 Adafruit_SPITFT::endWrite()
- 80086bc  80086bc       84     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT10writePixelEsst)
- 80086bc  80086bc        0     1                 $t
- 80086bd  80086bd       84     1                 Adafruit_SPITFT::writePixel(short, short, unsigned short)
- 8008740  8008740      13e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13writeFillRectEsssst)
- 8008740  8008740        0     1                 $t
- 8008741  8008741      13e     1                 Adafruit_SPITFT::writeFillRect(short, short, short, short, unsigned short)
- 8008880  8008880       8a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT9drawPixelEsst)
- 8008880  8008880        0     1                 $t
- 8008881  8008881       8a     1                 Adafruit_SPITFT::drawPixel(short, short, unsigned short)
- 800890c  800890c      146     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT8fillRectEsssst)
- 800890c  800890c        0     1                 $t
- 800890d  800890d      146     1                 Adafruit_SPITFT::fillRect(short, short, short, short, unsigned short)
- 8008a54  8008a54      104     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13drawFastHLineEssst)
- 8008a54  8008a54        0     1                 $t
- 8008a55  8008a55      104     1                 Adafruit_SPITFT::drawFastHLine(short, short, short, unsigned short)
- 8008b58  8008b58      100     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13drawFastVLineEssst)
- 8008b58  8008b58        0     1                 $t
- 8008b59  8008b59      100     1                 Adafruit_SPITFT::drawFastVLine(short, short, short, unsigned short)
- 8008c58  8008c58       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13invertDisplayEb)
- 8008c58  8008c58        0     1                 $t
- 8008c59  8008c59       64     1                 Adafruit_SPITFT::invertDisplay(bool)
- 8008cbc  8008cbc       4c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT12writeCommandEh)
- 8008cbc  8008cbc        0     1                 $t
- 8008cbd  8008cbd       4c     1                 Adafruit_SPITFT::writeCommand(unsigned char)
- 8008d08  8008d08       9e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11sendCommandEhPhh)
- 8008d08  8008d08        0     1                 $t
- 8008d09  8008d09       9e     1                 Adafruit_SPITFT::sendCommand(unsigned char, unsigned char*, unsigned char)
- 8008da8  8008da8       9e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11sendCommandEhPKhh)
- 8008da8  8008da8        0     1                 $t
- 8008da9  8008da9       9e     1                 Adafruit_SPITFT::sendCommand(unsigned char, unsigned char const*, unsigned char)
- 8008e48  8008e48       56     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11SPI_WRITE32Ej)
- 8008e48  8008e48        0     1                 $t
- 8008e49  8008e49       56     1                 Adafruit_SPITFT::SPI_WRITE32(unsigned int)
- 8008ea0  8008ea0       e4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT14writeFastVLineEssst)
- 8008ea0  8008ea0        0     1                 $t
- 8008ea1  8008ea1       e4     1                 Adafruit_SPITFT::writeFastVLine(short, short, short, unsigned short)
- 8008f84  8008f84       e8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT14writeFastHLineEssst)
- 8008f84  8008f84        0     1                 $t
- 8008f85  8008f85       e8     1                 Adafruit_SPITFT::writeFastHLine(short, short, short, unsigned short)
- 800906c  800906c       36     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xxC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
- 800906c  800906c        0     1                 $t
- 800906d  800906d       36     1                 Adafruit_ST77xx::Adafruit_ST77xx(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
- 800906d  800906d       36     1                 Adafruit_ST77xx::Adafruit_ST77xx(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
- 80090a4  80090a4       a0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx11displayInitEPKh)
- 80090a4  80090a4        0     1                 $t
- 80090a5  80090a5       a0     1                 Adafruit_ST77xx::displayInit(unsigned char const*)
- 8009144  8009144       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx5beginEj)
- 8009144  8009144        0     1                 $t
- 8009145  8009145       1a     1                 Adafruit_ST77xx::begin(unsigned int)
- 8009160  8009160       90     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx10commonInitEPKh)
- 8009160  8009160        0     1                 $t
- 8009161  8009161       90     1                 Adafruit_ST77xx::commonInit(unsigned char const*)
- 80091f0  80091f0       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx13setAddrWindowEtttt)
- 80091f0  80091f0        0     1                 $t
- 80091f1  80091f1       58     1                 Adafruit_ST77xx::setAddrWindow(unsigned short, unsigned short, unsigned short, unsigned short)
- 8009248  8009248       68     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx11setRotationEh)
- 8009248  8009248        0     1                 $t
- 8009249  8009249       68     1                 Adafruit_ST77xx::setRotation(unsigned char)
- 8009260  8009260        0     1                 $d
+ 8007dc9  8007dc9        c     1                 starm_putc
+ 8007dd4  8007dd4        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text.starm_getc)
+ 8007dd4  8007dd4        0     1                 $t
+ 8007dd5  8007dd5        c     1                 starm_getc
+ 8007de0  8007de0       5c     4         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.text.Reset_Handler)
+ 8007de0  8007de0        0     1                 $t
+ 8007de1  8007de1       3e     1                 Reset_Handler
+ 8007df8  8007df8        0     1                 CopyDataInit
+ 8007dfe  8007dfe        0     1                 LoopCopyDataInit
+ 8007e0c  8007e0c        0     1                 FillZerobss
+ 8007e10  8007e10        0     1                 LoopFillZerobss
+ 8007e1c  8007e1c        0     1                 LoopForever
+ 8007e20  8007e20        0     1                 $d
+ 8007e3c  8007e3c        2     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.text.Default_Handler)
+ 8007e3c  8007e3c        0     1                 Infinite_Loop
+ 8007e3c  8007e3c        0     1                 $t
+ 8007e3c  8007e3c        2     1                 Default_Handler
+ 8007e3d  8007e3d        2     1                 SecureFault_Handler
+ 8007e3d  8007e3d        2     1                 WWDG_IRQHandler
+ 8007e3d  8007e3d        2     1                 PVD_AVD_IRQHandler
+ 8007e3d  8007e3d        2     1                 RTC_IRQHandler
+ 8007e3d  8007e3d        2     1                 RTC_S_IRQHandler
+ 8007e3d  8007e3d        2     1                 TAMP_IRQHandler
+ 8007e3d  8007e3d        2     1                 RAMCFG_IRQHandler
+ 8007e3d  8007e3d        2     1                 FLASH_IRQHandler
+ 8007e3d  8007e3d        2     1                 FLASH_S_IRQHandler
+ 8007e3d  8007e3d        2     1                 GTZC_IRQHandler
+ 8007e3d  8007e3d        2     1                 RCC_IRQHandler
+ 8007e3d  8007e3d        2     1                 RCC_S_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI0_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI1_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI2_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI3_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI4_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI5_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI6_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI7_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI8_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI9_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI10_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI11_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI12_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI14_IRQHandler
+ 8007e3d  8007e3d        2     1                 EXTI15_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA1_Channel0_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA1_Channel1_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA1_Channel2_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA1_Channel3_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA1_Channel4_IRQHandler
+ 8007e3d  8007e3d        2     1                 IWDG_IRQHandler
+ 8007e3d  8007e3d        2     1                 SAES_IRQHandler
+ 8007e3d  8007e3d        2     1                 ADC1_IRQHandler
+ 8007e3d  8007e3d        2     1                 DAC1_IRQHandler
+ 8007e3d  8007e3d        2     1                 FDCAN1_IT0_IRQHandler
+ 8007e3d  8007e3d        2     1                 FDCAN1_IT1_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM1_BRK_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM1_UP_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM1_TRG_COM_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM1_CC_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM3_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM4_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM5_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM6_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM7_IRQHandler
+ 8007e3d  8007e3d        2     1                 I2C2_EV_IRQHandler
+ 8007e3d  8007e3d        2     1                 I2C2_ER_IRQHandler
+ 8007e3d  8007e3d        2     1                 SPI1_IRQHandler
+ 8007e3d  8007e3d        2     1                 SPI3_IRQHandler
+ 8007e3d  8007e3d        2     1                 USART1_IRQHandler
+ 8007e3d  8007e3d        2     1                 USART2_IRQHandler
+ 8007e3d  8007e3d        2     1                 USART3_IRQHandler
+ 8007e3d  8007e3d        2     1                 UART4_IRQHandler
+ 8007e3d  8007e3d        2     1                 UART5_IRQHandler
+ 8007e3d  8007e3d        2     1                 LPUART1_IRQHandler
+ 8007e3d  8007e3d        2     1                 LPTIM1_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM8_BRK_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM8_UP_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM8_TRG_COM_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM8_CC_IRQHandler
+ 8007e3d  8007e3d        2     1                 ADC2_IRQHandler
+ 8007e3d  8007e3d        2     1                 LPTIM2_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM15_IRQHandler
+ 8007e3d  8007e3d        2     1                 USB_DRD_FS_IRQHandler
+ 8007e3d  8007e3d        2     1                 CRS_IRQHandler
+ 8007e3d  8007e3d        2     1                 UCPD1_IRQHandler
+ 8007e3d  8007e3d        2     1                 FMC_IRQHandler
+ 8007e3d  8007e3d        2     1                 OCTOSPI1_IRQHandler
+ 8007e3d  8007e3d        2     1                 SDMMC1_IRQHandler
+ 8007e3d  8007e3d        2     1                 I2C3_EV_IRQHandler
+ 8007e3d  8007e3d        2     1                 I2C3_ER_IRQHandler
+ 8007e3d  8007e3d        2     1                 SPI4_IRQHandler
+ 8007e3d  8007e3d        2     1                 USART6_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel0_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel1_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel2_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel3_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel4_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel5_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel6_IRQHandler
+ 8007e3d  8007e3d        2     1                 GPDMA2_Channel7_IRQHandler
+ 8007e3d  8007e3d        2     1                 FPU_IRQHandler
+ 8007e3d  8007e3d        2     1                 ICACHE_IRQHandler
+ 8007e3d  8007e3d        2     1                 DCACHE1_IRQHandler
+ 8007e3d  8007e3d        2     1                 DCMI_PSSI_IRQHandler
+ 8007e3d  8007e3d        2     1                 FDCAN2_IT0_IRQHandler
+ 8007e3d  8007e3d        2     1                 FDCAN2_IT1_IRQHandler
+ 8007e3d  8007e3d        2     1                 DTS_IRQHandler
+ 8007e3d  8007e3d        2     1                 RNG_IRQHandler
+ 8007e3d  8007e3d        2     1                 OTFDEC1_IRQHandler
+ 8007e3d  8007e3d        2     1                 AES_IRQHandler
+ 8007e3d  8007e3d        2     1                 HASH_IRQHandler
+ 8007e3d  8007e3d        2     1                 PKA_IRQHandler
+ 8007e3d  8007e3d        2     1                 CEC_IRQHandler
+ 8007e3d  8007e3d        2     1                 TIM12_IRQHandler
+ 8007e3d  8007e3d        2     1                 I3C1_EV_IRQHandler
+ 8007e3d  8007e3d        2     1                 I3C1_ER_IRQHandler
+ 8007e3d  8007e3d        2     1                 I3C2_EV_IRQHandler
+ 8007e3d  8007e3d        2     1                 I3C2_ER_IRQHandler
+ 8007e40  8007e40       38     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFXC2Ess)
+ 8007e40  8007e40        0     1                 $t
+ 8007e41  8007e41       38     1                 Adafruit_GFX::Adafruit_GFX(short, short)
+ 8007e78  8007e78       ce     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX9writeLineEsssst)
+ 8007e78  8007e78        0     1                 $t
+ 8007e79  8007e79       ce     1                 Adafruit_GFX::writeLine(short, short, short, short, unsigned short)
+ 8007f48  8007f48        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10startWriteEv)
+ 8007f48  8007f48        0     1                 $t
+ 8007f49  8007f49        2     1                 Adafruit_GFX::startWrite()
+ 8007f4c  8007f4c        a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10writePixelEsst)
+ 8007f4c  8007f4c        0     1                 $t
+ 8007f4d  8007f4d        a     1                 Adafruit_GFX::writePixel(short, short, unsigned short)
+ 8007f58  8007f58       18     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX14writeFastVLineEssst)
+ 8007f58  8007f58        0     1                 $t
+ 8007f59  8007f59       18     1                 Adafruit_GFX::writeFastVLine(short, short, short, unsigned short)
+ 8007f70  8007f70       18     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX14writeFastHLineEssst)
+ 8007f70  8007f70        0     1                 $t
+ 8007f71  8007f71       18     1                 Adafruit_GFX::writeFastHLine(short, short, short, unsigned short)
+ 8007f88  8007f88       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13writeFillRectEsssst)
+ 8007f88  8007f88        0     1                 $t
+ 8007f89  8007f89       1a     1                 Adafruit_GFX::writeFillRect(short, short, short, short, unsigned short)
+ 8007fa4  8007fa4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8endWriteEv)
+ 8007fa4  8007fa4        0     1                 $t
+ 8007fa5  8007fa5        2     1                 Adafruit_GFX::endWrite()
+ 8007fa8  8007fa8       44     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13drawFastVLineEssst)
+ 8007fa8  8007fa8        0     1                 $t
+ 8007fa9  8007fa9       44     1                 Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
+ 8007fec  8007fec       40     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13drawFastHLineEssst)
+ 8007fec  8007fec        0     1                 $t
+ 8007fed  8007fed       40     1                 Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
+ 800802c  800802c       56     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8fillRectEsssst)
+ 800802c  800802c        0     1                 $t
+ 800802d  800802d       56     1                 Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
+ 8008084  8008084       20     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10fillScreenEt)
+ 8008084  8008084        0     1                 $t
+ 8008085  8008085       20     1                 Adafruit_GFX::fillScreen(unsigned short)
+ 80080a4  80080a4       82     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawLineEsssst)
+ 80080a4  80080a4        0     1                 $t
+ 80080a5  80080a5       82     1                 Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
+ 8008128  8008128       7e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawRectEsssst)
+ 8008128  8008128        0     1                 $t
+ 8008129  8008129       7e     1                 Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
+ 80081a8  80081a8      342     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawCharEsshtthh)
+ 80081a8  80081a8        0     1                 $t
+ 80081a9  80081a9      342     1                 Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char, unsigned char)
+ 80084ec  80084ec      13e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX5writeEh)
+ 80084ec  80084ec        0     1                 $t
+ 80084ed  80084ed      13e     1                 Adafruit_GFX::write(unsigned char)
+ 800862c  800862c       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX11setTextSizeEhh)
+ 800862c  800862c        0     1                 $t
+ 800862d  800862d       1a     1                 Adafruit_GFX::setTextSize(unsigned char, unsigned char)
+ 8008648  8008648       20     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX11setRotationEh)
+ 8008648  8008648        0     1                 $t
+ 8008649  8008649       20     1                 Adafruit_GFX::setRotation(unsigned char)
+ 8008652  8008652        0     1                 $d
+ 8008656  8008656        0     1                 $t
+ 8008668  8008668        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13invertDisplayEb)
+ 8008668  8008668        0     1                 $t
+ 8008669  8008669        2     1                 Adafruit_GFX::invertDisplay(bool)
+ 800866c  800866c        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN5Print17availableForWriteEv)
+ 800866c  800866c        0     1                 $t
+ 800866d  800866d        4     1                 Print::availableForWrite()
+ 8008670  8008670        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN5Print5flushEv)
+ 8008670  8008670        0     1                 $t
+ 8008671  8008671        2     1                 Print::flush()
+ 8008674  8008674       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFTC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
+ 8008674  8008674        0     1                 $t
+ 8008675  8008675       58     1                 Adafruit_SPITFT::Adafruit_SPITFT(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 80086cc  80086cc       3a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT7initSPIEj)
+ 80086cc  80086cc        0     1                 $t
+ 80086cd  80086cd       3a     1                 Adafruit_SPITFT::initSPI(unsigned int)
+ 8008708  8008708       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT10startWriteEv)
+ 8008708  8008708        0     1                 $t
+ 8008709  8008709       14     1                 Adafruit_SPITFT::startWrite()
+ 800871c  800871c       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT8endWriteEv)
+ 800871c  800871c        0     1                 $t
+ 800871d  800871d       14     1                 Adafruit_SPITFT::endWrite()
+ 8008730  8008730       84     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT10writePixelEsst)
+ 8008730  8008730        0     1                 $t
+ 8008731  8008731       84     1                 Adafruit_SPITFT::writePixel(short, short, unsigned short)
+ 80087b4  80087b4      13e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13writeFillRectEsssst)
+ 80087b4  80087b4        0     1                 $t
+ 80087b5  80087b5      13e     1                 Adafruit_SPITFT::writeFillRect(short, short, short, short, unsigned short)
+ 80088f4  80088f4       8a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT9drawPixelEsst)
+ 80088f4  80088f4        0     1                 $t
+ 80088f5  80088f5       8a     1                 Adafruit_SPITFT::drawPixel(short, short, unsigned short)
+ 8008980  8008980      146     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT8fillRectEsssst)
+ 8008980  8008980        0     1                 $t
+ 8008981  8008981      146     1                 Adafruit_SPITFT::fillRect(short, short, short, short, unsigned short)
+ 8008ac8  8008ac8      104     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13drawFastHLineEssst)
+ 8008ac8  8008ac8        0     1                 $t
+ 8008ac9  8008ac9      104     1                 Adafruit_SPITFT::drawFastHLine(short, short, short, unsigned short)
+ 8008bcc  8008bcc      100     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13drawFastVLineEssst)
+ 8008bcc  8008bcc        0     1                 $t
+ 8008bcd  8008bcd      100     1                 Adafruit_SPITFT::drawFastVLine(short, short, short, unsigned short)
+ 8008ccc  8008ccc       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13invertDisplayEb)
+ 8008ccc  8008ccc        0     1                 $t
+ 8008ccd  8008ccd       64     1                 Adafruit_SPITFT::invertDisplay(bool)
+ 8008d30  8008d30       4c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT12writeCommandEh)
+ 8008d30  8008d30        0     1                 $t
+ 8008d31  8008d31       4c     1                 Adafruit_SPITFT::writeCommand(unsigned char)
+ 8008d7c  8008d7c       9e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11sendCommandEhPhh)
+ 8008d7c  8008d7c        0     1                 $t
+ 8008d7d  8008d7d       9e     1                 Adafruit_SPITFT::sendCommand(unsigned char, unsigned char*, unsigned char)
+ 8008e1c  8008e1c       9e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11sendCommandEhPKhh)
+ 8008e1c  8008e1c        0     1                 $t
+ 8008e1d  8008e1d       9e     1                 Adafruit_SPITFT::sendCommand(unsigned char, unsigned char const*, unsigned char)
+ 8008ebc  8008ebc       56     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11SPI_WRITE32Ej)
+ 8008ebc  8008ebc        0     1                 $t
+ 8008ebd  8008ebd       56     1                 Adafruit_SPITFT::SPI_WRITE32(unsigned int)
+ 8008f14  8008f14       e4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT14writeFastVLineEssst)
+ 8008f14  8008f14        0     1                 $t
+ 8008f15  8008f15       e4     1                 Adafruit_SPITFT::writeFastVLine(short, short, short, unsigned short)
+ 8008ff8  8008ff8       e8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT14writeFastHLineEssst)
+ 8008ff8  8008ff8        0     1                 $t
+ 8008ff9  8008ff9       e8     1                 Adafruit_SPITFT::writeFastHLine(short, short, short, unsigned short)
+ 80090e0  80090e0       36     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xxC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
+ 80090e0  80090e0        0     1                 $t
+ 80090e1  80090e1       36     1                 Adafruit_ST77xx::Adafruit_ST77xx(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 80090e1  80090e1       36     1                 Adafruit_ST77xx::Adafruit_ST77xx(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 8009118  8009118       a0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx11displayInitEPKh)
+ 8009118  8009118        0     1                 $t
+ 8009119  8009119       a0     1                 Adafruit_ST77xx::displayInit(unsigned char const*)
+ 80091b8  80091b8       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx5beginEj)
+ 80091b8  80091b8        0     1                 $t
+ 80091b9  80091b9       1a     1                 Adafruit_ST77xx::begin(unsigned int)
+ 80091d4  80091d4       90     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx10commonInitEPKh)
+ 80091d4  80091d4        0     1                 $t
+ 80091d5  80091d5       90     1                 Adafruit_ST77xx::commonInit(unsigned char const*)
+ 8009264  8009264       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx13setAddrWindowEtttt)
  8009264  8009264        0     1                 $t
- 80092b0  80092b0       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST7735C2EP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
- 80092b0  80092b0        0     1                 $t
- 80092b1  80092b1       34     1                 Adafruit_ST7735::Adafruit_ST7735(__SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
- 80092b1  80092b1       34     1                 Adafruit_ST7735::Adafruit_ST7735(__SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
- 80092e4  80092e4      120     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST77355initREh)
- 80092e4  80092e4        0     1                 $t
- 80092e5  80092e5      120     1                 Adafruit_ST7735::initR(unsigned char)
- 8009404  8009404       fe     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST773511setRotationEh)
- 8009404  8009404        0     1                 $t
- 8009405  8009405       fe     1                 Adafruit_ST7735::setRotation(unsigned char)
- 8009438  8009438        0     1                 $d
- 800943c  800943c        0     1                 $t
- 8009504  8009504       6a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_create)
- 8009504  8009504        0     1                 $t
- 8009505  8009505       6a     1                 Display_create
- 8009570  8009570       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_init)
- 8009570  8009570        0     1                 $t
- 8009571  8009571       10     1                 Display_init
- 8009580  8009580       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setRotation)
- 8009580  8009580        0     1                 $t
- 8009581  8009581       10     1                 Display_setRotation
- 8009590  8009590       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_fillScreen)
- 8009590  8009590        0     1                 $t
- 8009591  8009591       10     1                 Display_fillScreen
- 80095a0  80095a0       16     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextSize)
- 80095a0  80095a0        0     1                 $t
- 80095a1  80095a1       16     1                 Display_setTextSize
- 80095b8  80095b8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setCursor)
- 80095b8  80095b8        0     1                 $t
- 80095b9  80095b9       10     1                 Display_setCursor
- 80095c8  80095c8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextColor)
- 80095c8  80095c8        0     1                 $t
- 80095c9  80095c9       10     1                 Display_setTextColor
- 80095d8  80095d8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextColorWithBg)
- 80095d8  80095d8        0     1                 $t
- 80095d9  80095d9       10     1                 Display_setTextColorWithBg
- 80095e8  80095e8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_width)
- 80095e8  80095e8        0     1                 $t
- 80095e9  80095e9       10     1                 Display_width
- 80095f8  80095f8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_height)
- 80095f8  80095f8        0     1                 $t
- 80095f9  80095f9       10     1                 Display_height
- 8009608  8009608       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_print)
- 8009608  8009608        0     1                 $t
- 8009609  8009609       10     1                 Display_print
- 8009618  8009618       48     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.text._ZN5Print5writeEPKhj)
- 8009618  8009618        0     1                 $t
- 8009619  8009619       48     1                 Print::write(unsigned char const*, unsigned int)
- 8009660  8009660       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.text._ZN5Print5printEPKc)
- 8009660  8009660        0     1                 $t
- 8009661  8009661       22     1                 Print::print(char const*)
- 8009684  8009684       16     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesawC2EP19__I2C_HandleTypeDef)
- 8009684  8009684        0     1                 $t
- 8009685  8009685       16     1                 Adafruit_seesaw::Adafruit_seesaw(__I2C_HandleTypeDef*)
- 8009685  8009685       16     1                 Adafruit_seesaw::Adafruit_seesaw(__I2C_HandleTypeDef*)
- 800969c  800969c      1c0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5beginEhb)
- 800969c  800969c        0     1                 $t
- 800969d  800969d      1c0     1                 Adafruit_seesaw::begin(unsigned char, bool)
- 800985c  800985c       dc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw4readEhhPhht)
- 800985c  800985c        0     1                 $t
- 800985d  800985d       dc     1                 Adafruit_seesaw::read(unsigned char, unsigned char, unsigned char*, unsigned char, unsigned short)
- 8009938  8009938       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw7pinModeEhh)
- 8009938  8009938        0     1                 $t
- 8009939  8009939       22     1                 Adafruit_seesaw::pinMode(unsigned char, unsigned char)
- 800995c  800995c      318     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11pinModeBulkEjjh)
- 800995c  800995c        0     1                 $t
- 800995d  800995d      318     1                 Adafruit_seesaw::pinModeBulk(unsigned int, unsigned int, unsigned char)
- 800998c  800998c        0     1                 $d
- 8009994  8009994        0     1                 $t
- 8009c74  8009c74      264     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11pinModeBulkEjh)
- 8009c74  8009c74        0     1                 $t
- 8009c75  8009c75      264     1                 Adafruit_seesaw::pinModeBulk(unsigned int, unsigned char)
- 8009c96  8009c96        0     1                 $d
- 8009c9e  8009c9e        0     1                 $t
- 8009ed8  8009ed8       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw12digitalWriteEhh)
- 8009ed8  8009ed8        0     1                 $t
- 8009ed9  8009ed9       22     1                 Adafruit_seesaw::digitalWrite(unsigned char, unsigned char)
- 8009efc  8009efc       dc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw16digitalWriteBulkEjjh)
- 8009efc  8009efc        0     1                 $t
- 8009efd  8009efd       dc     1                 Adafruit_seesaw::digitalWriteBulk(unsigned int, unsigned int, unsigned char)
- 8009fd8  8009fd8       a8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw16digitalWriteBulkEjh)
- 8009fd8  8009fd8        0     1                 $t
- 8009fd9  8009fd9       a8     1                 Adafruit_seesaw::digitalWriteBulk(unsigned int, unsigned char)
- 800a080  800a080       42     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw15digitalReadBulkEj)
- 800a080  800a080        0     1                 $t
- 800a081  800a081       42     1                 Adafruit_seesaw::digitalReadBulk(unsigned int)
- 800a0c4  800a0c4       7e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEhhPhh)
- 800a0c4  800a0c4        0     1                 $t
- 800a0c5  800a0c5       7e     1                 Adafruit_seesaw::write(unsigned char, unsigned char, unsigned char*, unsigned char)
- 800a144  800a144       92     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw10analogReadEh)
- 800a144  800a144        0     1                 $t
- 800a145  800a145       92     1                 Adafruit_seesaw::analogRead(unsigned char)
- 800a1d8  800a1d8       ce     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11analogWriteEhth)
- 800a1d8  800a1d8        0     1                 $t
- 800a1d9  800a1d9       ce     1                 Adafruit_seesaw::analogWrite(unsigned char, unsigned short, unsigned char)
- 800a2a8  800a2a8       82     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw10setPWMFreqEht)
- 800a2a8  800a2a8        0     1                 $t
- 800a2a9  800a2a9       82     1                 Adafruit_seesaw::setPWMFreq(unsigned char, unsigned short)
- 800a32c  800a32c       78     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEh)
- 800a32c  800a32c        0     1                 $t
- 800a32d  800a32d       78     1                 Adafruit_seesaw::write(unsigned char)
- 800a3a4  800a3a4       86     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEPKc)
- 800a3a4  800a3a4        0     1                 $t
- 800a3a5  800a3a5       86     1                 Adafruit_seesaw::write(char const*)
- 800a42c  800a42c       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield18C2EP19__I2C_HandleTypeDef)
- 800a42c  800a42c        0     1                 $t
- 800a42d  800a42d       14     1                 Adafruit_TFTShield18::Adafruit_TFTShield18(__I2C_HandleTypeDef*)
- 800a42d  800a42d       14     1                 Adafruit_TFTShield18::Adafruit_TFTShield18(__I2C_HandleTypeDef*)
- 800a440  800a440       2a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield185beginEh)
- 800a440  800a440        0     1                 $t
- 800a441  800a441       2a     1                 Adafruit_TFTShield18::begin(unsigned char)
- 800a46c  800a46c       3e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield1812setBacklightEt)
- 800a46c  800a46c        0     1                 $t
- 800a46d  800a46d       3e     1                 Adafruit_TFTShield18::setBacklight(unsigned short)
- 800a4ac  800a4ac        8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield188tftResetEb)
- 800a4ac  800a4ac        0     1                 $t
- 800a4ad  800a4ad        8     1                 Adafruit_TFTShield18::tftReset(bool)
- 800a4b4  800a4b4        8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield1811readButtonsEv)
+ 8009265  8009265       58     1                 Adafruit_ST77xx::setAddrWindow(unsigned short, unsigned short, unsigned short, unsigned short)
+ 80092bc  80092bc       68     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx11setRotationEh)
+ 80092bc  80092bc        0     1                 $t
+ 80092bd  80092bd       68     1                 Adafruit_ST77xx::setRotation(unsigned char)
+ 80092d4  80092d4        0     1                 $d
+ 80092d8  80092d8        0     1                 $t
+ 8009324  8009324       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST7735C2EP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
+ 8009324  8009324        0     1                 $t
+ 8009325  8009325       34     1                 Adafruit_ST7735::Adafruit_ST7735(__SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 8009325  8009325       34     1                 Adafruit_ST7735::Adafruit_ST7735(__SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 8009358  8009358      120     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST77355initREh)
+ 8009358  8009358        0     1                 $t
+ 8009359  8009359      120     1                 Adafruit_ST7735::initR(unsigned char)
+ 8009478  8009478       fe     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST773511setRotationEh)
+ 8009478  8009478        0     1                 $t
+ 8009479  8009479       fe     1                 Adafruit_ST7735::setRotation(unsigned char)
+ 80094ac  80094ac        0     1                 $d
+ 80094b0  80094b0        0     1                 $t
+ 8009578  8009578       6a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_create)
+ 8009578  8009578        0     1                 $t
+ 8009579  8009579       6a     1                 Display_create
+ 80095e4  80095e4       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_init)
+ 80095e4  80095e4        0     1                 $t
+ 80095e5  80095e5       10     1                 Display_init
+ 80095f4  80095f4       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setRotation)
+ 80095f4  80095f4        0     1                 $t
+ 80095f5  80095f5       10     1                 Display_setRotation
+ 8009604  8009604       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_fillScreen)
+ 8009604  8009604        0     1                 $t
+ 8009605  8009605       10     1                 Display_fillScreen
+ 8009614  8009614       16     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextSize)
+ 8009614  8009614        0     1                 $t
+ 8009615  8009615       16     1                 Display_setTextSize
+ 800962c  800962c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setCursor)
+ 800962c  800962c        0     1                 $t
+ 800962d  800962d       10     1                 Display_setCursor
+ 800963c  800963c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextColor)
+ 800963c  800963c        0     1                 $t
+ 800963d  800963d       10     1                 Display_setTextColor
+ 800964c  800964c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextColorWithBg)
+ 800964c  800964c        0     1                 $t
+ 800964d  800964d       10     1                 Display_setTextColorWithBg
+ 800965c  800965c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_width)
+ 800965c  800965c        0     1                 $t
+ 800965d  800965d       10     1                 Display_width
+ 800966c  800966c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_height)
+ 800966c  800966c        0     1                 $t
+ 800966d  800966d       10     1                 Display_height
+ 800967c  800967c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_print)
+ 800967c  800967c        0     1                 $t
+ 800967d  800967d       10     1                 Display_print
+ 800968c  800968c       48     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.text._ZN5Print5writeEPKhj)
+ 800968c  800968c        0     1                 $t
+ 800968d  800968d       48     1                 Print::write(unsigned char const*, unsigned int)
+ 80096d4  80096d4       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.text._ZN5Print5printEPKc)
+ 80096d4  80096d4        0     1                 $t
+ 80096d5  80096d5       22     1                 Print::print(char const*)
+ 80096f8  80096f8       16     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesawC2EP19__I2C_HandleTypeDef)
+ 80096f8  80096f8        0     1                 $t
+ 80096f9  80096f9       16     1                 Adafruit_seesaw::Adafruit_seesaw(__I2C_HandleTypeDef*)
+ 80096f9  80096f9       16     1                 Adafruit_seesaw::Adafruit_seesaw(__I2C_HandleTypeDef*)
+ 8009710  8009710      1c0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5beginEhb)
+ 8009710  8009710        0     1                 $t
+ 8009711  8009711      1c0     1                 Adafruit_seesaw::begin(unsigned char, bool)
+ 80098d0  80098d0       dc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw4readEhhPhht)
+ 80098d0  80098d0        0     1                 $t
+ 80098d1  80098d1       dc     1                 Adafruit_seesaw::read(unsigned char, unsigned char, unsigned char*, unsigned char, unsigned short)
+ 80099ac  80099ac       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw7pinModeEhh)
+ 80099ac  80099ac        0     1                 $t
+ 80099ad  80099ad       22     1                 Adafruit_seesaw::pinMode(unsigned char, unsigned char)
+ 80099d0  80099d0      318     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11pinModeBulkEjjh)
+ 80099d0  80099d0        0     1                 $t
+ 80099d1  80099d1      318     1                 Adafruit_seesaw::pinModeBulk(unsigned int, unsigned int, unsigned char)
+ 8009a00  8009a00        0     1                 $d
+ 8009a08  8009a08        0     1                 $t
+ 8009ce8  8009ce8      264     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11pinModeBulkEjh)
+ 8009ce8  8009ce8        0     1                 $t
+ 8009ce9  8009ce9      264     1                 Adafruit_seesaw::pinModeBulk(unsigned int, unsigned char)
+ 8009d0a  8009d0a        0     1                 $d
+ 8009d12  8009d12        0     1                 $t
+ 8009f4c  8009f4c       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw12digitalWriteEhh)
+ 8009f4c  8009f4c        0     1                 $t
+ 8009f4d  8009f4d       22     1                 Adafruit_seesaw::digitalWrite(unsigned char, unsigned char)
+ 8009f70  8009f70       dc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw16digitalWriteBulkEjjh)
+ 8009f70  8009f70        0     1                 $t
+ 8009f71  8009f71       dc     1                 Adafruit_seesaw::digitalWriteBulk(unsigned int, unsigned int, unsigned char)
+ 800a04c  800a04c       a8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw16digitalWriteBulkEjh)
+ 800a04c  800a04c        0     1                 $t
+ 800a04d  800a04d       a8     1                 Adafruit_seesaw::digitalWriteBulk(unsigned int, unsigned char)
+ 800a0f4  800a0f4       42     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw15digitalReadBulkEj)
+ 800a0f4  800a0f4        0     1                 $t
+ 800a0f5  800a0f5       42     1                 Adafruit_seesaw::digitalReadBulk(unsigned int)
+ 800a138  800a138       7e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEhhPhh)
+ 800a138  800a138        0     1                 $t
+ 800a139  800a139       7e     1                 Adafruit_seesaw::write(unsigned char, unsigned char, unsigned char*, unsigned char)
+ 800a1b8  800a1b8       92     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw10analogReadEh)
+ 800a1b8  800a1b8        0     1                 $t
+ 800a1b9  800a1b9       92     1                 Adafruit_seesaw::analogRead(unsigned char)
+ 800a24c  800a24c       ce     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11analogWriteEhth)
+ 800a24c  800a24c        0     1                 $t
+ 800a24d  800a24d       ce     1                 Adafruit_seesaw::analogWrite(unsigned char, unsigned short, unsigned char)
+ 800a31c  800a31c       82     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw10setPWMFreqEht)
+ 800a31c  800a31c        0     1                 $t
+ 800a31d  800a31d       82     1                 Adafruit_seesaw::setPWMFreq(unsigned char, unsigned short)
+ 800a3a0  800a3a0       78     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEh)
+ 800a3a0  800a3a0        0     1                 $t
+ 800a3a1  800a3a1       78     1                 Adafruit_seesaw::write(unsigned char)
+ 800a418  800a418       86     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEPKc)
+ 800a418  800a418        0     1                 $t
+ 800a419  800a419       86     1                 Adafruit_seesaw::write(char const*)
+ 800a4a0  800a4a0       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield18C2EP19__I2C_HandleTypeDef)
+ 800a4a0  800a4a0        0     1                 $t
+ 800a4a1  800a4a1       14     1                 Adafruit_TFTShield18::Adafruit_TFTShield18(__I2C_HandleTypeDef*)
+ 800a4a1  800a4a1       14     1                 Adafruit_TFTShield18::Adafruit_TFTShield18(__I2C_HandleTypeDef*)
+ 800a4b4  800a4b4       2a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield185beginEh)
  800a4b4  800a4b4        0     1                 $t
- 800a4b5  800a4b5        8     1                 Adafruit_TFTShield18::readButtons()
- 800a4bc  800a4bc       3c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_create)
- 800a4bc  800a4bc        0     1                 $t
- 800a4bd  800a4bd       3c     1                 TFTShield18_create
- 800a4f8  800a4f8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_begin)
- 800a4f8  800a4f8        0     1                 $t
- 800a4f9  800a4f9       10     1                 TFTShield18_begin
- 800a508  800a508       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_setBacklight)
- 800a508  800a508        0     1                 $t
- 800a509  800a509       10     1                 TFTShield18_setBacklight
- 800a518  800a518       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_tftReset)
- 800a518  800a518        0     1                 $t
- 800a519  800a519       10     1                 TFTShield18_tftReset
- 800a528  800a528        e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_readButtons)
+ 800a4b5  800a4b5       2a     1                 Adafruit_TFTShield18::begin(unsigned char)
+ 800a4e0  800a4e0       3e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield1812setBacklightEt)
+ 800a4e0  800a4e0        0     1                 $t
+ 800a4e1  800a4e1       3e     1                 Adafruit_TFTShield18::setBacklight(unsigned short)
+ 800a520  800a520        8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield188tftResetEb)
+ 800a520  800a520        0     1                 $t
+ 800a521  800a521        8     1                 Adafruit_TFTShield18::tftReset(bool)
+ 800a528  800a528        8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield1811readButtonsEv)
  800a528  800a528        0     1                 $t
- 800a529  800a529        e     1                 TFTShield18_readButtons
- 800a538  800a538       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.text.DWT_Init)
- 800a538  800a538        0     1                 $t
- 800a539  800a539       34     1                 DWT_Init
- 800a56c  800a56c       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.text.DWT_CheckInitialized)
+ 800a529  800a529        8     1                 Adafruit_TFTShield18::readButtons()
+ 800a530  800a530       3c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_create)
+ 800a530  800a530        0     1                 $t
+ 800a531  800a531       3c     1                 TFTShield18_create
+ 800a56c  800a56c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_begin)
  800a56c  800a56c        0     1                 $t
- 800a56d  800a56d       22     1                 DWT_CheckInitialized
- 800a590  800a590       12     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.text.buzzerDisable)
- 800a590  800a590        0     1                 $t
- 800a591  800a591       12     1                 buzzerDisable
- 800a5a4  800a5a4       3c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.runTimer2)
- 800a5a4  800a5a4        0     1                 $t
- 800a5a5  800a5a5       3c     1                 runTimer2
- 800a5e0  800a5e0       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.stopTimer2)
+ 800a56d  800a56d       10     1                 TFTShield18_begin
+ 800a57c  800a57c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_setBacklight)
+ 800a57c  800a57c        0     1                 $t
+ 800a57d  800a57d       10     1                 TFTShield18_setBacklight
+ 800a58c  800a58c       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_tftReset)
+ 800a58c  800a58c        0     1                 $t
+ 800a58d  800a58d       10     1                 TFTShield18_tftReset
+ 800a59c  800a59c        e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_readButtons)
+ 800a59c  800a59c        0     1                 $t
+ 800a59d  800a59d        e     1                 TFTShield18_readButtons
+ 800a5ac  800a5ac       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.text.DWT_Init)
+ 800a5ac  800a5ac        0     1                 $t
+ 800a5ad  800a5ad       34     1                 DWT_Init
+ 800a5e0  800a5e0       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.text.DWT_CheckInitialized)
  800a5e0  800a5e0        0     1                 $t
- 800a5e1  800a5e1       30     1                 stopTimer2
- 800a610  800a610       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.TIM2_IRQHandler)
- 800a610  800a610        0     1                 $t
- 800a611  800a611       64     1                 TIM2_IRQHandler
- 800a674  800a674       54     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.displayTime)
- 800a674  800a674        0     1                 $t
- 800a675  800a675       54     1                 displayTime
- 800a6c8  800a6c8        c     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc++.a(cxa_virtual.cpp.obj):(.text.__cxa_pure_virtual)
- 800a6c8  800a6c8        0     1                 $t
- 800a6c9  800a6c9        c     1                 __cxa_pure_virtual
- 800a6d4  800a6d4        4     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc++.a(abort_message.cpp.obj):(.text.unlikely.__abort_message)
- 800a6d4  800a6d4        0     1                 $t
- 800a6d5  800a6d5        4     1                 __abort_message
- 800a6d8  800a6d8      1c6     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libclang_rt.builtins.a(udivmoddi4.c.obj):(.text.__udivmoddi4)
- 800a6d8  800a6d8        0     1                 $t
- 800a6d9  800a6d9      1c6     1                 __udivmoddi4
- 800a89e  800a89e        8     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(bzero.c.o):(.text.bzero)
- 800a89e  800a89e        0     1                 $t
- 800a89f  800a89f        8     1                 bzero
- 800a89f  800a89f        8     1                 __aeabi_memclr4
- 800a89f  800a89f        8     1                 __aeabi_memclr8
- 800a89f  800a89f        8     1                 __aeabi_memclr
- 800a8a6  800a8a6       12     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(memcpy.c.o):(.text.memcpy)
- 800a8a6  800a8a6        0     1                 $t
- 800a8a7  800a8a7       12     1                 memcpy
- 800a8a7  800a8a7       12     1                 __aeabi_memcpy4
- 800a8a7  800a8a7       12     1                 __aeabi_memcpy8
- 800a8a7  800a8a7       12     1                 __aeabi_memcpy
- 800a8b8  800a8b8        e     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(memset.c.o):(.text.memset)
- 800a8b8  800a8b8        0     1                 $t
- 800a8b9  800a8b9        e     1                 memset
- 800a8c8  800a8c8       1c     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_misc_init.c.o):(.text.__libc_init_array)
- 800a8c8  800a8c8        0     1                 $t
- 800a8c9  800a8c9       1c     1                 __libc_init_array
- 800a8dc  800a8dc        0     1                 $d
- 800a8e4  800a8e4        c     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_stdlib_abort.c.o):(.text.abort)
- 800a8e4  800a8e4        0     1                 $t
- 800a8e5  800a8e5        c     1                 abort
- 800a8f0  800a8f0       5c     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_signal_signal.c.o):(.text.raise)
- 800a8f0  800a8f0        0     1                 $t
- 800a8f1  800a8f1       5c     1                 raise
- 800a944  800a944        0     1                 $d
- 800a950  800a950        c    16         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text.__aeabi_read_tp)
- 800a950  800a950        0     1                 $t
- 800a951  800a951        6     1                 __aeabi_read_tp
- 800a958  800a958        0     1                 $d
- 800a95c  800a95c       10     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text._initial_set_tls)
- 800a95c  800a95c        0     1                 $t
- 800a95d  800a95d        6     1                 _initial_set_tls
- 800a964  800a964        0     1                 $d
- 800a96c  800a96c       14     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_set_tls.c.o):(.text._set_tls)
+ 800a5e1  800a5e1       22     1                 DWT_CheckInitialized
+ 800a604  800a604       12     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.text.buzzerDisable)
+ 800a604  800a604        0     1                 $t
+ 800a605  800a605       12     1                 buzzerDisable
+ 800a618  800a618       3c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.runTimer2)
+ 800a618  800a618        0     1                 $t
+ 800a619  800a619       3c     1                 runTimer2
+ 800a654  800a654       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.stopTimer2)
+ 800a654  800a654        0     1                 $t
+ 800a655  800a655       30     1                 stopTimer2
+ 800a684  800a684       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.TIM2_IRQHandler)
+ 800a684  800a684        0     1                 $t
+ 800a685  800a685       64     1                 TIM2_IRQHandler
+ 800a6e8  800a6e8       54     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.displayTime)
+ 800a6e8  800a6e8        0     1                 $t
+ 800a6e9  800a6e9       54     1                 displayTime
+ 800a73c  800a73c        c     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc++.a(cxa_virtual.cpp.obj):(.text.__cxa_pure_virtual)
+ 800a73c  800a73c        0     1                 $t
+ 800a73d  800a73d        c     1                 __cxa_pure_virtual
+ 800a748  800a748        4     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc++.a(abort_message.cpp.obj):(.text.unlikely.__abort_message)
+ 800a748  800a748        0     1                 $t
+ 800a749  800a749        4     1                 __abort_message
+ 800a74c  800a74c      1c6     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libclang_rt.builtins.a(udivmoddi4.c.obj):(.text.__udivmoddi4)
+ 800a74c  800a74c        0     1                 $t
+ 800a74d  800a74d      1c6     1                 __udivmoddi4
+ 800a912  800a912        8     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(bzero.c.o):(.text.bzero)
+ 800a912  800a912        0     1                 $t
+ 800a913  800a913        8     1                 bzero
+ 800a913  800a913        8     1                 __aeabi_memclr4
+ 800a913  800a913        8     1                 __aeabi_memclr8
+ 800a913  800a913        8     1                 __aeabi_memclr
+ 800a91a  800a91a       12     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(memcpy.c.o):(.text.memcpy)
+ 800a91a  800a91a        0     1                 $t
+ 800a91b  800a91b       12     1                 memcpy
+ 800a91b  800a91b       12     1                 __aeabi_memcpy4
+ 800a91b  800a91b       12     1                 __aeabi_memcpy8
+ 800a91b  800a91b       12     1                 __aeabi_memcpy
+ 800a92c  800a92c        e     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(memset.c.o):(.text.memset)
+ 800a92c  800a92c        0     1                 $t
+ 800a92d  800a92d        e     1                 memset
+ 800a93c  800a93c       30     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_misc_init.c.o):(.text.__libc_init_array)
+ 800a93c  800a93c        0     1                 $t
+ 800a93d  800a93d       30     1                 __libc_init_array
+ 800a95c  800a95c        0     1                 $d
+ 800a96c  800a96c        c     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_stdlib_abort.c.o):(.text.abort)
  800a96c  800a96c        0     1                 $t
- 800a96d  800a96d       14     1                 _set_tls
- 800a978  800a978        0     1                 $d
- 800a980  800a980       24     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_printf.c.o):(.text.printf)
- 800a980  800a980        0     1                 $t
- 800a981  800a981       24     1                 printf
- 800a9a0  800a9a0        0     1                 $d
- 800a9a4  800a9a4       50     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_snprintf.c.o):(.text.snprintf)
- 800a9a4  800a9a4        0     1                 $t
- 800a9a5  800a9a5       50     1                 snprintf
- 800a9f0  800a9f0        0     1                 $d
- 800a9f4  800a9f4       10     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_filestrput.c.o):(.text.__file_str_put)
- 800a9f4  800a9f4        0     1                 $t
- 800a9f5  800a9f5       10     1                 __file_str_put
- 800aa04  800aa04       18     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_string_strnlen.c.o):(.text.strnlen)
- 800aa04  800aa04        0     1                 $t
- 800aa05  800aa05       18     1                 strnlen
- 800aa1c  800aa1c      4c4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.__i_vfprintf)
- 800aa1c  800aa1c        0     1                 $t
- 800aa1d  800aa1d      4c4     1                 __i_vfprintf
- 800aa92  800aa92        0     1                 $d
- 800aa9c  800aa9c        0     1                 $t
- 800abf4  800abf4        0     1                 $d
- 800abfc  800abfc        0     1                 $t
- 800aed8  800aed8        0     1                 $d
- 800aee0  800aee0       28     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.__ultoa_invert)
- 800aee0  800aee0        0     1                 $t
- 800aee1  800aee1       28     1                 __ultoa_invert
- 800af08  800af08        8     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.OUTLINED_FUNCTION_0)
- 800af08  800af08        0     1                 $t
- 800af09  800af09        8     1                 OUTLINED_FUNCTION_0
- 800af10  800af10        0     1         . = ALIGN(4)
- 800af10  800af10        0     1         _etext = .
- 800af10  800af10      960     4 .rodata
- 800af10  800af10        0     1         . = ALIGN(4)
- 800af10  800af10       10     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.rodata.AHBPrescTable)
- 800af10  800af10       10     1                 AHBPrescTable
- 800af20  800af20        8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.rodata.APBPrescTable)
- 800af20  800af20        8     1                 APBPrescTable
- 800af28  800af28       18     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.rodata.UARTPrescTable)
- 800af28  800af28       18     1                 UARTPrescTable
- 800af40  800af40      19d     1         <internal>:(.rodata.str1.1)
- 800b0e0  800b0e0        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.rodata.stdin)
- 800b0e0  800b0e0        4     1                 stdin
- 800b0e0  800b0e0        4     1                 stdout
- 800b0e0  800b0e0        4     1                 stderr
- 800b0e4  800b0e4       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.rodata._ZTV12Adafruit_GFX)
- 800b0e4  800b0e4       58     1                 vtable for Adafruit_GFX
- 800b13c  800b13c      500     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.rodata._ZL4font)
- 800b13c  800b13c      500     1                 font
- 800b63c  800b63c       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.rodata._ZTV15Adafruit_SPITFT)
- 800b63c  800b63c       60     1                 vtable for Adafruit_SPITFT
- 800b69c  800b69c       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.rodata._ZTV15Adafruit_ST77xx)
- 800b69c  800b69c       60     1                 vtable for Adafruit_ST77xx
- 800b6fc  800b6fc       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZTV15Adafruit_ST7735)
- 800b6fc  800b6fc       60     1                 vtable for Adafruit_ST7735
- 800b75c  800b75c       3b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL5Rcmd1)
- 800b75c  800b75c       3b     1                 Rcmd1
- 800b797  800b797        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL10Rcmd2green)
- 800b797  800b797        d     1                 Rcmd2green
- 800b7a4  800b7a4        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL13Rcmd2green144)
- 800b7a4  800b7a4        d     1                 Rcmd2green144
- 800b7b1  800b7b1        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL16Rcmd2green160x80)
- 800b7b1  800b7b1        d     1                 Rcmd2green160x80
- 800b7be  800b7be        f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL22Rcmd2green160x80plugin)
- 800b7be  800b7be        f     1                 Rcmd2green160x80plugin
- 800b7cd  800b7cd        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL8Rcmd2red)
- 800b7cd  800b7cd        d     1                 Rcmd2red
- 800b7da  800b7da       2b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL5Rcmd3)
- 800b7da  800b7da       2b     1                 Rcmd3
- 800b806  800b806        c     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata..Lswitch.table._ZN15Adafruit_ST773511setRotationEh.7)
- 800b806  800b806        c     1                 .Lswitch.table._ZN15Adafruit_ST773511setRotationEh.7
- 800b812  800b812        c     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata..Lswitch.table._ZN15Adafruit_ST773511setRotationEh.8)
- 800b812  800b812        c     1                 .Lswitch.table._ZN15Adafruit_ST773511setRotationEh.8
- 800b820  800b820       28     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.rodata._ZTV15Adafruit_seesaw)
- 800b820  800b820       28     1                 vtable for Adafruit_seesaw
- 800b848  800b848       28     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.rodata._ZTV20Adafruit_TFTShield18)
- 800b848  800b848       28     1                 vtable for Adafruit_TFTShield18
- 800b870  800b870        0     1         . = ALIGN(4)
- 800b870  800b870        0     1 .ARM.extab
- 800b870  800b870        0     1         . = ALIGN(4)
- 800b870  800b870        0     1         . = ALIGN(4)
- 800b870  800b870       10     4 .ARM
- 800b870  800b870        0     1         . = ALIGN(4)
- 800b870  800b870        0     1         __exidx_start = .
- 800b870  800b870       10     4         <internal>:(.ARM.exidx)
- 800b880  800b880        0     1         __exidx_end = .
- 800b880  800b880        0     1         . = ALIGN(4)
- 800b880  800b880        4     4 .preinit_array
- 800b880  800b880        0     1         . = ALIGN(4)
- 800b880  800b880        4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.preinit_array)
- 800b884  800b884        0     1         . = ALIGN(4)
- 800b884  800b884        0     1 .init_array
- 800b884  800b884        0     1         . = ALIGN(4)
- 800b884  800b884        0     1         . = ALIGN(4)
- 800b884  800b884        0     1 .fini_array
- 800b884  800b884        0     1         . = ALIGN(4)
- 800b884  800b884        0     1         . = ALIGN(4)
- 800b884  800b884        0     1 _sidata = LOADADDR(.data)
-20000000  800b884       2c     4 .data
-20000000  800b884        0     1         . = ALIGN(4)
-20000000  800b884        0     1         _sdata = .
-20000000  800b884        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.data.SystemCoreClock)
-20000000  800b884        4     1                 SystemCoreClock
-20000004  800b888        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.data.uwTickPrio)
-20000004  800b888        4     1                 uwTickPrio
-20000008  800b88c        1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.data.uwTickFreq)
-20000008  800b88c        1     1                 uwTickFreq
-2000000c  800b890        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.data.COM_USART)
-2000000c  800b890        4     1                 COM_USART
-20000010  800b894        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.data.buzzer1)
-20000010  800b894        c     1                 buzzer1
-2000001c  800b8a0       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.data.__stdio)
-2000001c  800b8a0       10     1                 __stdio
-2000002c  800b8b0        0     1         . = ALIGN(4)
-2000002c  800b8b0        0     4 .tdata
-2000002c  800b8b0        0     1         . = ALIGN(4)
-2000002c  800b8b0        0     1         _edata = .
-2000002c  800b8b0        0     1 PROVIDE( __tdata_start = ADDR(.tdata) )
+ 800a96d  800a96d        c     1                 abort
+ 800a978  800a978       5c     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_signal_signal.c.o):(.text.raise)
+ 800a978  800a978        0     1                 $t
+ 800a979  800a979       5c     1                 raise
+ 800a9cc  800a9cc        0     1                 $d
+ 800a9e0  800a9e0        c    16         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text.__aeabi_read_tp)
+ 800a9e0  800a9e0        0     1                 $t
+ 800a9e1  800a9e1        6     1                 __aeabi_read_tp
+ 800a9e8  800a9e8        0     1                 $d
+ 800a9ec  800a9ec       10     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text._initial_set_tls)
+ 800a9ec  800a9ec        0     1                 $t
+ 800a9ed  800a9ed        6     1                 _initial_set_tls
+ 800a9f4  800a9f4        0     1                 $d
+ 800a9fc  800a9fc       14     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_set_tls.c.o):(.text._set_tls)
+ 800a9fc  800a9fc        0     1                 $t
+ 800a9fd  800a9fd       14     1                 _set_tls
+ 800aa08  800aa08        0     1                 $d
+ 800aa10  800aa10       24     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_printf.c.o):(.text.printf)
+ 800aa10  800aa10        0     1                 $t
+ 800aa11  800aa11       24     1                 printf
+ 800aa30  800aa30        0     1                 $d
+ 800aa34  800aa34       50     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_snprintf.c.o):(.text.snprintf)
+ 800aa34  800aa34        0     1                 $t
+ 800aa35  800aa35       50     1                 snprintf
+ 800aa80  800aa80        0     1                 $d
+ 800aa84  800aa84       10     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_filestrput.c.o):(.text.__file_str_put)
+ 800aa84  800aa84        0     1                 $t
+ 800aa85  800aa85       10     1                 __file_str_put
+ 800aa94  800aa94       18     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_string_strnlen.c.o):(.text.strnlen)
+ 800aa94  800aa94        0     1                 $t
+ 800aa95  800aa95       18     1                 strnlen
+ 800aaac  800aaac      4c4     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.__i_vfprintf)
+ 800aaac  800aaac        0     1                 $t
+ 800aaad  800aaad      4c4     1                 __i_vfprintf
+ 800ab22  800ab22        0     1                 $d
+ 800ab2c  800ab2c        0     1                 $t
+ 800ac84  800ac84        0     1                 $d
+ 800ac8c  800ac8c        0     1                 $t
+ 800af68  800af68        0     1                 $d
+ 800af70  800af70       28     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.__ultoa_invert)
+ 800af70  800af70        0     1                 $t
+ 800af71  800af71       28     1                 __ultoa_invert
+ 800af98  800af98        8     2         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.OUTLINED_FUNCTION_0)
+ 800af98  800af98        0     1                 $t
+ 800af99  800af99        8     1                 OUTLINED_FUNCTION_0
+ 800afa0  800afa0        0     1         . = ALIGN(4)
+ 800afa0  800afa0        0     1         _etext = .
+ 800afa0  800afa0      980     4 .rodata
+ 800afa0  800afa0        0     1         . = ALIGN(4)
+ 800afa0  800afa0       10     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.rodata.AHBPrescTable)
+ 800afa0  800afa0       10     1                 AHBPrescTable
+ 800afb0  800afb0        8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.rodata.APBPrescTable)
+ 800afb0  800afb0        8     1                 APBPrescTable
+ 800afb8  800afb8       18     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.rodata.UARTPrescTable)
+ 800afb8  800afb8       18     1                 UARTPrescTable
+ 800afd0  800afd0      1c0     1         <internal>:(.rodata.str1.1)
+ 800b190  800b190        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.rodata.stdin)
+ 800b190  800b190        4     1                 stdin
+ 800b190  800b190        4     1                 stdout
+ 800b190  800b190        4     1                 stderr
+ 800b194  800b194       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.rodata._ZTV12Adafruit_GFX)
+ 800b194  800b194       58     1                 vtable for Adafruit_GFX
+ 800b1ec  800b1ec      500     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.rodata._ZL4font)
+ 800b1ec  800b1ec      500     1                 font
+ 800b6ec  800b6ec       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.rodata._ZTV15Adafruit_SPITFT)
+ 800b6ec  800b6ec       60     1                 vtable for Adafruit_SPITFT
+ 800b74c  800b74c       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.rodata._ZTV15Adafruit_ST77xx)
+ 800b74c  800b74c       60     1                 vtable for Adafruit_ST77xx
+ 800b7ac  800b7ac       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZTV15Adafruit_ST7735)
+ 800b7ac  800b7ac       60     1                 vtable for Adafruit_ST7735
+ 800b80c  800b80c       3b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL5Rcmd1)
+ 800b80c  800b80c       3b     1                 Rcmd1
+ 800b847  800b847        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL10Rcmd2green)
+ 800b847  800b847        d     1                 Rcmd2green
+ 800b854  800b854        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL13Rcmd2green144)
+ 800b854  800b854        d     1                 Rcmd2green144
+ 800b861  800b861        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL16Rcmd2green160x80)
+ 800b861  800b861        d     1                 Rcmd2green160x80
+ 800b86e  800b86e        f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL22Rcmd2green160x80plugin)
+ 800b86e  800b86e        f     1                 Rcmd2green160x80plugin
+ 800b87d  800b87d        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL8Rcmd2red)
+ 800b87d  800b87d        d     1                 Rcmd2red
+ 800b88a  800b88a       2b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL5Rcmd3)
+ 800b88a  800b88a       2b     1                 Rcmd3
+ 800b8b6  800b8b6        c     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata..Lswitch.table._ZN15Adafruit_ST773511setRotationEh.7)
+ 800b8b6  800b8b6        c     1                 .Lswitch.table._ZN15Adafruit_ST773511setRotationEh.7
+ 800b8c2  800b8c2        c     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata..Lswitch.table._ZN15Adafruit_ST773511setRotationEh.8)
+ 800b8c2  800b8c2        c     1                 .Lswitch.table._ZN15Adafruit_ST773511setRotationEh.8
+ 800b8d0  800b8d0       28     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.rodata._ZTV15Adafruit_seesaw)
+ 800b8d0  800b8d0       28     1                 vtable for Adafruit_seesaw
+ 800b8f8  800b8f8       28     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.rodata._ZTV20Adafruit_TFTShield18)
+ 800b8f8  800b8f8       28     1                 vtable for Adafruit_TFTShield18
+ 800b920  800b920        0     1         . = ALIGN(4)
+ 800b920  800b920        0     1 .ARM.extab
+ 800b920  800b920        0     1         . = ALIGN(4)
+ 800b920  800b920        0     1         . = ALIGN(4)
+ 800b920  800b920       10     4 .ARM
+ 800b920  800b920        0     1         . = ALIGN(4)
+ 800b920  800b920        0     1         __exidx_start = .
+ 800b920  800b920       10     4         <internal>:(.ARM.exidx)
+ 800b930  800b930        0     1         __exidx_end = .
+ 800b930  800b930        0     1         . = ALIGN(4)
+ 800b930  800b930        4     4 .preinit_array
+ 800b930  800b930        0     1         . = ALIGN(4)
+ 800b930  800b930        0     1         PROVIDE_HIDDEN (__preinit_array_start = .)
+ 800b930  800b930        4     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.preinit_array)
+ 800b934  800b934        0     1         PROVIDE_HIDDEN (__preinit_array_end = .)
+ 800b934  800b934        0     1         . = ALIGN(4)
+ 800b934  800b934        0     1 .init_array
+ 800b934  800b934        0     1         . = ALIGN(4)
+ 800b934  800b934        0     1         PROVIDE_HIDDEN (__init_array_start = .)
+ 800b934  800b934        0     1         PROVIDE_HIDDEN (__init_array_end = .)
+ 800b934  800b934        0     1         . = ALIGN(4)
+ 800b934  800b934        0     1 .fini_array
+ 800b934  800b934        0     1         . = ALIGN(4)
+ 800b934  800b934        0     1         . = ALIGN(4)
+ 800b934  800b934        0     1 _sidata = LOADADDR(.data)
+20000000  800b934       2c     4 .data
+20000000  800b934        0     1         . = ALIGN(4)
+20000000  800b934        0     1         _sdata = .
+20000000  800b934        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.data.SystemCoreClock)
+20000000  800b934        4     1                 SystemCoreClock
+20000004  800b938        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.data.uwTickPrio)
+20000004  800b938        4     1                 uwTickPrio
+20000008  800b93c        1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.data.uwTickFreq)
+20000008  800b93c        1     1                 uwTickFreq
+2000000c  800b940        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.data.COM_USART)
+2000000c  800b940        4     1                 COM_USART
+20000010  800b944        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.data.buzzer1)
+20000010  800b944        c     1                 buzzer1
+2000001c  800b950       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.data.__stdio)
+2000001c  800b950       10     1                 __stdio
+2000002c  800b960        0     1         . = ALIGN(4)
+2000002c  800b960        0     4 .tdata
+2000002c  800b960        0     1         . = ALIGN(4)
+2000002c  800b960        0     1         _edata = .
+2000002c  800b960        0     1 PROVIDE( __tdata_start = ADDR(.tdata) )
 2000002c 2000002c        4     4 .tbss
 2000002c 2000002c        0     1         _sbss = .
 2000002c 2000002c        0     1         __bss_start__ = _sbss
-2000002c 2000002c        4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_errno_errno.c.o):(.tbss.errno)
+2000002c 2000002c        4     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_errno_errno.c.o):(.tbss.errno)
        0        0        4     1                 errno
 20000030 20000030        0     1         . = ALIGN(4)
 2000002c 2000002c        0     1 PROVIDE( __tls_base = __tdata_start )
@@ -1159,9 +1163,9 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
 20000448 20000448        1     1                 guard variable for TFTShield18_create::seesaw
 2000044c 2000044c        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.bss.timer)
 2000044c 2000044c        4     1                 timer
-20000450 20000450       80     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_signal_signal.c.o):(.bss._sig_func)
+20000450 20000450       80     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_signal_signal.c.o):(.bss._sig_func)
 20000450 20000450       80     1                 _sig_func
-200004d0 200004d0        4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_tls.c.o):(.bss.__tls)
+200004d0 200004d0        4     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_tls.c.o):(.bss.__tls)
 200004d0 200004d0        4     1                 __tls
 200004d4 200004d4        0     1         . = ALIGN(4)
 200004d4 200004d4        0     1         _ebss = .
@@ -1174,7 +1178,7 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
 20000ad8 20000ad8        0     1         . = ALIGN(8)
        0        0       50     1 .ARM.attributes
        0        0       50     1         <internal>:(.ARM.attributes)
-       0        0    193ca     1 .debug_loclists
+       0        0    193fd     1 .debug_loclists
        0        0       db     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_loclists)
       db       db      233     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_loclists)
      30e      30e      3b1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_loclists)
@@ -1200,21 +1204,21 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
     d2c9     d2c9      535     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_loclists)
     d7fe     d7fe     1299     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_loclists)
     ea97     ea97      213     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_loclists)
-    ecaa     ecaa      26c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_loclists)
-    ef16     ef16       84     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_loclists)
-    ef9a     ef9a       25     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_loclists)
-    efbf     efbf      25b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_loclists)
-    f21a     f21a     4394     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_loclists)
-   135ae    135ae     1441     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_loclists)
-   149ef    149ef      303     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_loclists)
-   14cf2    14cf2       b7     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_loclists)
-   14da9    14da9      aad     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_loclists)
-   15856    15856      d41     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_loclists)
-   16597    16597     2c86     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_loclists)
-   1921d    1921d       9a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_loclists)
-   192b7    192b7       44     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_loclists)
-   192fb    192fb       9a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_loclists)
-   19395    19395       35     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_loclists)
+    ecaa     ecaa      29f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_loclists)
+    ef49     ef49       84     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_loclists)
+    efcd     efcd       25     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_loclists)
+    eff2     eff2      25b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_loclists)
+    f24d     f24d     4394     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_loclists)
+   135e1    135e1     1441     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_loclists)
+   14a22    14a22      303     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_loclists)
+   14d25    14d25       b7     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_loclists)
+   14ddc    14ddc      aad     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_loclists)
+   15889    15889      d41     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_loclists)
+   165ca    165ca     2c86     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_loclists)
+   19250    19250       9a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_loclists)
+   192ea    192ea       44     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_loclists)
+   1932e    1932e       9a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_loclists)
+   193c8    193c8       35     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_loclists)
        0        0     5bbc     1 .debug_abbrev
        0        0       f8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_abbrev)
       f8       f8      304     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_abbrev)
@@ -1259,7 +1263,7 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
     57a0     57a0       c5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_abbrev)
     5865     5865      19c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_abbrev)
     5a01     5a01      1bb     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_abbrev)
-       0        0    29e31     1 .debug_info
+       0        0    29e56     1 .debug_info
        0        0      8ed     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_info)
      8ed      8ed     1047     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_info)
     1934     1934      7a0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_info)
@@ -1285,24 +1289,24 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
    12790    12790      b60     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_info)
    132f0    132f0     2e94     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_info)
    16184    16184     121b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_info)
-   1739f    1739f     21f4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_info)
-   19593    19593      96a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_info)
-   19efd    19efd     15cf     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_info)
-   1b4cc    1b4cc       ae     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_info)
-   1b57a    1b57a      573     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_info)
-   1baed    1baed      1f8     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_info)
-   1bce5    1bce5     43c4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_info)
-   200a9    200a9     240d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_info)
-   224b6    224b6      b14     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_info)
-   22fca    22fca      5cf     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_info)
-   23599    23599      f05     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_info)
-   2449e    2449e     14d5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_info)
-   25973    25973     2777     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_info)
-   280ea    280ea      5b3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_info)
-   2869d    2869d      3ef     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_info)
-   28a8c    28a8c      3ed     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_info)
-   28e79    28e79      728     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_info)
-   295a1    295a1      890     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_info)
+   1739f    1739f     2237     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_info)
+   195d6    195d6      96a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_info)
+   19f40    19f40     15cf     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_info)
+   1b50f    1b50f       ae     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_info)
+   1b5bd    1b5bd      573     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_info)
+   1bb30    1bb30      1da     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_info)
+   1bd0a    1bd0a     43c4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_info)
+   200ce    200ce     240d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_info)
+   224db    224db      b14     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_info)
+   22fef    22fef      5cf     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_info)
+   235be    235be      f05     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_info)
+   244c3    244c3     14d5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_info)
+   25998    25998     2777     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_info)
+   2810f    2810f      5b3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_info)
+   286c2    286c2      3ef     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_info)
+   28ab1    28ab1      3ed     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_info)
+   28e9e    28e9e      728     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_info)
+   295c6    295c6      890     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_info)
        0        0     2202     1 .debug_rnglists
        0        0       19     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_rnglists)
       19       19       7d     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_rnglists)
@@ -1346,7 +1350,7 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
     21a4     21a4       17     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_rnglists)
     21bb     21bb       1d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_rnglists)
     21d8     21d8       2a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_rnglists)
-       0        0     9270     1 .debug_str_offsets
+       0        0     9274     1 .debug_str_offsets
        0        0      300     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_str_offsets)
      300      300      574     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_str_offsets)
      874      874      230     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_str_offsets)
@@ -1372,26 +1376,26 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
     4230     4230      334     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_str_offsets)
     4564     4564      454     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_str_offsets)
     49b8     49b8      6d4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_str_offsets)
-    508c     508c      bac     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_str_offsets)
-    5c38     5c38      378     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_str_offsets)
-    5fb0     5fb0      88c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_str_offsets)
-    683c     683c       4c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_str_offsets)
-    6888     6888      1d0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_str_offsets)
-    6a58     6a58      5b0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_str_offsets)
-    7008     7008      554     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_str_offsets)
-    755c     755c      364     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_str_offsets)
-    78c0     78c0      1f0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_str_offsets)
-    7ab0     7ab0      318     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_str_offsets)
-    7dc8     7dc8      260     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_str_offsets)
-    8028     8028      674     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_str_offsets)
-    869c     869c      1f8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_str_offsets)
-    8894     8894      178     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_str_offsets)
-    8a0c     8a0c      180     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_str_offsets)
-    8b8c     8b8c      2a8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_str_offsets)
-    8e34     8e34      43c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_str_offsets)
-       0        0     f50d     1 .debug_str
-       0        0     f50d     1         <internal>:(.debug_str)
-       0        0     24ac     1 .debug_addr
+    508c     508c      bb0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_str_offsets)
+    5c3c     5c3c      378     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_str_offsets)
+    5fb4     5fb4      88c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_str_offsets)
+    6840     6840       4c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_str_offsets)
+    688c     688c      1d0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_str_offsets)
+    6a5c     6a5c      5b0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_str_offsets)
+    700c     700c      554     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_str_offsets)
+    7560     7560      364     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_str_offsets)
+    78c4     78c4      1f0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_str_offsets)
+    7ab4     7ab4      318     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_str_offsets)
+    7dcc     7dcc      260     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_str_offsets)
+    802c     802c      674     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_str_offsets)
+    86a0     86a0      1f8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_str_offsets)
+    8898     8898      178     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_str_offsets)
+    8a10     8a10      180     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_str_offsets)
+    8b90     8b90      2a8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_str_offsets)
+    8e38     8e38      43c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_str_offsets)
+       0        0     f292     1 .debug_str
+       0        0     f292     1         <internal>:(.debug_str)
+       0        0     24b8     1 .debug_addr
        0        0       1c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_addr)
       1c       1c       a0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_addr)
       bc       bc       48     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_addr)
@@ -1417,23 +1421,23 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
     1058     1058       8c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_addr)
     10e4     10e4      674     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_addr)
     1758     1758       90     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_addr)
-    17e8     17e8       b8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_addr)
-    18a0     18a0       68     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_addr)
-    1908     1908       54     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_addr)
-    195c     195c       10     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_addr)
-    196c     196c       68     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_addr)
-    19d4     19d4      3cc     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_addr)
-    1da0     1da0      16c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_addr)
-    1f0c     1f0c       48     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_addr)
-    1f54     1f54       48     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_addr)
-    1f9c     1f9c      104     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_addr)
-    20a0     20a0      164     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_addr)
-    2204     2204      1f4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_addr)
-    23f8     23f8       30     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_addr)
-    2428     2428       28     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_addr)
-    2450     2450       10     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_addr)
-    2460     2460       20     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_addr)
-    2480     2480       2c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_addr)
+    17e8     17e8       c4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_addr)
+    18ac     18ac       68     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_addr)
+    1914     1914       54     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_addr)
+    1968     1968       10     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_addr)
+    1978     1978       68     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_addr)
+    19e0     19e0      3cc     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_addr)
+    1dac     1dac      16c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_addr)
+    1f18     1f18       48     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_addr)
+    1f60     1f60       48     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_addr)
+    1fa8     1fa8      104     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_addr)
+    20ac     20ac      164     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_addr)
+    2210     2210      1f4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_addr)
+    2404     2404       30     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_addr)
+    2434     2434       28     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_addr)
+    245c     245c       10     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_addr)
+    246c     246c       20     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_addr)
+    248c     248c       2c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_addr)
        0        0       92     1 .comment
        0        0       92     1         <internal>:(.comment)
        0        0     6934     4 .debug_frame
@@ -1479,9 +1483,9 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
     67c8     67c8       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_frame)
     67fc     67fc       7c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_frame)
     6878     6878       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_frame)
-    68dc     68dc       24     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(strlen.S.o):(.debug_frame)
-    6900     6900       34     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_frame)
-       0        0    23036     1 .debug_line
+    68dc     68dc       24     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(strlen.S.o):(.debug_frame)
+    6900     6900       34     4         C:/Users/jadha/AppData/Local/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_frame)
+       0        0    23051     1 .debug_line
        0        0      188     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_line)
      188      188      594     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_line)
      71c      71c      c99     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_line)
@@ -1507,31 +1511,31 @@ FLASH 0x8000000 0x080000 0x00b8b0        9%  rx
    16c4b    16c4b      7c4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_line)
    1740f    1740f     30dc     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_line)
    1a4eb    1a4eb      4d3     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_line)
-   1a9be    1a9be      4d8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_line)
-   1ae96    1ae96      2b3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_line)
-   1b149    1b149      4b5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_line)
-   1b5fe    1b5fe       ef     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_line)
-   1b6ed    1b6ed      34f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_line)
-   1ba3c    1ba3c       6d     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_line)
-   1baa9    1baa9     32bd     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_line)
-   1ed66    1ed66     126c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_line)
-   1ffd2    1ffd2      307     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_line)
-   202d9    202d9      22a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_line)
-   20503    20503      638     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_line)
-   20b3b    20b3b      8fd     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_line)
-   21438    21438     15d9     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_line)
-   22a11    22a11      193     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_line)
-   22ba4    22ba4      10e     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_line)
-   22cb2    22cb2       a2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_line)
-   22d54    22d54      1b2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_line)
-   22f06    22f06      130     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_line)
-       0        0     2d85     1 .debug_line_str
-       0        0     2d85     1         <internal>:(.debug_line_str)
+   1a9be    1a9be      4f3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_line)
+   1aeb1    1aeb1      2b3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_line)
+   1b164    1b164      4b5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_line)
+   1b619    1b619       ef     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_line)
+   1b708    1b708      34f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_line)
+   1ba57    1ba57       6d     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_line)
+   1bac4    1bac4     32bd     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_line)
+   1ed81    1ed81     126c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_line)
+   1ffed    1ffed      307     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_line)
+   202f4    202f4      22a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_line)
+   2051e    2051e      638     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_line)
+   20b56    20b56      8fd     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_line)
+   21453    21453     15d9     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_line)
+   22a2c    22a2c      193     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_line)
+   22bbf    22bbf      10e     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_line)
+   22ccd    22ccd       a2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_line)
+   22d6f    22d6f      1b2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_line)
+   22f21    22f21      130     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_line)
+       0        0     2af8     1 .debug_line_str
+       0        0     2af8     1         <internal>:(.debug_line_str)
        0        0       28     1 .debug_aranges
        0        0       28     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_aranges)
-       0        0     3990     4 .symtab
-       0        0     3990     4         <internal>:(.symtab)
+       0        0     39b0     4 .symtab
+       0        0     39b0     4         <internal>:(.symtab)
        0        0      14b     1 .shstrtab
        0        0      14b     1         <internal>:(.shstrtab)
-       0        0     3052     1 .strtab
-       0        0     3052     1         <internal>:(.strtab)
+       0        0     3074     1 .strtab
+       0        0     3074     1         <internal>:(.strtab)

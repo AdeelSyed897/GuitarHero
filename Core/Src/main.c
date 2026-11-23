@@ -251,7 +251,6 @@ int main(void)
     }
     lastButtonState = buttons;
 
-    uint32_t now = timer;                // read the volatile count once
     if (timer_on)
       if (now % 10 == 0 && now != lastShown)   // update display every 1/10th sec
       {
