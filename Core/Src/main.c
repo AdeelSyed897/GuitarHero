@@ -94,6 +94,56 @@ static void MX_TIM1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+typedef enum {
+    WELCOME,
+    COUNTDOWN,
+    PLAYING,
+    WIN,
+    LOSE
+} GameState;
+
+void showWelcome(void)
+{
+    Display_fillScreen(ST77XX_BLACK);
+    Display_setTextSize(2, 2);
+    Display_setTextColor(ST7735_WHITE);
+
+    Display_setCursor(15, 30);
+    Display_print("Welcome to");
+
+    Display_setCursor(15, 60);
+    Display_print("Guitar Hero!");
+
+    Display_setTextSize(1, 1);
+    Display_setCursor(15, 100);
+    Display_print("Press SELECT to start");
+}
+
+void showCountdown(uint32_t number)
+{
+    Display_fillScreen(ST77XX_BLACK);
+    Display_setTextSize(3, 3);
+    Display_setTextColor(ST7735_WHITE);
+    Display_setCursor(70, 50);
+
+    if (number == 3)
+        Display_print("3");
+    else if (number == 2)
+        Display_print("2");
+    else if (number == 1)
+        Display_print("1");
+}
+
+void showPlaying(void)
+{
+    Display_fillScreen(ST77XX_BLACK);
+    Display_setTextSize(2, 2);
+    Display_setTextColor(ST7735_GREEN);
+    Display_setCursor(15, 50);
+    Display_print("PLAYING!");
+}
+
+
 /* USER CODE END 0 */
 
 /**
@@ -191,75 +241,67 @@ int main(void)
   TFTShield18_setBacklight(TFTSHIELD_BACKLIGHT_ON);
 
   /* Place extra user setup code here */
+  buzzerDisable(&buzzer1);
 
-  Display_setTextSize(1, 1);
-  Display_setTextColor(ST7735_BLACK);
-  Display_setCursor(Display_width() / 2 - 57, 10);
-  Display_print("ECE 2049 Stop Watch");
-  Display_setCursor(4, Display_height() - 20);
-  Display_print("B2: start   B1: stop/reset");
-
-  buzzerDisable(&buzzer1);                 // buzzer not used in this example
-
+  GameState gameState = WELCOME;
+  uint32_t stateStart = 0;
+  uint32_t lastCountdown = 3;
   uint32_t lastButtonState = TFTSHIELD_BUTTON_ALL;
-  uint32_t timer_on = 0;
-  uint32_t lastShown = 0xFFFFFFFF;
-  uint8_t testShown = 0;
 
-  displayTime(0);
+  runTimer2();
+  showWelcome();
 
-  Display_fillScreen(ST77XX_BLACK);
-  Display_setTextSize(2, 2);
-  Display_setTextColor(ST7735_WHITE);
+  while (1){
 
-  Display_setCursor(15, 30);
-  Display_print("Welcome to");
+  uint32_t now = timer;
+  uint32_t buttons = TFTShield18_readButtons();
 
-  Display_setCursor(15, 60);
-  Display_print("Guitar Hero!");
+  // Detect when joystick SELECT is newly pressed
+  uint8_t selectPressed = (lastButtonState & TFTSHIELD_BUTTON_IN) &&
+                          !(buttons & TFTSHIELD_BUTTON_IN);
 
-  while (1)    // Forever loop of the stop watch
+  if (selectPressed)
   {
-    uint32_t now = timer;
-    if (timer_on && now >= 300 && !testShown)
-    {
-        Display_setTextSize(1, 1);
-        Display_setTextColor(ST7735_GREEN);
-        Display_setCursor(10, 100);
-        Display_print("3 SECONDS!");
+      if (gameState == WELCOME)
+      {
+          gameState = COUNTDOWN;
+          stateStart = timer;
+          lastCountdown = 3;
+          showCountdown(3);
+      }
+      else
+      {
+          gameState = WELCOME;
+          buzzerDisable(&buzzer1);
+          showWelcome();
+      }
+  }
 
-        testShown = 1;
+  lastButtonState = buttons;
+
+  // Countdown logic
+  if (gameState == COUNTDOWN)
+  {
+      uint32_t elapsed = timer - stateStart;
+
+      if (elapsed >= 300)
+      {
+          gameState = PLAYING;
+          showPlaying();
+      }
+      else
+      {
+          uint32_t number = 3 - elapsed / 100;
+
+          if (number != lastCountdown)
+          {
+              lastCountdown = number;
+              showCountdown(number);
+          }
     }
-    uint32_t buttons = TFTShield18_readButtons();   // pressed = 0
+}
 
-    if (lastButtonState != buttons)                 // act once per press
-    {
-      if (!(buttons & TFTSHIELD_BUTTON_1))
-      {
-        timer_on = 0;
-        stopTimer2();                    // stop and reset timer
-        GPIOA->BSRR = GPIO_BSRR_BR5;     // turn LED off
-        displayTime(0);
-        testShown = 0;   
-      }
-      if (!(buttons & TFTSHIELD_BUTTON_2) && !timer_on)
-      {
-        timer_on = 1;
-        runTimer2();                     // starts timer
-        GPIOA->BSRR = GPIO_BSRR_BR5;     // turn LED off
-      }
-    }
-    lastButtonState = buttons;
-
-    if (timer_on)
-      if (now % 10 == 0 && now != lastShown)   // update display every 1/10th sec
-      {
-        displayTime(now);
-        lastShown = now;
-      }
-
-    /* USER CODE END WHILE */
-
+     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
