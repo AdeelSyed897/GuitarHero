@@ -102,49 +102,60 @@ typedef enum {
     LOSE
 } GameState;
 
+#define BTN1 (1 << 0)
+#define BTN2 (1 << 1)
+#define BTN3 (1 << 2)
+#define BTN4 (1 << 3)
 
 typedef struct {
     uint32_t pitch;
     uint32_t duration;
-    uint8_t button;
+    uint8_t buttons;
 } SongNote;
 
 
 const SongNote song[] = {
-    {NOTE_C, 50, 0},
-    {NOTE_D, 50, 1},
-    {NOTE_E, 50, 2},
-    {NOTE_G, 50, 3},
+    // Intro - single notes
+    {NOTE_C, 200, BTN1},
+    {NOTE_D, 200, BTN2},
+    {NOTE_E, 200, BTN3},
+    {NOTE_G, 200, BTN4},
 
-    {NOTE_G, 50, 3},
-    {NOTE_E, 50, 2},
-    {NOTE_D, 50, 1},
-    {NOTE_C, 75, 0},
+    // First chord
+    {NOTE_C, 250, BTN1 | BTN3},
+    {NOTE_E, 200, BTN3},
+    {NOTE_D, 200, BTN2},
+    {NOTE_C, 200, BTN1},
 
-    {NOTE_E, 50, 2},
-    {NOTE_G, 50, 3},
-    {NOTE_E, 50, 2},
-    {NOTE_C, 75, 0},
+    // Second section
+    {NOTE_E, 200, BTN3},
+    {NOTE_G, 200, BTN4},
+    {NOTE_E, 250, BTN2 | BTN4},
+    {NOTE_C, 200, BTN1},
 
-    {NOTE_D, 50, 1},
-    {NOTE_E, 50, 2},
-    {NOTE_G, 50, 3},
-    {NOTE_D, 75, 1},
+    // Third section
+    {NOTE_D, 200, BTN2},
+    {NOTE_E, 200, BTN3},
+    {NOTE_G, 250, BTN1 | BTN4},
+    {NOTE_D, 200, BTN2},
 
-    {NOTE_C, 50, 0},
-    {NOTE_C, 50, 0},
-    {NOTE_G, 50, 3},
-    {NOTE_G, 50, 3},
+    // Fourth section
+    {NOTE_C, 200, BTN1},
+    {NOTE_C, 200, BTN1},
+    {NOTE_G, 250, BTN3 | BTN4},
+    {NOTE_G, 200, BTN4},
 
-    {NOTE_E, 50, 2},
-    {NOTE_E, 50, 2},
-    {NOTE_D, 50, 1},
-    {NOTE_D, 50, 1},
+    // Fifth section
+    {NOTE_E, 200, BTN3},
+    {NOTE_E, 250, BTN1 | BTN2},
+    {NOTE_D, 200, BTN2},
+    {NOTE_D, 200, BTN2},
 
-    {NOTE_C, 50, 0},
-    {NOTE_E, 50, 2},
-    {NOTE_G, 50, 3},
-    {NOTE_C, 100, 0}
+    // Ending
+    {NOTE_C, 200, BTN1},
+    {NOTE_E, 200, BTN3},
+    {NOTE_G, 250, BTN2 | BTN3},
+    {NOTE_C, 300, BTN1 | BTN4}
 };
 
 #define SONG_LENGTH (sizeof(song) / sizeof(song[0]))
@@ -271,13 +282,19 @@ void drawNoteLanes(void)
     }
 }
 
-void drawCurrentNote(uint8_t button)
+void drawCurrentNote(uint8_t buttons)
 {
-    // Clear only the note display area
+    // Clear previous note indicators
     Display_fillRect(0, 35, 160, 45, ST7735_BLACK);
 
-    // Highlight the lane for the active note
-    Display_fillRect(button * 40 + 5, 45, 30, 25, laneColors[button]);
+    // Draw every required button
+    for (int i = 0; i < 4; i++)
+    {
+        if (buttons & (1 << i))
+        {
+            Display_fillRect(i * 40 + 5, 45, 30, 25, laneColors[i]);
+        }
+    }
 }
 
 void drawScore(uint32_t hits, uint32_t misses)
@@ -466,7 +483,7 @@ int main(void)
 
         // Draw gameplay screen
         drawNoteLanes();
-        drawCurrentNote(song[noteIndex].button);
+        drawCurrentNote(song[noteIndex].buttons);
         drawScore(hits, misses);
 
         // Start the first note
@@ -494,9 +511,12 @@ int main(void)
     // Check for correct button presses
     if (!noteHit && elapsed < duration)
     {
-        uint8_t expectedButton = song[noteIndex].button;
+        uint8_t expectedButtons = song[noteIndex].buttons;
 
-        if (newPresses & (1 << expectedButton))
+        // All required buttons must be held together
+        // At least one must have been newly pressed
+        if ((guitarButtons & expectedButtons) == expectedButtons &&
+            (newPresses & expectedButtons))
         {
             hits++;
             noteHit = 1;
@@ -538,7 +558,7 @@ int main(void)
             noteSounding = 1;
 
             // Display the next note
-            drawCurrentNote(song[noteIndex].button);
+            drawCurrentNote(song[noteIndex].buttons);
             drawScore(hits, misses);
           }
         }
