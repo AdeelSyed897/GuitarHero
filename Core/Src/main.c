@@ -215,6 +215,90 @@ void showSongFinished(void)
 }
 
 
+void initGuitarButtons(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+    // BTN1 = PB13, BTN3 = PB8
+    GPIO_InitStruct.Pin = GPIO_PIN_13 | GPIO_PIN_8;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    // BTN2 = PC12, BTN4 = PC11
+    GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_11;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+}
+
+uint8_t getButtonStates(void)
+{
+    uint8_t buttons = 0;
+
+    if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_13) == GPIO_PIN_RESET)
+        buttons |= (1 << 0);
+
+    if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12) == GPIO_PIN_RESET)
+        buttons |= (1 << 1);
+
+    if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_8) == GPIO_PIN_RESET)
+        buttons |= (1 << 2);
+
+    if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == GPIO_PIN_RESET)
+        buttons |= (1 << 3);
+
+    return buttons;
+}
+
+
+const uint16_t laneColors[4] = {
+    ST7735_RED,
+    ST7735_GREEN,
+    ST7735_BLUE,
+    ST7735_YELLOW
+};
+
+void drawNoteLanes(void)
+{
+    Display_fillScreen(ST77XX_BLACK);
+
+    for (int i = 0; i < 4; i++)
+    {
+        // Four lanes across the 160-pixel screen
+        Display_drawRect(i * 40, 20, 40, 95, ST7735_WHITE);
+
+        // Colored button indicators
+        Display_fillRect(i * 40 + 10, 92, 20, 15, laneColors[i]);
+    }
+}
+
+void drawCurrentNote(uint8_t button)
+{
+    // Clear only the note display area
+    Display_fillRect(0, 35, 160, 45, ST7735_BLACK);
+
+    // Highlight the lane for the active note
+    Display_fillRect(button * 40 + 5, 45, 30, 25, laneColors[button]);
+}
+
+void drawScore(uint32_t hits, uint32_t misses)
+{
+    char scoreText[35];
+
+    Display_fillRect(0, 0, 160, 18, ST7735_BLACK);
+    Display_setTextSize(1, 1);
+    Display_setTextColor(ST7735_WHITE);
+    Display_setCursor(4, 4);
+
+    snprintf(scoreText, sizeof(scoreText),
+             "Hits:%lu Miss:%lu",
+             (unsigned long)hits, (unsigned long)misses);
+
+    Display_print(scoreText);
+}
+
+
+
+
 
 /* USER CODE END 0 */
 
@@ -313,6 +397,7 @@ int main(void)
   TFTShield18_setBacklight(TFTSHIELD_BACKLIGHT_ON);
 
   /* Place extra user setup code here */
+  initGuitarButtons();
   buzzerDisable(&buzzer1);
 
   GameState gameState = WELCOME;
@@ -322,6 +407,10 @@ int main(void)
   uint32_t noteIndex = 0;
   uint32_t noteStart = 0;
   uint8_t noteSounding = 0;
+  uint32_t hits = 0;
+  uint32_t misses = 0;
+  uint8_t noteHit = 0;
+  uint8_t lastGuitarButtons = 0;
 
   runTimer2();
   showWelcome();
@@ -330,6 +419,12 @@ int main(void)
 
   uint32_t now = timer;
   uint32_t buttons = TFTShield18_readButtons();
+
+  uint8_t guitarButtons = getButtonStates();
+
+  // Only detect newly pressed buttons
+  uint8_t newPresses = guitarButtons & ~lastGuitarButtons;
+  lastGuitarButtons = guitarButtons;
 
   // Detect when joystick SELECT is newly pressed
   uint8_t selectPressed = (lastButtonState & TFTSHIELD_BUTTON_IN) &&
@@ -362,9 +457,19 @@ int main(void)
       if (elapsed >= 300)
       {
         gameState = PLAYING;
-        showPlaying();
 
+        // Reset game progress
+        hits = 0;
+        misses = 0;
+        noteHit = 0;
         noteIndex = 0;
+
+        // Draw gameplay screen
+        drawNoteLanes();
+        drawCurrentNote(song[noteIndex].button);
+        drawScore(hits, misses);
+
+        // Start the first note
         noteStart = timer;
         playSongNote(noteIndex);
         noteSounding = 1;
@@ -383,39 +488,65 @@ int main(void)
       // Song playback
   if (gameState == PLAYING)
   {
-      uint32_t elapsed = timer - noteStart;
-      uint32_t duration = song[noteIndex].duration;
+        uint32_t elapsed = timer - noteStart;
+    uint32_t duration = song[noteIndex].duration;
 
-      // Silence the final 8 ticks of each note
-      if (noteSounding && (duration <= 8 || elapsed >= duration - 8))
-      {
-          buzzerDisable(&buzzer1);
-          noteSounding = 0;
-      }
+    // Check for correct button presses
+    if (!noteHit && elapsed < duration)
+    {
+        uint8_t expectedButton = song[noteIndex].button;
 
-      // Advance to the next note
-      if (elapsed >= duration)
-      {
-          noteIndex++;
+        if (newPresses & (1 << expectedButton))
+        {
+            hits++;
+            noteHit = 1;
+            drawScore(hits, misses);
+        }
+    }
 
-          if (noteIndex >= SONG_LENGTH)
-          {
-              buzzerDisable(&buzzer1);
-              gameState = WIN;
-              showSongFinished();
+    // Silence the final 8 ticks of the note
+    if (noteSounding && (duration <= 8 || elapsed >= duration - 8))
+    {
+        buzzerDisable(&buzzer1);
+        noteSounding = 0;
+    }
+
+    // Advance when the note finishes
+    if (elapsed >= duration)
+    {
+        // Count a missed note
+        if (!noteHit)
+        {
+            misses++;
+        }
+
+        noteIndex++;
+
+        if (noteIndex >= SONG_LENGTH)
+        {
+            buzzerDisable(&buzzer1);
+            gameState = WIN;  // Temporary result state
+            showSongFinished();
+        }
+        else
+        {
+            // Reset hit detection for the next note
+            noteHit = 0;
+
+            noteStart += duration;
+            playSongNote(noteIndex);
+            noteSounding = 1;
+
+            // Display the next note
+            drawCurrentNote(song[noteIndex].button);
+            drawScore(hits, misses);
           }
-          else
-          {
-              noteStart += duration;
-              playSongNote(noteIndex);
-              noteSounding = 1;
-          }
-      }
-  } // End of PLAYING state
+        }
+      } // End of PLAYING state
 
-     /* USER CODE END WHILE */
-    /* USER CODE BEGIN 3 */
-  }
+      /* USER CODE END WHILE */
+      /* USER CODE BEGIN 3 */
+    }
   /* USER CODE END 3 */
 }
 
