@@ -1,0 +1,6 @@
+Core/Src/graphics/Adafruit_TFTShield18_API.cpp:23:TFTShield18_create	16	static
+Core/Src/graphics/Adafruit_TFTShield18_API.cpp:28:TFTShield18_begin	0	static
+Core/Src/graphics/Adafruit_TFTShield18_API.cpp:32:TFTShield18_setBacklight	0	static
+Core/Src/graphics/Adafruit_TFTShield18_API.cpp:36:TFTShield18_setBacklightFreq	0	static
+Core/Src/graphics/Adafruit_TFTShield18_API.cpp:39:TFTShield18_tftReset	0	static
+Core/Src/graphics/Adafruit_TFTShield18_API.cpp:42:TFTShield18_readButtons	0	static

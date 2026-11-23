@@ -1,0 +1,4 @@
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c:85:HAL_RNGEx_SetConfig	24	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c:181:HAL_RNGEx_GetConfig	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c:232:HAL_RNGEx_LockConfig	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c:291:HAL_RNGEx_RecoverSeedError	8	static

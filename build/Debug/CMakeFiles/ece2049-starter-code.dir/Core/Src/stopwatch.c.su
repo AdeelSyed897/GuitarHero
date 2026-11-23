@@ -1,0 +1,4 @@
+Core/Src/stopwatch.c:19:runTimer2	0	static
+Core/Src/stopwatch.c:33:stopTimer2	0	static
+Core/Src/stopwatch.c:41:TIM2_IRQHandler	0	static
+Core/Src/stopwatch.c:54:displayTime	48	static

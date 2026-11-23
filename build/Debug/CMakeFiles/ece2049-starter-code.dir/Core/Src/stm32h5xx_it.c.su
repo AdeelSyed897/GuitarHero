@@ -1,0 +1,17 @@
+Core/Src/stm32h5xx_it.c:76:NMI_Handler	0	static
+Core/Src/stm32h5xx_it.c:91:HardFault_Handler	0	static
+Core/Src/stm32h5xx_it.c:106:MemManage_Handler	0	static
+Core/Src/stm32h5xx_it.c:121:BusFault_Handler	0	static
+Core/Src/stm32h5xx_it.c:136:UsageFault_Handler	0	static
+Core/Src/stm32h5xx_it.c:151:SVC_Handler	0	static
+Core/Src/stm32h5xx_it.c:164:DebugMon_Handler	0	static
+Core/Src/stm32h5xx_it.c:177:PendSV_Handler	0	static
+Core/Src/stm32h5xx_it.c:190:SysTick_Handler	0	static
+Core/Src/stm32h5xx_it.c:211:EXTI13_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:225:GPDMA1_Channel5_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:239:GPDMA1_Channel6_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:253:GPDMA1_Channel7_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:267:I2C1_EV_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:281:I2C1_ER_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:295:SPI2_IRQHandler	0	static
+Core/Src/stm32h5xx_it.c:308:HAL_SPI_TxCpltCallback	0	static

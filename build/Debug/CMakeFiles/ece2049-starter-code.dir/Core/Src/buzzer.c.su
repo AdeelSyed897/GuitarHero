@@ -1,0 +1,4 @@
+Core/Src/buzzer.c:8:buzzerEnable	8	static
+Core/Src/buzzer.c:13:buzzerDisable	8	static
+Core/Src/buzzer.c:18:buzzerSetNote	16	static
+Core/Src/buzzer.c:26:buzzerGetPrescalerFromNote	16	static

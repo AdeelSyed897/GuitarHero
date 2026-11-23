@@ -1,0 +1,13 @@
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:154:HAL_RNG_Init	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:352:HAL_RNG_MspInit	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:278:HAL_RNG_DeInit	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:367:HAL_RNG_MspDeInit	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:634:HAL_RNG_GenerateRandomNumber	24	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:951:RNG_RecoverSeedError	24	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:716:HAL_RNG_GenerateRandomNumber_IT	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:765:HAL_RNG_IRQHandler	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:885:HAL_RNG_ErrorCallback	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:869:HAL_RNG_ReadyDataCallback	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:852:HAL_RNG_ReadLastRandomNumber	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:919:HAL_RNG_GetState	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c:929:HAL_RNG_GetError	0	static

@@ -30,6 +30,7 @@
 #include "stm32h5xx_hal.h"
 
 #include "buzzer.h"
+#include "stopwatch.h"
 #include "stm32h5xx_hal_tim.h"
 
 /* USER CODE END Includes */
@@ -193,51 +194,48 @@ int main(void)
 
   Display_setTextSize(1, 1);
   Display_setTextColor(ST7735_BLACK);
-  Display_setCursor(Display_width() / 2 - 58, Display_height() / 2 - 5);
-  Display_print("Welcome to ECE 2049!");
+  Display_setCursor(Display_width() / 2 - 57, 10);
+  Display_print("ECE 2049 Stop Watch");
+  Display_setCursor(4, Display_height() - 20);
+  Display_print("B2: start   B1: stop/reset");
 
-  int32_t currNoteNum = 0;
-  int32_t currOctave = 1;
-
-  buzzerSetNote(&buzzer1, chromaticScale[currNoteNum], currOctave);
-  buzzerDisable(&buzzer1);
+  buzzerDisable(&buzzer1);                 // buzzer not used in this example
 
   uint32_t lastButtonState = TFTSHIELD_BUTTON_ALL;
+  uint32_t timer_on = 0;
+  uint32_t lastShown = 0xFFFFFFFF;
 
-  while (1)
+  displayTime(0);
+
+  while (1)    // Forever loop of the stop watch
   {
-    /* Place application loop code here */
+    uint32_t buttons = TFTShield18_readButtons();   // pressed = 0
 
-    uint32_t buttons = TFTShield18_readButtons();
-
-    if(lastButtonState != buttons) {
-      if(!(buttons & TFTSHIELD_BUTTON_1)) {
-        if(buzzer1.currBuzzerState) buzzerDisable(&buzzer1);
-        else buzzerEnable(&buzzer1);
-      } else if(!(buttons & TFTSHIELD_BUTTON_UP)) {
-        currNoteNum++;
-        if (currNoteNum >= NUM_NOTES) {
-          currNoteNum %= NUM_NOTES;
-          currOctave++;
-        }
-
-        printf("Current Note Num: %d, Current Octave: %d\n", currNoteNum, currOctave);
-
-        buzzerSetNote(&buzzer1, chromaticScale[currNoteNum], currOctave);
-      } else if (!(buttons & TFTSHIELD_BUTTON_DOWN)) {
-        currNoteNum--;
-        if (currNoteNum < 0) {
-          currNoteNum = NUM_NOTES + currNoteNum;
-          currOctave--;
-        }
-
-        printf("Current Note Num: %d, Current Octave: %d\n", currNoteNum, currOctave);
-
-        buzzerSetNote(&buzzer1, chromaticScale[currNoteNum], currOctave);
+    if (lastButtonState != buttons)                 // act once per press
+    {
+      if (!(buttons & TFTSHIELD_BUTTON_1))
+      {
+        timer_on = 0;
+        stopTimer2();                    // stop and reset timer
+        GPIOA->BSRR = GPIO_BSRR_BR5;     // turn LED off
+        displayTime(0);
+      }
+      if (!(buttons & TFTSHIELD_BUTTON_2) && !timer_on)
+      {
+        timer_on = 1;
+        runTimer2();                     // starts timer
+        GPIOA->BSRR = GPIO_BSRR_BR5;     // turn LED off
       }
     }
-
     lastButtonState = buttons;
+
+    uint32_t now = timer;                // read the volatile count once
+    if (timer_on)
+      if (now % 10 == 0 && now != lastShown)   // update display every 1/10th sec
+      {
+        displayTime(now);
+        lastShown = now;
+      }
 
     /* USER CODE END WHILE */
 

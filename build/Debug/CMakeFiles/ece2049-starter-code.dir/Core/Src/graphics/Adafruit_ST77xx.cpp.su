@@ -1,0 +1,12 @@
+Core/Src/graphics/Adafruit_ST77xx.cpp:50:_ZN15Adafruit_ST77xxC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb	48	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:61:_ZN15Adafruit_ST77xx11displayInitEPKh	48	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:93:_ZN15Adafruit_ST77xx5beginEj	0	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:111:_ZN15Adafruit_ST77xx10commonInitEPKh	40	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:128:_ZN15Adafruit_ST77xx13setAddrWindowEtttt	32	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:150:_ZN15Adafruit_ST77xx11setRotationEh	24	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:188:_ZN15Adafruit_ST77xx14setColRowStartEaa	0	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:199:_ZN15Adafruit_ST77xx13enableDisplayEb	0	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:209:_ZN15Adafruit_ST77xx13enableTearingEb	0	static
+Core/Src/graphics/Adafruit_ST77xx.cpp:219:_ZN15Adafruit_ST77xx11enableSleepEb	0	static
+Core/Inc/graphics/Print.h:65:_ZN5Print17availableForWriteEv	0	static
+Core/Inc/graphics/Print.h:92:_ZN5Print5flushEv	0	static

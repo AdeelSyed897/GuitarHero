@@ -1,0 +1,1537 @@
+STMicroelectronics Memory Configuration
+
+Name     Origin   Length   Bytes-Used %age-Used Attributes
+RAM 0x20000000 0x044000 0x000ad8        0%  rwx     
+FLASH 0x8000000 0x080000 0x00b8b0        9%  rx      
+
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        0     1 _estack = ORIGIN(RAM) + LENGTH(RAM)
+       0        0        0     1 _sstack = _estack - _Min_Stack_Size
+       0        0        0     1 _Min_Heap_Size = 0x200
+       0        0        0     1 _Min_Stack_Size = 0x400
+ 8000000  8000000      254     1 .isr_vector
+ 8000000  8000000        0     1         . = ALIGN(4)
+ 8000000  8000000      254     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.isr_vector)
+ 8000000  8000000      254     1                 g_pfnVectors
+ 8000254  8000254        0     1         . = ALIGN(4)
+ 8000260  8000260     acb0    16 .text
+ 8000260  8000260        0     1         . = ALIGN(4)
+ 8000260  8000260       14     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libclang_rt.builtins.a(aeabi_uldivmod.S.obj):(.text)
+ 8000260  8000260        0     1                 $t
+ 8000261  8000261       14     1                 __aeabi_uldivmod
+ 8000274  8000274       10     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(strlen.S.o):(.text)
+ 8000274  8000274        0     1                 $t
+ 8000275  8000275       10     1                 strlen
+ 8000284  8000284       b4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.text.SystemInit)
+ 8000284  8000284        0     1                 $t
+ 8000285  8000285       b4     1                 SystemInit
+ 8000338  8000338       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_NVIC_SetPriorityGrouping)
+ 8000338  8000338        0     1                 $t
+ 8000339  8000339       20     1                 HAL_NVIC_SetPriorityGrouping
+ 8000358  8000358       5c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_NVIC_SetPriority)
+ 8000358  8000358        0     1                 $t
+ 8000359  8000359       5c     1                 HAL_NVIC_SetPriority
+ 80003b4  80003b4       22     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_NVIC_EnableIRQ)
+ 80003b4  80003b4        0     1                 $t
+ 80003b5  80003b5       22     1                 HAL_NVIC_EnableIRQ
+ 80003d8  80003d8       28     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_SYSTICK_Config)
+ 80003d8  80003d8        0     1                 $t
+ 80003d9  80003d9       28     1                 HAL_SYSTICK_Config
+ 8000400  8000400       70     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_SYSTICK_CLKSourceConfig)
+ 8000400  8000400        0     1                 $t
+ 8000401  8000401       70     1                 HAL_SYSTICK_CLKSourceConfig
+ 8000408  8000408        0     1                 $d
+ 800040e  800040e        0     1                 $t
+ 8000470  8000470       3c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_SYSTICK_GetCLKSourceConfig)
+ 8000470  8000470        0     1                 $t
+ 8000471  8000471       3c     1                 HAL_SYSTICK_GetCLKSourceConfig
+ 8000496  8000496        0     1                 $d
+ 800049a  800049a        0     1                 $t
+ 80004ac  80004ac       24     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_MPU_Enable)
+ 80004ac  80004ac        0     1                 $t
+ 80004ad  80004ad       24     1                 HAL_MPU_Enable
+ 80004d0  80004d0       26     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_MPU_Disable)
+ 80004d0  80004d0        0     1                 $t
+ 80004d1  80004d1       26     1                 HAL_MPU_Disable
+ 80004f8  80004f8       54     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_MPU_ConfigRegion)
+ 80004f8  80004f8        0     1                 $t
+ 80004f9  80004f9       54     1                 HAL_MPU_ConfigRegion
+ 800054c  800054c       40     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.text.HAL_MPU_ConfigMemoryAttributes)
+ 800054c  800054c        0     1                 $t
+ 800054d  800054d       40     1                 HAL_MPU_ConfigMemoryAttributes
+ 800058c  800058c      566     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_Init)
+ 800058c  800058c        0     1                 $t
+ 800058d  800058d      566     1                 HAL_DMA_Init
+ 8000af4  8000af4       c4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_Start_IT)
+ 8000af4  8000af4        0     1                 $t
+ 8000af5  8000af5       c4     1                 HAL_DMA_Start_IT
+ 8000bb8  8000bb8       2c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_Abort_IT)
+ 8000bb8  8000bb8        0     1                 $t
+ 8000bb9  8000bb9       2c     1                 HAL_DMA_Abort_IT
+ 8000be4  8000be4      19e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_IRQHandler)
+ 8000be4  8000be4        0     1                 $t
+ 8000be5  8000be5      19e     1                 HAL_DMA_IRQHandler
+ 8000d84  8000d84        8     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_GetState)
+ 8000d84  8000d84        0     1                 $t
+ 8000d85  8000d85        8     1                 HAL_DMA_GetState
+ 8000d8c  8000d8c        6     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_GetError)
+ 8000d8c  8000d8c        0     1                 $t
+ 8000d8d  8000d8d        6     1                 HAL_DMA_GetError
+ 8000d94  8000d94       44     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.text.HAL_DMA_ConfigChannelAttributes)
+ 8000d94  8000d94        0     1                 $t
+ 8000d95  8000d95       44     1                 HAL_DMA_ConfigChannelAttributes
+ 8000dd8  8000dd8       d6     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.text.HAL_DMAEx_List_Start_IT)
+ 8000dd8  8000dd8        0     1                 $t
+ 8000dd9  8000dd9       d6     1                 HAL_DMAEx_List_Start_IT
+ 8000eb0  8000eb0        c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.text.HAL_DMAEx_GetFifoLevel)
+ 8000eb0  8000eb0        0     1                 $t
+ 8000eb1  8000eb1        c     1                 HAL_DMAEx_GetFifoLevel
+ 8000ebc  8000ebc      62e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_OscConfig)
+ 8000ebc  8000ebc        0     1                 $t
+ 8000ebd  8000ebd      62e     1                 HAL_RCC_OscConfig
+ 80014ec  80014ec       30     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_GetHCLKFreq)
+ 80014ec  80014ec        0     1                 $t
+ 80014ed  80014ed       30     1                 HAL_RCC_GetHCLKFreq
+ 800151c  800151c      262     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_ClockConfig)
+ 800151c  800151c        0     1                 $t
+ 800151d  800151d      262     1                 HAL_RCC_ClockConfig
+ 8001780  8001780      128     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_GetSysClockFreq)
+ 8001780  8001780        0     1                 $t
+ 8001781  8001781      128     1                 HAL_RCC_GetSysClockFreq
+ 8001898  8001898        0     1                 $d
+ 80018a8  80018a8       46     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK1Freq)
+ 80018a8  80018a8        0     1                 $t
+ 80018a9  80018a9       46     1                 HAL_RCC_GetPCLK1Freq
+ 80018f0  80018f0       46     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK2Freq)
+ 80018f0  80018f0        0     1                 $t
+ 80018f1  80018f1       46     1                 HAL_RCC_GetPCLK2Freq
+ 8001938  8001938       46     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK3Freq)
+ 8001938  8001938        0     1                 $t
+ 8001939  8001939       46     1                 HAL_RCC_GetPCLK3Freq
+ 8001980  8001980      966     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.HAL_RCCEx_PeriphCLKConfig)
+ 8001980  8001980        0     1                 $t
+ 8001981  8001981      966     1                 HAL_RCCEx_PeriphCLKConfig
+ 80019bc  80019bc        0     1                 $d
+ 80019c8  80019c8        0     1                 $t
+ 80019f8  80019f8        0     1                 $d
+ 8001a04  8001a04        0     1                 $t
+ 8001a30  8001a30        0     1                 $d
+ 8001a3c  8001a3c        0     1                 $t
+ 8001a68  8001a68        0     1                 $d
+ 8001a74  8001a74        0     1                 $t
+ 8001aa0  8001aa0        0     1                 $d
+ 8001aac  8001aac        0     1                 $t
+ 8001ad8  8001ad8        0     1                 $d
+ 8001ae4  8001ae4        0     1                 $t
+ 8001b10  8001b10        0     1                 $d
+ 8001b1c  8001b1c        0     1                 $t
+ 8001c90  8001c90        0     1                 $d
+ 8001c9c  8001c9c        0     1                 $t
+ 8001ccc  8001ccc        0     1                 $d
+ 8001cd8  8001cd8        0     1                 $t
+ 8001e74  8001e74        0     1                 $d
+ 8001e7e  8001e7e        0     1                 $t
+ 8001eba  8001eba        0     1                 $d
+ 8001ec4  8001ec4        0     1                 $t
+ 8001f00  8001f00        0     1                 $d
+ 8001f0a  8001f0a        0     1                 $t
+ 8001f46  8001f46        0     1                 $d
+ 8001f52  8001f52        0     1                 $t
+ 8001f7e  8001f7e        0     1                 $d
+ 8001f82  8001f82        0     1                 $t
+ 80022e8  80022e8       ea     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.RCCEx_PLL2_Config)
+ 80022e8  80022e8        0     1                 $t
+ 80022e9  80022e9       ea     1                 RCCEx_PLL2_Config
+ 80023d4  80023d4       ea     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.RCCEx_PLL3_Config)
+ 80023d4  80023d4        0     1                 $t
+ 80023d5  80023d5       ea     1                 RCCEx_PLL3_Config
+ 80024c0  80024c0      16c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.HAL_RCCEx_GetPLL1ClockFreq)
+ 80024c0  80024c0        0     1                 $t
+ 80024c1  80024c1      16c     1                 HAL_RCCEx_GetPLL1ClockFreq
+ 80024fa  80024fa        0     1                 $d
+ 80024fe  80024fe        0     1                 $t
+ 8002620  8002620        0     1                 $d
+ 800262c  800262c      16c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.HAL_RCCEx_GetPLL2ClockFreq)
+ 800262c  800262c        0     1                 $t
+ 800262d  800262d      16c     1                 HAL_RCCEx_GetPLL2ClockFreq
+ 8002666  8002666        0     1                 $d
+ 800266a  800266a        0     1                 $t
+ 800278c  800278c        0     1                 $d
+ 8002798  8002798      16c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.HAL_RCCEx_GetPLL3ClockFreq)
+ 8002798  8002798        0     1                 $t
+ 8002799  8002799      16c     1                 HAL_RCCEx_GetPLL3ClockFreq
+ 80027d2  80027d2        0     1                 $d
+ 80027d6  80027d6        0     1                 $t
+ 80028f8  80028f8        0     1                 $d
+ 8002904  8002904      f22     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.text.HAL_RCCEx_GetPeriphCLKFreq)
+ 8002904  8002904        0     1                 $t
+ 8002905  8002905      f22     1                 HAL_RCCEx_GetPeriphCLKFreq
+ 800294a  800294a        0     1                 $d
+ 800298a  800298a        0     1                 $t
+ 8002a7e  8002a7e        0     1                 $d
+ 8002a8a  8002a8a        0     1                 $t
+ 8002b3e  8002b3e        0     1                 $d
+ 8002b48  8002b48        0     1                 $t
+ 8002e88  8002e88        0     1                 $d
+ 8002e92  8002e92        0     1                 $t
+ 8002ed8  8002ed8        0     1                 $d
+ 8002ee2  8002ee2        0     1                 $t
+ 8002fc4  8002fc4        0     1                 $d
+ 8002fd0  8002fd0        0     1                 $t
+ 8002fee  8002fee        0     1                 $d
+ 8002ff6  8002ff6        0     1                 $t
+ 8003828  8003828      190     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.text.HAL_GPIO_Init)
+ 8003828  8003828        0     1                 $t
+ 8003829  8003829      190     1                 HAL_GPIO_Init
+ 80039b8  80039b8        c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.text.HAL_GPIO_WritePin)
+ 80039b8  80039b8        0     1                 $t
+ 80039b9  80039b9        c     1                 HAL_GPIO_WritePin
+ 80039c4  80039c4       4c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.text.HAL_Init)
+ 80039c4  80039c4        0     1                 $t
+ 80039c5  80039c5       4c     1                 HAL_Init
+ 8003a10  8003a10       aa     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.text.HAL_InitTick)
+ 8003a10  8003a10        0     1                 $t
+ 8003a11  8003a11       aa     1                 HAL_InitTick
+ 8003abc  8003abc       1a     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.text.HAL_IncTick)
+ 8003abc  8003abc        0     1                 $t
+ 8003abd  8003abd       1a     1                 HAL_IncTick
+ 8003ad8  8003ad8        c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.text.HAL_GetTick)
+ 8003ad8  8003ad8        0     1                 $t
+ 8003ad9  8003ad9        c     1                 HAL_GetTick
+ 8003ae4  8003ae4       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.text.HAL_EXTI_RegisterCallback)
+ 8003ae4  8003ae4        0     1                 $t
+ 8003ae5  8003ae5       20     1                 HAL_EXTI_RegisterCallback
+ 8003b04  8003b04        e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.text.HAL_EXTI_GetHandle)
+ 8003b04  8003b04        0     1                 $t
+ 8003b05  8003b05        e     1                 HAL_EXTI_GetHandle
+ 8003b14  8003b14       54     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.text.HAL_EXTI_IRQHandler)
+ 8003b14  8003b14        0     1                 $t
+ 8003b15  8003b15       54     1                 HAL_EXTI_IRQHandler
+ 8003b68  8003b68       ae     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_Init)
+ 8003b68  8003b68        0     1                 $t
+ 8003b69  8003b69       ae     1                 HAL_I2C_Init
+ 8003c18  8003c18       96     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_WaitOnFlagUntilTimeout)
+ 8003c18  8003c18        0     1                 $t
+ 8003c19  8003c19       96     1                 I2C_WaitOnFlagUntilTimeout
+ 8003cb0  8003cb0       3a     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_TransferConfig)
+ 8003cb0  8003cb0        0     1                 $t
+ 8003cb1  8003cb1       3a     1                 I2C_TransferConfig
+ 8003cec  8003cec      1a6     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_Master_ISR_IT)
+ 8003cec  8003cec        0     1                 $t
+ 8003ced  8003ced      1a6     1                 I2C_Master_ISR_IT
+ 8003e94  8003e94       7a     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_Enable_IRQ)
+ 8003e94  8003e94        0     1                 $t
+ 8003e95  8003e95       7a     1                 I2C_Enable_IRQ
+ 8003f10  8003f10      178     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_Slave_ISR_IT)
+ 8003f10  8003f10        0     1                 $t
+ 8003f11  8003f11      178     1                 I2C_Slave_ISR_IT
+ 8004088  8004088      1ae     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_Master_Transmit_DMA)
+ 8004088  8004088        0     1                 $t
+ 8004089  8004089      1ae     1                 HAL_I2C_Master_Transmit_DMA
+ 8004238  8004238      1e2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_Master_ISR_DMA)
+ 8004238  8004238        0     1                 $t
+ 8004239  8004239      1e2     1                 I2C_Master_ISR_DMA
+ 800441c  800441c       e6     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_DMAMasterTransmitCplt)
+ 800441c  800441c        0     1                 $t
+ 800441d  800441d       e6     1                 I2C_DMAMasterTransmitCplt
+ 8004504  8004504       14     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_DMAError)
+ 8004504  8004504        0     1                 $t
+ 8004505  8004505       14     1                 I2C_DMAError
+ 8004518  8004518      1aa     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_Master_Receive_DMA)
+ 8004518  8004518        0     1                 $t
+ 8004519  8004519      1aa     1                 HAL_I2C_Master_Receive_DMA
+ 80046c4  80046c4       e6     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_DMAMasterReceiveCplt)
+ 80046c4  80046c4        0     1                 $t
+ 80046c5  80046c5       e6     1                 I2C_DMAMasterReceiveCplt
+ 80047ac  80047ac      132     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_Slave_ISR_DMA)
+ 80047ac  80047ac        0     1                 $t
+ 80047ad  80047ad      132     1                 I2C_Slave_ISR_DMA
+ 80048e0  80048e0      1de     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_Mem_ISR_DMA)
+ 80048e0  80048e0        0     1                 $t
+ 80048e1  80048e1      1de     1                 I2C_Mem_ISR_DMA
+ 8004ac0  8004ac0      134     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_IsDeviceReady)
+ 8004ac0  8004ac0        0     1                 $t
+ 8004ac1  8004ac1      134     1                 HAL_I2C_IsDeviceReady
+ 8004bf4  8004bf4       3e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_DMAAbort)
+ 8004bf4  8004bf4        0     1                 $t
+ 8004bf5  8004bf5       3e     1                 I2C_DMAAbort
+ 8004c34  8004c34        e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_EV_IRQHandler)
+ 8004c34  8004c34        0     1                 $t
+ 8004c35  8004c35        e     1                 HAL_I2C_EV_IRQHandler
+ 8004c44  8004c44       64     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_ER_IRQHandler)
+ 8004c44  8004c44        0     1                 $t
+ 8004c45  8004c45       64     1                 HAL_I2C_ER_IRQHandler
+ 8004ca8  8004ca8      188     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITError)
+ 8004ca8  8004ca8        0     1                 $t
+ 8004ca9  8004ca9      188     1                 I2C_ITError
+ 8004e30  8004e30        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_MasterTxCpltCallback)
+ 8004e30  8004e30        0     1                 $t
+ 8004e31  8004e31        2     1                 HAL_I2C_MasterTxCpltCallback
+ 8004e34  8004e34        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_MasterRxCpltCallback)
+ 8004e34  8004e34        0     1                 $t
+ 8004e35  8004e35        2     1                 HAL_I2C_MasterRxCpltCallback
+ 8004e38  8004e38        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_SlaveTxCpltCallback)
+ 8004e38  8004e38        0     1                 $t
+ 8004e39  8004e39        2     1                 HAL_I2C_SlaveTxCpltCallback
+ 8004e3c  8004e3c        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_SlaveRxCpltCallback)
+ 8004e3c  8004e3c        0     1                 $t
+ 8004e3d  8004e3d        2     1                 HAL_I2C_SlaveRxCpltCallback
+ 8004e40  8004e40        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_AddrCallback)
+ 8004e40  8004e40        0     1                 $t
+ 8004e41  8004e41        2     1                 HAL_I2C_AddrCallback
+ 8004e44  8004e44        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_ListenCpltCallback)
+ 8004e44  8004e44        0     1                 $t
+ 8004e45  8004e45        2     1                 HAL_I2C_ListenCpltCallback
+ 8004e48  8004e48        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_MemTxCpltCallback)
+ 8004e48  8004e48        0     1                 $t
+ 8004e49  8004e49        2     1                 HAL_I2C_MemTxCpltCallback
+ 8004e4c  8004e4c        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_MemRxCpltCallback)
+ 8004e4c  8004e4c        0     1                 $t
+ 8004e4d  8004e4d        2     1                 HAL_I2C_MemRxCpltCallback
+ 8004e50  8004e50        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_ErrorCallback)
+ 8004e50  8004e50        0     1                 $t
+ 8004e51  8004e51        2     1                 HAL_I2C_ErrorCallback
+ 8004e54  8004e54        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_AbortCpltCallback)
+ 8004e54  8004e54        0     1                 $t
+ 8004e55  8004e55        2     1                 HAL_I2C_AbortCpltCallback
+ 8004e58  8004e58        8     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.HAL_I2C_GetState)
+ 8004e58  8004e58        0     1                 $t
+ 8004e59  8004e59        8     1                 HAL_I2C_GetState
+ 8004e60  8004e60       6e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITMasterSeqCplt)
+ 8004e60  8004e60        0     1                 $t
+ 8004e61  8004e61       6e     1                 I2C_ITMasterSeqCplt
+ 8004ed0  8004ed0      140     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITMasterCplt)
+ 8004ed0  8004ed0        0     1                 $t
+ 8004ed1  8004ed1      140     1                 I2C_ITMasterCplt
+ 8005010  8005010      284     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITSlaveCplt)
+ 8005010  8005010        0     1                 $t
+ 8005011  8005011      284     1                 I2C_ITSlaveCplt
+ 8005294  8005294       74     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITListenCplt)
+ 8005294  8005294        0     1                 $t
+ 8005295  8005295       74     1                 I2C_ITListenCplt
+ 8005308  8005308       94     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITSlaveSeqCplt)
+ 8005308  8005308        0     1                 $t
+ 8005309  8005309       94     1                 I2C_ITSlaveSeqCplt
+ 800539c  800539c       8e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_ITAddrCplt)
+ 800539c  800539c        0     1                 $t
+ 800539d  800539d       8e     1                 I2C_ITAddrCplt
+ 800542c  800542c      152     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.text.I2C_IsErrorOccurred)
+ 800542c  800542c        0     1                 $t
+ 800542d  800542d      152     1                 I2C_IsErrorOccurred
+ 8005580  8005580       4c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.text.HAL_I2CEx_ConfigAnalogFilter)
+ 8005580  8005580        0     1                 $t
+ 8005581  8005581       4c     1                 HAL_I2CEx_ConfigAnalogFilter
+ 80055cc  80055cc       4c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.text.HAL_I2CEx_ConfigDigitalFilter)
+ 80055cc  80055cc        0     1                 $t
+ 80055cd  80055cd       4c     1                 HAL_I2CEx_ConfigDigitalFilter
+ 8005618  8005618       14     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.text.HAL_ICACHE_Enable)
+ 8005618  8005618        0     1                 $t
+ 8005619  8005619       14     1                 HAL_ICACHE_Enable
+ 800562c  800562c       ca     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.text.HAL_RNG_Init)
+ 800562c  800562c        0     1                 $t
+ 800562d  800562d       ca     1                 HAL_RNG_Init
+ 80056f8  80056f8      1c2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_Init)
+ 80056f8  80056f8        0     1                 $t
+ 80056f9  80056f9      1c2     1                 HAL_SPI_Init
+ 80058bc  80058bc       c4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.SPI_CloseTransfer)
+ 80058bc  80058bc        0     1                 $t
+ 80058bd  80058bd       c4     1                 SPI_CloseTransfer
+ 8005980  8005980      236     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_Transmit_DMA)
+ 8005980  8005980        0     1                 $t
+ 8005981  8005981      236     1                 HAL_SPI_Transmit_DMA
+ 8005bb8  8005bb8        8     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.SPI_DMAHalfTransmitCplt)
+ 8005bb8  8005bb8        0     1                 $t
+ 8005bb9  8005bb9        8     1                 SPI_DMAHalfTransmitCplt
+ 8005bc0  8005bc0       26     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.SPI_DMATransmitCplt)
+ 8005bc0  8005bc0        0     1                 $t
+ 8005bc1  8005bc1       26     1                 SPI_DMATransmitCplt
+ 8005be8  8005be8       30     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.SPI_DMAError)
+ 8005be8  8005be8        0     1                 $t
+ 8005be9  8005be9       30     1                 SPI_DMAError
+ 8005c18  8005c18      25c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_IRQHandler)
+ 8005c18  8005c18        0     1                 $t
+ 8005c19  8005c19      25c     1                 HAL_SPI_IRQHandler
+ 8005e74  8005e74        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_SuspendCallback)
+ 8005e74  8005e74        0     1                 $t
+ 8005e75  8005e75        2     1                 HAL_SPI_SuspendCallback
+ 8005e78  8005e78        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_ErrorCallback)
+ 8005e78  8005e78        0     1                 $t
+ 8005e79  8005e79        2     1                 HAL_SPI_ErrorCallback
+ 8005e7c  8005e7c        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_TxRxCpltCallback)
+ 8005e7c  8005e7c        0     1                 $t
+ 8005e7d  8005e7d        2     1                 HAL_SPI_TxRxCpltCallback
+ 8005e80  8005e80        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_RxCpltCallback)
+ 8005e80  8005e80        0     1                 $t
+ 8005e81  8005e81        2     1                 HAL_SPI_RxCpltCallback
+ 8005e84  8005e84       18     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.SPI_DMAAbortOnError)
+ 8005e84  8005e84        0     1                 $t
+ 8005e85  8005e85       18     1                 SPI_DMAAbortOnError
+ 8005e9c  8005e9c        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.text.HAL_SPI_TxHalfCpltCallback)
+ 8005e9c  8005e9c        0     1                 $t
+ 8005e9d  8005e9d        2     1                 HAL_SPI_TxHalfCpltCallback
+ 8005ea0  8005ea0      228     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.TIM_Base_SetConfig)
+ 8005ea0  8005ea0        0     1                 $t
+ 8005ea1  8005ea1      228     1                 TIM_Base_SetConfig
+ 80060c8  80060c8       60     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.HAL_TIM_PWM_Init)
+ 80060c8  80060c8        0     1                 $t
+ 80060c9  80060c9       60     1                 HAL_TIM_PWM_Init
+ 8006128  8006128      106     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.HAL_TIM_PWM_Stop)
+ 8006128  8006128        0     1                 $t
+ 8006129  8006129      106     1                 HAL_TIM_PWM_Stop
+ 80061ec  80061ec        0     1                 $d
+ 80061f2  80061f2        0     1                 $t
+ 8006230  8006230       e8     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.TIM_OC1_SetConfig)
+ 8006230  8006230        0     1                 $t
+ 8006231  8006231       e8     1                 TIM_OC1_SetConfig
+ 8006318  8006318       e0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.TIM_OC2_SetConfig)
+ 8006318  8006318        0     1                 $t
+ 8006319  8006319       e0     1                 TIM_OC2_SetConfig
+ 80063f8  80063f8       e0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.TIM_OC3_SetConfig)
+ 80063f8  80063f8        0     1                 $t
+ 80063f9  80063f9       e0     1                 TIM_OC3_SetConfig
+ 80064d8  80064d8       e0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.TIM_OC4_SetConfig)
+ 80064d8  80064d8        0     1                 $t
+ 80064d9  80064d9       e0     1                 TIM_OC4_SetConfig
+ 80065b8  80065b8      260     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.text.HAL_TIM_PWM_ConfigChannel)
+ 80065b8  80065b8        0     1                 $t
+ 80065b9  80065b9      260     1                 HAL_TIM_PWM_ConfigChannel
+ 80065de  80065de        0     1                 $d
+ 80065e4  80065e4        0     1                 $t
+ 8006818  8006818      192     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.text.HAL_TIMEx_MasterConfigSynchronization)
+ 8006818  8006818        0     1                 $t
+ 8006819  8006819      192     1                 HAL_TIMEx_MasterConfigSynchronization
+ 80069ac  80069ac       fc     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.text.HAL_TIMEx_ConfigBreakDeadTime)
+ 80069ac  80069ac        0     1                 $t
+ 80069ad  80069ad       fc     1                 HAL_TIMEx_ConfigBreakDeadTime
+ 8006aa8  8006aa8       62     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.HAL_UART_Init)
+ 8006aa8  8006aa8        0     1                 $t
+ 8006aa9  8006aa9       62     1                 HAL_UART_Init
+ 8006b0c  8006b0c        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.HAL_UART_MspInit)
+ 8006b0c  8006b0c        0     1                 $t
+ 8006b0d  8006b0d        2     1                 HAL_UART_MspInit
+ 8006b10  8006b10       e4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.UART_AdvFeatureConfig)
+ 8006b10  8006b10        0     1                 $t
+ 8006b11  8006b11       e4     1                 UART_AdvFeatureConfig
+ 8006bf4  8006bf4      22e     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.UART_SetConfig)
+ 8006bf4  8006bf4        0     1                 $t
+ 8006bf5  8006bf5      22e     1                 UART_SetConfig
+ 8006e24  8006e24       c2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.UART_CheckIdleState)
+ 8006e24  8006e24        0     1                 $t
+ 8006e25  8006e25       c2     1                 UART_CheckIdleState
+ 8006ee8  8006ee8      126     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.HAL_UART_Transmit)
+ 8006ee8  8006ee8        0     1                 $t
+ 8006ee9  8006ee9      126     1                 HAL_UART_Transmit
+ 8007010  8007010      164     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.text.UART_WaitOnFlagUntilTimeout)
+ 8007010  8007010        0     1                 $t
+ 8007011  8007011      164     1                 UART_WaitOnFlagUntilTimeout
+ 8007174  8007174       56     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.BSP_LED_Init)
+ 8007174  8007174        0     1                 $t
+ 8007175  8007175       56     1                 BSP_LED_Init
+ 80071cc  80071cc       94     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.BSP_PB_Init)
+ 80071cc  80071cc        0     1                 $t
+ 80071cd  80071cd       94     1                 BSP_PB_Init
+ 8007260  8007260        6     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.BUTTON_USER_EXTI_Callback)
+ 8007260  8007260        0     1                 $t
+ 8007261  8007261        6     1                 BUTTON_USER_EXTI_Callback
+ 8007268  8007268       16     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.BSP_PB_IRQHandler)
+ 8007268  8007268        0     1                 $t
+ 8007269  8007269       16     1                 BSP_PB_IRQHandler
+ 8007280  8007280        2     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.BSP_PB_Callback)
+ 8007280  8007280        0     1                 $t
+ 8007281  8007281        2     1                 BSP_PB_Callback
+ 8007284  8007284       aa     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.BSP_COM_Init)
+ 8007284  8007284        0     1                 $t
+ 8007285  8007285       aa     1                 BSP_COM_Init
+ 8007330  8007330       34     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.MX_USART_Init)
+ 8007330  8007330        0     1                 $t
+ 8007331  8007331       34     1                 MX_USART_Init
+ 8007364  8007364       30     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.text.__io_putchar)
+ 8007364  8007364        0     1                 $t
+ 8007365  8007365       30     1                 __io_putchar
+ 8007394  8007394      4d2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.main)
+ 8007394  8007394        0     1                 $t
+ 8007395  8007395      4d2     1                 main
+ 8007868  8007868       b2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.SystemClock_Config)
+ 8007868  8007868        0     1                 $t
+ 8007869  8007869       b2     1                 SystemClock_Config
+ 800791c  800791c        6     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.text.Error_Handler)
+ 800791c  800791c        0     1                 $t
+ 800791d  800791d        6     1                 Error_Handler
+ 8007924  8007924        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.NMI_Handler)
+ 8007924  8007924        0     1                 $t
+ 8007925  8007925        2     1                 NMI_Handler
+ 8007928  8007928        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.HardFault_Handler)
+ 8007928  8007928        0     1                 $t
+ 8007929  8007929        2     1                 HardFault_Handler
+ 800792c  800792c        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.MemManage_Handler)
+ 800792c  800792c        0     1                 $t
+ 800792d  800792d        2     1                 MemManage_Handler
+ 8007930  8007930        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.BusFault_Handler)
+ 8007930  8007930        0     1                 $t
+ 8007931  8007931        2     1                 BusFault_Handler
+ 8007934  8007934        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.UsageFault_Handler)
+ 8007934  8007934        0     1                 $t
+ 8007935  8007935        2     1                 UsageFault_Handler
+ 8007938  8007938        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SVC_Handler)
+ 8007938  8007938        0     1                 $t
+ 8007939  8007939        2     1                 SVC_Handler
+ 800793c  800793c        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.DebugMon_Handler)
+ 800793c  800793c        0     1                 $t
+ 800793d  800793d        2     1                 DebugMon_Handler
+ 8007940  8007940        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.PendSV_Handler)
+ 8007940  8007940        0     1                 $t
+ 8007941  8007941        2     1                 PendSV_Handler
+ 8007944  8007944        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SysTick_Handler)
+ 8007944  8007944        0     1                 $t
+ 8007945  8007945        4     1                 SysTick_Handler
+ 8007948  8007948        6     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.EXTI13_IRQHandler)
+ 8007948  8007948        0     1                 $t
+ 8007949  8007949        6     1                 EXTI13_IRQHandler
+ 8007950  8007950        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel5_IRQHandler)
+ 8007950  8007950        0     1                 $t
+ 8007951  8007951        c     1                 GPDMA1_Channel5_IRQHandler
+ 800795c  800795c        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel6_IRQHandler)
+ 800795c  800795c        0     1                 $t
+ 800795d  800795d        c     1                 GPDMA1_Channel6_IRQHandler
+ 8007968  8007968        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.GPDMA1_Channel7_IRQHandler)
+ 8007968  8007968        0     1                 $t
+ 8007969  8007969        c     1                 GPDMA1_Channel7_IRQHandler
+ 8007974  8007974        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.I2C1_EV_IRQHandler)
+ 8007974  8007974        0     1                 $t
+ 8007975  8007975        c     1                 I2C1_EV_IRQHandler
+ 8007980  8007980        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.I2C1_ER_IRQHandler)
+ 8007980  8007980        0     1                 $t
+ 8007981  8007981        c     1                 I2C1_ER_IRQHandler
+ 800798c  800798c        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.SPI2_IRQHandler)
+ 800798c  800798c        0     1                 $t
+ 800798d  800798d        c     1                 SPI2_IRQHandler
+ 8007998  8007998       1e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.text.HAL_SPI_TxCpltCallback)
+ 8007998  8007998        0     1                 $t
+ 8007999  8007999       1e     1                 HAL_SPI_TxCpltCallback
+ 80079b8  80079b8        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_MspInit)
+ 80079b8  80079b8        0     1                 $t
+ 80079b9  80079b9        2     1                 HAL_MspInit
+ 80079bc  80079bc      162     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_I2C_MspInit)
+ 80079bc  80079bc        0     1                 $t
+ 80079bd  80079bd      162     1                 HAL_I2C_MspInit
+ 8007b20  8007b20       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_RNG_MspInit)
+ 8007b20  8007b20        0     1                 $t
+ 8007b21  8007b21       58     1                 HAL_RNG_MspInit
+ 8007b78  8007b78      136     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_SPI_MspInit)
+ 8007b78  8007b78        0     1                 $t
+ 8007b79  8007b79      136     1                 HAL_SPI_MspInit
+ 8007cb0  8007cb0       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_TIM_PWM_MspInit)
+ 8007cb0  8007cb0        0     1                 $t
+ 8007cb1  8007cb1       30     1                 HAL_TIM_PWM_MspInit
+ 8007ce0  8007ce0       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.text.HAL_TIM_MspPostInit)
+ 8007ce0  8007ce0        0     1                 $t
+ 8007ce1  8007ce1       60     1                 HAL_TIM_MspPostInit
+ 8007d40  8007d40       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text._exit)
+ 8007d40  8007d40        0     1                 $t
+ 8007d41  8007d41       14     1                 _exit
+ 8007d41  8007d41       14     1                 exit
+ 8007d50  8007d50        0     1                 $d
+ 8007d54  8007d54        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text.starm_putc)
+ 8007d54  8007d54        0     1                 $t
+ 8007d55  8007d55        c     1                 starm_putc
+ 8007d60  8007d60        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.text.starm_getc)
+ 8007d60  8007d60        0     1                 $t
+ 8007d61  8007d61        c     1                 starm_getc
+ 8007d6c  8007d6c       5c     4         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.text.Reset_Handler)
+ 8007d6c  8007d6c        0     1                 $t
+ 8007d6d  8007d6d       3e     1                 Reset_Handler
+ 8007d84  8007d84        0     1                 CopyDataInit
+ 8007d8a  8007d8a        0     1                 LoopCopyDataInit
+ 8007d98  8007d98        0     1                 FillZerobss
+ 8007d9c  8007d9c        0     1                 LoopFillZerobss
+ 8007da8  8007da8        0     1                 LoopForever
+ 8007dac  8007dac        0     1                 $d
+ 8007dc8  8007dc8        2     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.text.Default_Handler)
+ 8007dc8  8007dc8        0     1                 Infinite_Loop
+ 8007dc8  8007dc8        0     1                 $t
+ 8007dc8  8007dc8        2     1                 Default_Handler
+ 8007dc9  8007dc9        2     1                 SecureFault_Handler
+ 8007dc9  8007dc9        2     1                 WWDG_IRQHandler
+ 8007dc9  8007dc9        2     1                 PVD_AVD_IRQHandler
+ 8007dc9  8007dc9        2     1                 RTC_IRQHandler
+ 8007dc9  8007dc9        2     1                 RTC_S_IRQHandler
+ 8007dc9  8007dc9        2     1                 TAMP_IRQHandler
+ 8007dc9  8007dc9        2     1                 RAMCFG_IRQHandler
+ 8007dc9  8007dc9        2     1                 FLASH_IRQHandler
+ 8007dc9  8007dc9        2     1                 FLASH_S_IRQHandler
+ 8007dc9  8007dc9        2     1                 GTZC_IRQHandler
+ 8007dc9  8007dc9        2     1                 RCC_IRQHandler
+ 8007dc9  8007dc9        2     1                 RCC_S_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI0_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI1_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI2_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI3_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI4_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI5_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI6_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI7_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI8_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI9_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI10_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI11_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI12_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI14_IRQHandler
+ 8007dc9  8007dc9        2     1                 EXTI15_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA1_Channel0_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA1_Channel1_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA1_Channel2_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA1_Channel3_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA1_Channel4_IRQHandler
+ 8007dc9  8007dc9        2     1                 IWDG_IRQHandler
+ 8007dc9  8007dc9        2     1                 SAES_IRQHandler
+ 8007dc9  8007dc9        2     1                 ADC1_IRQHandler
+ 8007dc9  8007dc9        2     1                 DAC1_IRQHandler
+ 8007dc9  8007dc9        2     1                 FDCAN1_IT0_IRQHandler
+ 8007dc9  8007dc9        2     1                 FDCAN1_IT1_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM1_BRK_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM1_UP_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM1_TRG_COM_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM1_CC_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM3_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM4_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM5_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM6_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM7_IRQHandler
+ 8007dc9  8007dc9        2     1                 I2C2_EV_IRQHandler
+ 8007dc9  8007dc9        2     1                 I2C2_ER_IRQHandler
+ 8007dc9  8007dc9        2     1                 SPI1_IRQHandler
+ 8007dc9  8007dc9        2     1                 SPI3_IRQHandler
+ 8007dc9  8007dc9        2     1                 USART1_IRQHandler
+ 8007dc9  8007dc9        2     1                 USART2_IRQHandler
+ 8007dc9  8007dc9        2     1                 USART3_IRQHandler
+ 8007dc9  8007dc9        2     1                 UART4_IRQHandler
+ 8007dc9  8007dc9        2     1                 UART5_IRQHandler
+ 8007dc9  8007dc9        2     1                 LPUART1_IRQHandler
+ 8007dc9  8007dc9        2     1                 LPTIM1_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM8_BRK_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM8_UP_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM8_TRG_COM_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM8_CC_IRQHandler
+ 8007dc9  8007dc9        2     1                 ADC2_IRQHandler
+ 8007dc9  8007dc9        2     1                 LPTIM2_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM15_IRQHandler
+ 8007dc9  8007dc9        2     1                 USB_DRD_FS_IRQHandler
+ 8007dc9  8007dc9        2     1                 CRS_IRQHandler
+ 8007dc9  8007dc9        2     1                 UCPD1_IRQHandler
+ 8007dc9  8007dc9        2     1                 FMC_IRQHandler
+ 8007dc9  8007dc9        2     1                 OCTOSPI1_IRQHandler
+ 8007dc9  8007dc9        2     1                 SDMMC1_IRQHandler
+ 8007dc9  8007dc9        2     1                 I2C3_EV_IRQHandler
+ 8007dc9  8007dc9        2     1                 I2C3_ER_IRQHandler
+ 8007dc9  8007dc9        2     1                 SPI4_IRQHandler
+ 8007dc9  8007dc9        2     1                 USART6_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel0_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel1_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel2_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel3_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel4_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel5_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel6_IRQHandler
+ 8007dc9  8007dc9        2     1                 GPDMA2_Channel7_IRQHandler
+ 8007dc9  8007dc9        2     1                 FPU_IRQHandler
+ 8007dc9  8007dc9        2     1                 ICACHE_IRQHandler
+ 8007dc9  8007dc9        2     1                 DCACHE1_IRQHandler
+ 8007dc9  8007dc9        2     1                 DCMI_PSSI_IRQHandler
+ 8007dc9  8007dc9        2     1                 FDCAN2_IT0_IRQHandler
+ 8007dc9  8007dc9        2     1                 FDCAN2_IT1_IRQHandler
+ 8007dc9  8007dc9        2     1                 DTS_IRQHandler
+ 8007dc9  8007dc9        2     1                 RNG_IRQHandler
+ 8007dc9  8007dc9        2     1                 OTFDEC1_IRQHandler
+ 8007dc9  8007dc9        2     1                 AES_IRQHandler
+ 8007dc9  8007dc9        2     1                 HASH_IRQHandler
+ 8007dc9  8007dc9        2     1                 PKA_IRQHandler
+ 8007dc9  8007dc9        2     1                 CEC_IRQHandler
+ 8007dc9  8007dc9        2     1                 TIM12_IRQHandler
+ 8007dc9  8007dc9        2     1                 I3C1_EV_IRQHandler
+ 8007dc9  8007dc9        2     1                 I3C1_ER_IRQHandler
+ 8007dc9  8007dc9        2     1                 I3C2_EV_IRQHandler
+ 8007dc9  8007dc9        2     1                 I3C2_ER_IRQHandler
+ 8007dcc  8007dcc       38     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFXC2Ess)
+ 8007dcc  8007dcc        0     1                 $t
+ 8007dcd  8007dcd       38     1                 Adafruit_GFX::Adafruit_GFX(short, short)
+ 8007e04  8007e04       ce     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX9writeLineEsssst)
+ 8007e04  8007e04        0     1                 $t
+ 8007e05  8007e05       ce     1                 Adafruit_GFX::writeLine(short, short, short, short, unsigned short)
+ 8007ed4  8007ed4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10startWriteEv)
+ 8007ed4  8007ed4        0     1                 $t
+ 8007ed5  8007ed5        2     1                 Adafruit_GFX::startWrite()
+ 8007ed8  8007ed8        a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10writePixelEsst)
+ 8007ed8  8007ed8        0     1                 $t
+ 8007ed9  8007ed9        a     1                 Adafruit_GFX::writePixel(short, short, unsigned short)
+ 8007ee4  8007ee4       18     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX14writeFastVLineEssst)
+ 8007ee4  8007ee4        0     1                 $t
+ 8007ee5  8007ee5       18     1                 Adafruit_GFX::writeFastVLine(short, short, short, unsigned short)
+ 8007efc  8007efc       18     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX14writeFastHLineEssst)
+ 8007efc  8007efc        0     1                 $t
+ 8007efd  8007efd       18     1                 Adafruit_GFX::writeFastHLine(short, short, short, unsigned short)
+ 8007f14  8007f14       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13writeFillRectEsssst)
+ 8007f14  8007f14        0     1                 $t
+ 8007f15  8007f15       1a     1                 Adafruit_GFX::writeFillRect(short, short, short, short, unsigned short)
+ 8007f30  8007f30        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8endWriteEv)
+ 8007f30  8007f30        0     1                 $t
+ 8007f31  8007f31        2     1                 Adafruit_GFX::endWrite()
+ 8007f34  8007f34       44     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13drawFastVLineEssst)
+ 8007f34  8007f34        0     1                 $t
+ 8007f35  8007f35       44     1                 Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
+ 8007f78  8007f78       40     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13drawFastHLineEssst)
+ 8007f78  8007f78        0     1                 $t
+ 8007f79  8007f79       40     1                 Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
+ 8007fb8  8007fb8       56     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8fillRectEsssst)
+ 8007fb8  8007fb8        0     1                 $t
+ 8007fb9  8007fb9       56     1                 Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
+ 8008010  8008010       20     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX10fillScreenEt)
+ 8008010  8008010        0     1                 $t
+ 8008011  8008011       20     1                 Adafruit_GFX::fillScreen(unsigned short)
+ 8008030  8008030       82     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawLineEsssst)
+ 8008030  8008030        0     1                 $t
+ 8008031  8008031       82     1                 Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
+ 80080b4  80080b4       7e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawRectEsssst)
+ 80080b4  80080b4        0     1                 $t
+ 80080b5  80080b5       7e     1                 Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
+ 8008134  8008134      342     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX8drawCharEsshtthh)
+ 8008134  8008134        0     1                 $t
+ 8008135  8008135      342     1                 Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char, unsigned char)
+ 8008478  8008478      13e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX5writeEh)
+ 8008478  8008478        0     1                 $t
+ 8008479  8008479      13e     1                 Adafruit_GFX::write(unsigned char)
+ 80085b8  80085b8       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX11setTextSizeEhh)
+ 80085b8  80085b8        0     1                 $t
+ 80085b9  80085b9       1a     1                 Adafruit_GFX::setTextSize(unsigned char, unsigned char)
+ 80085d4  80085d4       20     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX11setRotationEh)
+ 80085d4  80085d4        0     1                 $t
+ 80085d5  80085d5       20     1                 Adafruit_GFX::setRotation(unsigned char)
+ 80085de  80085de        0     1                 $d
+ 80085e2  80085e2        0     1                 $t
+ 80085f4  80085f4        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN12Adafruit_GFX13invertDisplayEb)
+ 80085f4  80085f4        0     1                 $t
+ 80085f5  80085f5        2     1                 Adafruit_GFX::invertDisplay(bool)
+ 80085f8  80085f8        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN5Print17availableForWriteEv)
+ 80085f8  80085f8        0     1                 $t
+ 80085f9  80085f9        4     1                 Print::availableForWrite()
+ 80085fc  80085fc        2     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.text._ZN5Print5flushEv)
+ 80085fc  80085fc        0     1                 $t
+ 80085fd  80085fd        2     1                 Print::flush()
+ 8008600  8008600       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFTC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
+ 8008600  8008600        0     1                 $t
+ 8008601  8008601       58     1                 Adafruit_SPITFT::Adafruit_SPITFT(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 8008658  8008658       3a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT7initSPIEj)
+ 8008658  8008658        0     1                 $t
+ 8008659  8008659       3a     1                 Adafruit_SPITFT::initSPI(unsigned int)
+ 8008694  8008694       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT10startWriteEv)
+ 8008694  8008694        0     1                 $t
+ 8008695  8008695       14     1                 Adafruit_SPITFT::startWrite()
+ 80086a8  80086a8       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT8endWriteEv)
+ 80086a8  80086a8        0     1                 $t
+ 80086a9  80086a9       14     1                 Adafruit_SPITFT::endWrite()
+ 80086bc  80086bc       84     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT10writePixelEsst)
+ 80086bc  80086bc        0     1                 $t
+ 80086bd  80086bd       84     1                 Adafruit_SPITFT::writePixel(short, short, unsigned short)
+ 8008740  8008740      13e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13writeFillRectEsssst)
+ 8008740  8008740        0     1                 $t
+ 8008741  8008741      13e     1                 Adafruit_SPITFT::writeFillRect(short, short, short, short, unsigned short)
+ 8008880  8008880       8a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT9drawPixelEsst)
+ 8008880  8008880        0     1                 $t
+ 8008881  8008881       8a     1                 Adafruit_SPITFT::drawPixel(short, short, unsigned short)
+ 800890c  800890c      146     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT8fillRectEsssst)
+ 800890c  800890c        0     1                 $t
+ 800890d  800890d      146     1                 Adafruit_SPITFT::fillRect(short, short, short, short, unsigned short)
+ 8008a54  8008a54      104     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13drawFastHLineEssst)
+ 8008a54  8008a54        0     1                 $t
+ 8008a55  8008a55      104     1                 Adafruit_SPITFT::drawFastHLine(short, short, short, unsigned short)
+ 8008b58  8008b58      100     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13drawFastVLineEssst)
+ 8008b58  8008b58        0     1                 $t
+ 8008b59  8008b59      100     1                 Adafruit_SPITFT::drawFastVLine(short, short, short, unsigned short)
+ 8008c58  8008c58       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT13invertDisplayEb)
+ 8008c58  8008c58        0     1                 $t
+ 8008c59  8008c59       64     1                 Adafruit_SPITFT::invertDisplay(bool)
+ 8008cbc  8008cbc       4c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT12writeCommandEh)
+ 8008cbc  8008cbc        0     1                 $t
+ 8008cbd  8008cbd       4c     1                 Adafruit_SPITFT::writeCommand(unsigned char)
+ 8008d08  8008d08       9e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11sendCommandEhPhh)
+ 8008d08  8008d08        0     1                 $t
+ 8008d09  8008d09       9e     1                 Adafruit_SPITFT::sendCommand(unsigned char, unsigned char*, unsigned char)
+ 8008da8  8008da8       9e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11sendCommandEhPKhh)
+ 8008da8  8008da8        0     1                 $t
+ 8008da9  8008da9       9e     1                 Adafruit_SPITFT::sendCommand(unsigned char, unsigned char const*, unsigned char)
+ 8008e48  8008e48       56     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT11SPI_WRITE32Ej)
+ 8008e48  8008e48        0     1                 $t
+ 8008e49  8008e49       56     1                 Adafruit_SPITFT::SPI_WRITE32(unsigned int)
+ 8008ea0  8008ea0       e4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT14writeFastVLineEssst)
+ 8008ea0  8008ea0        0     1                 $t
+ 8008ea1  8008ea1       e4     1                 Adafruit_SPITFT::writeFastVLine(short, short, short, unsigned short)
+ 8008f84  8008f84       e8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.text._ZN15Adafruit_SPITFT14writeFastHLineEssst)
+ 8008f84  8008f84        0     1                 $t
+ 8008f85  8008f85       e8     1                 Adafruit_SPITFT::writeFastHLine(short, short, short, unsigned short)
+ 800906c  800906c       36     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xxC2EttP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
+ 800906c  800906c        0     1                 $t
+ 800906d  800906d       36     1                 Adafruit_ST77xx::Adafruit_ST77xx(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 800906d  800906d       36     1                 Adafruit_ST77xx::Adafruit_ST77xx(unsigned short, unsigned short, __SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 80090a4  80090a4       a0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx11displayInitEPKh)
+ 80090a4  80090a4        0     1                 $t
+ 80090a5  80090a5       a0     1                 Adafruit_ST77xx::displayInit(unsigned char const*)
+ 8009144  8009144       1a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx5beginEj)
+ 8009144  8009144        0     1                 $t
+ 8009145  8009145       1a     1                 Adafruit_ST77xx::begin(unsigned int)
+ 8009160  8009160       90     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx10commonInitEPKh)
+ 8009160  8009160        0     1                 $t
+ 8009161  8009161       90     1                 Adafruit_ST77xx::commonInit(unsigned char const*)
+ 80091f0  80091f0       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx13setAddrWindowEtttt)
+ 80091f0  80091f0        0     1                 $t
+ 80091f1  80091f1       58     1                 Adafruit_ST77xx::setAddrWindow(unsigned short, unsigned short, unsigned short, unsigned short)
+ 8009248  8009248       68     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.text._ZN15Adafruit_ST77xx11setRotationEh)
+ 8009248  8009248        0     1                 $t
+ 8009249  8009249       68     1                 Adafruit_ST77xx::setRotation(unsigned char)
+ 8009260  8009260        0     1                 $d
+ 8009264  8009264        0     1                 $t
+ 80092b0  80092b0       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST7735C2EP19__SPI_HandleTypeDefsP12GPIO_TypeDefsS3_aPVb)
+ 80092b0  80092b0        0     1                 $t
+ 80092b1  80092b1       34     1                 Adafruit_ST7735::Adafruit_ST7735(__SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 80092b1  80092b1       34     1                 Adafruit_ST7735::Adafruit_ST7735(__SPI_HandleTypeDef*, short, GPIO_TypeDef*, short, GPIO_TypeDef*, signed char, bool volatile*)
+ 80092e4  80092e4      120     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST77355initREh)
+ 80092e4  80092e4        0     1                 $t
+ 80092e5  80092e5      120     1                 Adafruit_ST7735::initR(unsigned char)
+ 8009404  8009404       fe     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.text._ZN15Adafruit_ST773511setRotationEh)
+ 8009404  8009404        0     1                 $t
+ 8009405  8009405       fe     1                 Adafruit_ST7735::setRotation(unsigned char)
+ 8009438  8009438        0     1                 $d
+ 800943c  800943c        0     1                 $t
+ 8009504  8009504       6a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_create)
+ 8009504  8009504        0     1                 $t
+ 8009505  8009505       6a     1                 Display_create
+ 8009570  8009570       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_init)
+ 8009570  8009570        0     1                 $t
+ 8009571  8009571       10     1                 Display_init
+ 8009580  8009580       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setRotation)
+ 8009580  8009580        0     1                 $t
+ 8009581  8009581       10     1                 Display_setRotation
+ 8009590  8009590       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_fillScreen)
+ 8009590  8009590        0     1                 $t
+ 8009591  8009591       10     1                 Display_fillScreen
+ 80095a0  80095a0       16     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextSize)
+ 80095a0  80095a0        0     1                 $t
+ 80095a1  80095a1       16     1                 Display_setTextSize
+ 80095b8  80095b8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setCursor)
+ 80095b8  80095b8        0     1                 $t
+ 80095b9  80095b9       10     1                 Display_setCursor
+ 80095c8  80095c8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextColor)
+ 80095c8  80095c8        0     1                 $t
+ 80095c9  80095c9       10     1                 Display_setTextColor
+ 80095d8  80095d8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_setTextColorWithBg)
+ 80095d8  80095d8        0     1                 $t
+ 80095d9  80095d9       10     1                 Display_setTextColorWithBg
+ 80095e8  80095e8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_width)
+ 80095e8  80095e8        0     1                 $t
+ 80095e9  80095e9       10     1                 Display_width
+ 80095f8  80095f8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_height)
+ 80095f8  80095f8        0     1                 $t
+ 80095f9  80095f9       10     1                 Display_height
+ 8009608  8009608       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.text.Display_print)
+ 8009608  8009608        0     1                 $t
+ 8009609  8009609       10     1                 Display_print
+ 8009618  8009618       48     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.text._ZN5Print5writeEPKhj)
+ 8009618  8009618        0     1                 $t
+ 8009619  8009619       48     1                 Print::write(unsigned char const*, unsigned int)
+ 8009660  8009660       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.text._ZN5Print5printEPKc)
+ 8009660  8009660        0     1                 $t
+ 8009661  8009661       22     1                 Print::print(char const*)
+ 8009684  8009684       16     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesawC2EP19__I2C_HandleTypeDef)
+ 8009684  8009684        0     1                 $t
+ 8009685  8009685       16     1                 Adafruit_seesaw::Adafruit_seesaw(__I2C_HandleTypeDef*)
+ 8009685  8009685       16     1                 Adafruit_seesaw::Adafruit_seesaw(__I2C_HandleTypeDef*)
+ 800969c  800969c      1c0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5beginEhb)
+ 800969c  800969c        0     1                 $t
+ 800969d  800969d      1c0     1                 Adafruit_seesaw::begin(unsigned char, bool)
+ 800985c  800985c       dc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw4readEhhPhht)
+ 800985c  800985c        0     1                 $t
+ 800985d  800985d       dc     1                 Adafruit_seesaw::read(unsigned char, unsigned char, unsigned char*, unsigned char, unsigned short)
+ 8009938  8009938       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw7pinModeEhh)
+ 8009938  8009938        0     1                 $t
+ 8009939  8009939       22     1                 Adafruit_seesaw::pinMode(unsigned char, unsigned char)
+ 800995c  800995c      318     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11pinModeBulkEjjh)
+ 800995c  800995c        0     1                 $t
+ 800995d  800995d      318     1                 Adafruit_seesaw::pinModeBulk(unsigned int, unsigned int, unsigned char)
+ 800998c  800998c        0     1                 $d
+ 8009994  8009994        0     1                 $t
+ 8009c74  8009c74      264     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11pinModeBulkEjh)
+ 8009c74  8009c74        0     1                 $t
+ 8009c75  8009c75      264     1                 Adafruit_seesaw::pinModeBulk(unsigned int, unsigned char)
+ 8009c96  8009c96        0     1                 $d
+ 8009c9e  8009c9e        0     1                 $t
+ 8009ed8  8009ed8       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw12digitalWriteEhh)
+ 8009ed8  8009ed8        0     1                 $t
+ 8009ed9  8009ed9       22     1                 Adafruit_seesaw::digitalWrite(unsigned char, unsigned char)
+ 8009efc  8009efc       dc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw16digitalWriteBulkEjjh)
+ 8009efc  8009efc        0     1                 $t
+ 8009efd  8009efd       dc     1                 Adafruit_seesaw::digitalWriteBulk(unsigned int, unsigned int, unsigned char)
+ 8009fd8  8009fd8       a8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw16digitalWriteBulkEjh)
+ 8009fd8  8009fd8        0     1                 $t
+ 8009fd9  8009fd9       a8     1                 Adafruit_seesaw::digitalWriteBulk(unsigned int, unsigned char)
+ 800a080  800a080       42     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw15digitalReadBulkEj)
+ 800a080  800a080        0     1                 $t
+ 800a081  800a081       42     1                 Adafruit_seesaw::digitalReadBulk(unsigned int)
+ 800a0c4  800a0c4       7e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEhhPhh)
+ 800a0c4  800a0c4        0     1                 $t
+ 800a0c5  800a0c5       7e     1                 Adafruit_seesaw::write(unsigned char, unsigned char, unsigned char*, unsigned char)
+ 800a144  800a144       92     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw10analogReadEh)
+ 800a144  800a144        0     1                 $t
+ 800a145  800a145       92     1                 Adafruit_seesaw::analogRead(unsigned char)
+ 800a1d8  800a1d8       ce     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw11analogWriteEhth)
+ 800a1d8  800a1d8        0     1                 $t
+ 800a1d9  800a1d9       ce     1                 Adafruit_seesaw::analogWrite(unsigned char, unsigned short, unsigned char)
+ 800a2a8  800a2a8       82     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw10setPWMFreqEht)
+ 800a2a8  800a2a8        0     1                 $t
+ 800a2a9  800a2a9       82     1                 Adafruit_seesaw::setPWMFreq(unsigned char, unsigned short)
+ 800a32c  800a32c       78     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEh)
+ 800a32c  800a32c        0     1                 $t
+ 800a32d  800a32d       78     1                 Adafruit_seesaw::write(unsigned char)
+ 800a3a4  800a3a4       86     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.text._ZN15Adafruit_seesaw5writeEPKc)
+ 800a3a4  800a3a4        0     1                 $t
+ 800a3a5  800a3a5       86     1                 Adafruit_seesaw::write(char const*)
+ 800a42c  800a42c       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield18C2EP19__I2C_HandleTypeDef)
+ 800a42c  800a42c        0     1                 $t
+ 800a42d  800a42d       14     1                 Adafruit_TFTShield18::Adafruit_TFTShield18(__I2C_HandleTypeDef*)
+ 800a42d  800a42d       14     1                 Adafruit_TFTShield18::Adafruit_TFTShield18(__I2C_HandleTypeDef*)
+ 800a440  800a440       2a     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield185beginEh)
+ 800a440  800a440        0     1                 $t
+ 800a441  800a441       2a     1                 Adafruit_TFTShield18::begin(unsigned char)
+ 800a46c  800a46c       3e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield1812setBacklightEt)
+ 800a46c  800a46c        0     1                 $t
+ 800a46d  800a46d       3e     1                 Adafruit_TFTShield18::setBacklight(unsigned short)
+ 800a4ac  800a4ac        8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield188tftResetEb)
+ 800a4ac  800a4ac        0     1                 $t
+ 800a4ad  800a4ad        8     1                 Adafruit_TFTShield18::tftReset(bool)
+ 800a4b4  800a4b4        8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.text._ZN20Adafruit_TFTShield1811readButtonsEv)
+ 800a4b4  800a4b4        0     1                 $t
+ 800a4b5  800a4b5        8     1                 Adafruit_TFTShield18::readButtons()
+ 800a4bc  800a4bc       3c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_create)
+ 800a4bc  800a4bc        0     1                 $t
+ 800a4bd  800a4bd       3c     1                 TFTShield18_create
+ 800a4f8  800a4f8       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_begin)
+ 800a4f8  800a4f8        0     1                 $t
+ 800a4f9  800a4f9       10     1                 TFTShield18_begin
+ 800a508  800a508       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_setBacklight)
+ 800a508  800a508        0     1                 $t
+ 800a509  800a509       10     1                 TFTShield18_setBacklight
+ 800a518  800a518       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_tftReset)
+ 800a518  800a518        0     1                 $t
+ 800a519  800a519       10     1                 TFTShield18_tftReset
+ 800a528  800a528        e     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.text.TFTShield18_readButtons)
+ 800a528  800a528        0     1                 $t
+ 800a529  800a529        e     1                 TFTShield18_readButtons
+ 800a538  800a538       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.text.DWT_Init)
+ 800a538  800a538        0     1                 $t
+ 800a539  800a539       34     1                 DWT_Init
+ 800a56c  800a56c       22     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.text.DWT_CheckInitialized)
+ 800a56c  800a56c        0     1                 $t
+ 800a56d  800a56d       22     1                 DWT_CheckInitialized
+ 800a590  800a590       12     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.text.buzzerDisable)
+ 800a590  800a590        0     1                 $t
+ 800a591  800a591       12     1                 buzzerDisable
+ 800a5a4  800a5a4       3c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.runTimer2)
+ 800a5a4  800a5a4        0     1                 $t
+ 800a5a5  800a5a5       3c     1                 runTimer2
+ 800a5e0  800a5e0       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.stopTimer2)
+ 800a5e0  800a5e0        0     1                 $t
+ 800a5e1  800a5e1       30     1                 stopTimer2
+ 800a610  800a610       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.TIM2_IRQHandler)
+ 800a610  800a610        0     1                 $t
+ 800a611  800a611       64     1                 TIM2_IRQHandler
+ 800a674  800a674       54     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.text.displayTime)
+ 800a674  800a674        0     1                 $t
+ 800a675  800a675       54     1                 displayTime
+ 800a6c8  800a6c8        c     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc++.a(cxa_virtual.cpp.obj):(.text.__cxa_pure_virtual)
+ 800a6c8  800a6c8        0     1                 $t
+ 800a6c9  800a6c9        c     1                 __cxa_pure_virtual
+ 800a6d4  800a6d4        4     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc++.a(abort_message.cpp.obj):(.text.unlikely.__abort_message)
+ 800a6d4  800a6d4        0     1                 $t
+ 800a6d5  800a6d5        4     1                 __abort_message
+ 800a6d8  800a6d8      1c6     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libclang_rt.builtins.a(udivmoddi4.c.obj):(.text.__udivmoddi4)
+ 800a6d8  800a6d8        0     1                 $t
+ 800a6d9  800a6d9      1c6     1                 __udivmoddi4
+ 800a89e  800a89e        8     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(bzero.c.o):(.text.bzero)
+ 800a89e  800a89e        0     1                 $t
+ 800a89f  800a89f        8     1                 bzero
+ 800a89f  800a89f        8     1                 __aeabi_memclr4
+ 800a89f  800a89f        8     1                 __aeabi_memclr8
+ 800a89f  800a89f        8     1                 __aeabi_memclr
+ 800a8a6  800a8a6       12     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(memcpy.c.o):(.text.memcpy)
+ 800a8a6  800a8a6        0     1                 $t
+ 800a8a7  800a8a7       12     1                 memcpy
+ 800a8a7  800a8a7       12     1                 __aeabi_memcpy4
+ 800a8a7  800a8a7       12     1                 __aeabi_memcpy8
+ 800a8a7  800a8a7       12     1                 __aeabi_memcpy
+ 800a8b8  800a8b8        e     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(memset.c.o):(.text.memset)
+ 800a8b8  800a8b8        0     1                 $t
+ 800a8b9  800a8b9        e     1                 memset
+ 800a8c8  800a8c8       1c     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_misc_init.c.o):(.text.__libc_init_array)
+ 800a8c8  800a8c8        0     1                 $t
+ 800a8c9  800a8c9       1c     1                 __libc_init_array
+ 800a8dc  800a8dc        0     1                 $d
+ 800a8e4  800a8e4        c     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_stdlib_abort.c.o):(.text.abort)
+ 800a8e4  800a8e4        0     1                 $t
+ 800a8e5  800a8e5        c     1                 abort
+ 800a8f0  800a8f0       5c     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_signal_signal.c.o):(.text.raise)
+ 800a8f0  800a8f0        0     1                 $t
+ 800a8f1  800a8f1       5c     1                 raise
+ 800a944  800a944        0     1                 $d
+ 800a950  800a950        c    16         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text.__aeabi_read_tp)
+ 800a950  800a950        0     1                 $t
+ 800a951  800a951        6     1                 __aeabi_read_tp
+ 800a958  800a958        0     1                 $d
+ 800a95c  800a95c       10     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text._initial_set_tls)
+ 800a95c  800a95c        0     1                 $t
+ 800a95d  800a95d        6     1                 _initial_set_tls
+ 800a964  800a964        0     1                 $d
+ 800a96c  800a96c       14     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_set_tls.c.o):(.text._set_tls)
+ 800a96c  800a96c        0     1                 $t
+ 800a96d  800a96d       14     1                 _set_tls
+ 800a978  800a978        0     1                 $d
+ 800a980  800a980       24     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_printf.c.o):(.text.printf)
+ 800a980  800a980        0     1                 $t
+ 800a981  800a981       24     1                 printf
+ 800a9a0  800a9a0        0     1                 $d
+ 800a9a4  800a9a4       50     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_snprintf.c.o):(.text.snprintf)
+ 800a9a4  800a9a4        0     1                 $t
+ 800a9a5  800a9a5       50     1                 snprintf
+ 800a9f0  800a9f0        0     1                 $d
+ 800a9f4  800a9f4       10     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_filestrput.c.o):(.text.__file_str_put)
+ 800a9f4  800a9f4        0     1                 $t
+ 800a9f5  800a9f5       10     1                 __file_str_put
+ 800aa04  800aa04       18     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_string_strnlen.c.o):(.text.strnlen)
+ 800aa04  800aa04        0     1                 $t
+ 800aa05  800aa05       18     1                 strnlen
+ 800aa1c  800aa1c      4c4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.__i_vfprintf)
+ 800aa1c  800aa1c        0     1                 $t
+ 800aa1d  800aa1d      4c4     1                 __i_vfprintf
+ 800aa92  800aa92        0     1                 $d
+ 800aa9c  800aa9c        0     1                 $t
+ 800abf4  800abf4        0     1                 $d
+ 800abfc  800abfc        0     1                 $t
+ 800aed8  800aed8        0     1                 $d
+ 800aee0  800aee0       28     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.__ultoa_invert)
+ 800aee0  800aee0        0     1                 $t
+ 800aee1  800aee1       28     1                 __ultoa_invert
+ 800af08  800af08        8     2         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_tinystdio_vfiprintf.c.o):(.text.OUTLINED_FUNCTION_0)
+ 800af08  800af08        0     1                 $t
+ 800af09  800af09        8     1                 OUTLINED_FUNCTION_0
+ 800af10  800af10        0     1         . = ALIGN(4)
+ 800af10  800af10        0     1         _etext = .
+ 800af10  800af10      960     4 .rodata
+ 800af10  800af10        0     1         . = ALIGN(4)
+ 800af10  800af10       10     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.rodata.AHBPrescTable)
+ 800af10  800af10       10     1                 AHBPrescTable
+ 800af20  800af20        8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.rodata.APBPrescTable)
+ 800af20  800af20        8     1                 APBPrescTable
+ 800af28  800af28       18     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.rodata.UARTPrescTable)
+ 800af28  800af28       18     1                 UARTPrescTable
+ 800af40  800af40      19d     1         <internal>:(.rodata.str1.1)
+ 800b0e0  800b0e0        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.rodata.stdin)
+ 800b0e0  800b0e0        4     1                 stdin
+ 800b0e0  800b0e0        4     1                 stdout
+ 800b0e0  800b0e0        4     1                 stderr
+ 800b0e4  800b0e4       58     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.rodata._ZTV12Adafruit_GFX)
+ 800b0e4  800b0e4       58     1                 vtable for Adafruit_GFX
+ 800b13c  800b13c      500     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.rodata._ZL4font)
+ 800b13c  800b13c      500     1                 font
+ 800b63c  800b63c       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.rodata._ZTV15Adafruit_SPITFT)
+ 800b63c  800b63c       60     1                 vtable for Adafruit_SPITFT
+ 800b69c  800b69c       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.rodata._ZTV15Adafruit_ST77xx)
+ 800b69c  800b69c       60     1                 vtable for Adafruit_ST77xx
+ 800b6fc  800b6fc       60     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZTV15Adafruit_ST7735)
+ 800b6fc  800b6fc       60     1                 vtable for Adafruit_ST7735
+ 800b75c  800b75c       3b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL5Rcmd1)
+ 800b75c  800b75c       3b     1                 Rcmd1
+ 800b797  800b797        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL10Rcmd2green)
+ 800b797  800b797        d     1                 Rcmd2green
+ 800b7a4  800b7a4        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL13Rcmd2green144)
+ 800b7a4  800b7a4        d     1                 Rcmd2green144
+ 800b7b1  800b7b1        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL16Rcmd2green160x80)
+ 800b7b1  800b7b1        d     1                 Rcmd2green160x80
+ 800b7be  800b7be        f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL22Rcmd2green160x80plugin)
+ 800b7be  800b7be        f     1                 Rcmd2green160x80plugin
+ 800b7cd  800b7cd        d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL8Rcmd2red)
+ 800b7cd  800b7cd        d     1                 Rcmd2red
+ 800b7da  800b7da       2b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata._ZL5Rcmd3)
+ 800b7da  800b7da       2b     1                 Rcmd3
+ 800b806  800b806        c     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata..Lswitch.table._ZN15Adafruit_ST773511setRotationEh.7)
+ 800b806  800b806        c     1                 .Lswitch.table._ZN15Adafruit_ST773511setRotationEh.7
+ 800b812  800b812        c     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.rodata..Lswitch.table._ZN15Adafruit_ST773511setRotationEh.8)
+ 800b812  800b812        c     1                 .Lswitch.table._ZN15Adafruit_ST773511setRotationEh.8
+ 800b820  800b820       28     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.rodata._ZTV15Adafruit_seesaw)
+ 800b820  800b820       28     1                 vtable for Adafruit_seesaw
+ 800b848  800b848       28     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.rodata._ZTV20Adafruit_TFTShield18)
+ 800b848  800b848       28     1                 vtable for Adafruit_TFTShield18
+ 800b870  800b870        0     1         . = ALIGN(4)
+ 800b870  800b870        0     1 .ARM.extab
+ 800b870  800b870        0     1         . = ALIGN(4)
+ 800b870  800b870        0     1         . = ALIGN(4)
+ 800b870  800b870       10     4 .ARM
+ 800b870  800b870        0     1         . = ALIGN(4)
+ 800b870  800b870        0     1         __exidx_start = .
+ 800b870  800b870       10     4         <internal>:(.ARM.exidx)
+ 800b880  800b880        0     1         __exidx_end = .
+ 800b880  800b880        0     1         . = ALIGN(4)
+ 800b880  800b880        4     4 .preinit_array
+ 800b880  800b880        0     1         . = ALIGN(4)
+ 800b880  800b880        4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.preinit_array)
+ 800b884  800b884        0     1         . = ALIGN(4)
+ 800b884  800b884        0     1 .init_array
+ 800b884  800b884        0     1         . = ALIGN(4)
+ 800b884  800b884        0     1         . = ALIGN(4)
+ 800b884  800b884        0     1 .fini_array
+ 800b884  800b884        0     1         . = ALIGN(4)
+ 800b884  800b884        0     1         . = ALIGN(4)
+ 800b884  800b884        0     1 _sidata = LOADADDR(.data)
+20000000  800b884       2c     4 .data
+20000000  800b884        0     1         . = ALIGN(4)
+20000000  800b884        0     1         _sdata = .
+20000000  800b884        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.data.SystemCoreClock)
+20000000  800b884        4     1                 SystemCoreClock
+20000004  800b888        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.data.uwTickPrio)
+20000004  800b888        4     1                 uwTickPrio
+20000008  800b88c        1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.data.uwTickFreq)
+20000008  800b88c        1     1                 uwTickFreq
+2000000c  800b890        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.data.COM_USART)
+2000000c  800b890        4     1                 COM_USART
+20000010  800b894        c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.data.buzzer1)
+20000010  800b894        c     1                 buzzer1
+2000001c  800b8a0       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.data.__stdio)
+2000001c  800b8a0       10     1                 __stdio
+2000002c  800b8b0        0     1         . = ALIGN(4)
+2000002c  800b8b0        0     4 .tdata
+2000002c  800b8b0        0     1         . = ALIGN(4)
+2000002c  800b8b0        0     1         _edata = .
+2000002c  800b8b0        0     1 PROVIDE( __tdata_start = ADDR(.tdata) )
+2000002c 2000002c        4     4 .tbss
+2000002c 2000002c        0     1         _sbss = .
+2000002c 2000002c        0     1         __bss_start__ = _sbss
+2000002c 2000002c        4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_errno_errno.c.o):(.tbss.errno)
+       0        0        4     1                 errno
+20000030 20000030        0     1         . = ALIGN(4)
+2000002c 2000002c        0     1 PROVIDE( __tls_base = __tdata_start )
+2000002c 2000002c        0     1 PROVIDE( __tls_align = MAX(ALIGNOF(.tdata), ALIGNOF(.tbss)) )
+2000002c 2000002c        0     1 PROVIDE( __arm32_tls_tcb_offset = MAX(8, __tls_align) )
+20000030 20000030      4a4     4 .bss
+20000030 20000030        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.bss.uwTick)
+20000030 20000030        4     1                 uwTick
+20000034 20000034        c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.bss.hpb_exti)
+20000034 20000034        c     1                 hpb_exti
+20000040 20000040       94     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.bss.hcom_uart)
+20000040 20000040       94     1                 hcom_uart
+200000d4 200000d4        1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.bss.COM_ActiveLogPort)
+200000d4 200000d4        1     1                 COM_ActiveLogPort
+200000d8 200000d8       4c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.htim1)
+200000d8 200000d8       4c     1                 htim1
+20000124 20000124       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.BspCOMInit)
+20000124 20000124       10     1                 BspCOMInit
+20000134 20000134       54     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.hi2c1)
+20000134 20000134       54     1                 hi2c1
+20000188 20000188       90     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.hspi2)
+20000188 20000188       90     1                 hspi2
+20000218 20000218       78     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.handle_GPDMA1_Channel6)
+20000218 20000218       78     1                 handle_GPDMA1_Channel6
+20000290 20000290       78     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.handle_GPDMA1_Channel5)
+20000290 20000290       78     1                 handle_GPDMA1_Channel5
+20000308 20000308       14     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.hrng)
+20000308 20000308       14     1                 hrng
+2000031c 2000031c       78     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.bss.handle_GPDMA1_Channel7)
+2000031c 2000031c       78     1                 handle_GPDMA1_Channel7
+20000394 20000394       40     2         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.bss._ZZN15Adafruit_SPITFT10writeColorEtjE10tempColors)
+20000394 20000394       40     1                 Adafruit_SPITFT::writeColor(unsigned short, unsigned int)::tempColors
+200003d4 200003d4        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.bss.st7735_handle)
+200003d4 200003d4        4     1                 st7735_handle
+200003d8 200003d8        1     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.bss.spiTxDone)
+200003d8 200003d8        1     1                 spiTxDone
+200003dc 200003dc       54     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.bss._ZZ14Display_createE6st7735)
+200003dc 200003dc       54     1                 Display_create::st7735
+20000430 20000430        1     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.bss._ZGVZ14Display_createE6st7735)
+20000430 20000430        1     1                 guard variable for Display_create::st7735
+20000434 20000434        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.bss.seesaw_handle)
+20000434 20000434        4     1                 seesaw_handle
+20000438 20000438       10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.bss._ZZ18TFTShield18_createE6seesaw)
+20000438 20000438       10     1                 TFTShield18_create::seesaw
+20000448 20000448        1     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.bss._ZGVZ18TFTShield18_createE6seesaw)
+20000448 20000448        1     1                 guard variable for TFTShield18_create::seesaw
+2000044c 2000044c        4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.bss.timer)
+2000044c 2000044c        4     1                 timer
+20000450 20000450       80     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_signal_signal.c.o):(.bss._sig_func)
+20000450 20000450       80     1                 _sig_func
+200004d0 200004d0        4     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_tls.c.o):(.bss.__tls)
+200004d0 200004d0        4     1                 __tls
+200004d4 200004d4        0     1         . = ALIGN(4)
+200004d4 200004d4        0     1         _ebss = .
+200004d4 200004d4        0     1         __bss_end__ = _ebss
+200004d4 200004d4      604     1 ._user_heap_stack
+200004d4 200004d4        4     1         . = ALIGN(8)
+200004d8 200004d8        0     1         PROVIDE ( _end = . )
+200004d8 200004d8      200     1         . = . + _Min_Heap_Size
+200006d8 200006d8      400     1         . = . + _Min_Stack_Size
+20000ad8 20000ad8        0     1         . = ALIGN(8)
+       0        0       50     1 .ARM.attributes
+       0        0       50     1         <internal>:(.ARM.attributes)
+       0        0    193ca     1 .debug_loclists
+       0        0       db     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_loclists)
+      db       db      233     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_loclists)
+     30e      30e      3b1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_loclists)
+     6bf      6bf     175b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_loclists)
+    1e1a     1e1a      396     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_loclists)
+    21b0     21b0     1031     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_loclists)
+    31e1     31e1      375     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_loclists)
+    3556     3556      453     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_loclists)
+    39a9     39a9      199     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_loclists)
+    3b42     3b42       70     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_loclists)
+    3bb2     3bb2       8b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_loclists)
+    3c3d     3c3d      131     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_loclists)
+    3d6e     3d6e      405     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_loclists)
+    4173     4173     306e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_loclists)
+    71e1     71e1       c7     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_loclists)
+    72a8     72a8      208     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_loclists)
+    74b0     74b0      1ed     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_loclists)
+    769d     769d      13e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_loclists)
+    77db     77db      ad5     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_loclists)
+    82b0     82b0       db     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_loclists)
+    838b     838b     408e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_loclists)
+    c419     c419      eb0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_loclists)
+    d2c9     d2c9      535     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_loclists)
+    d7fe     d7fe     1299     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_loclists)
+    ea97     ea97      213     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_loclists)
+    ecaa     ecaa      26c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_loclists)
+    ef16     ef16       84     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_loclists)
+    ef9a     ef9a       25     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_loclists)
+    efbf     efbf      25b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_loclists)
+    f21a     f21a     4394     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_loclists)
+   135ae    135ae     1441     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_loclists)
+   149ef    149ef      303     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_loclists)
+   14cf2    14cf2       b7     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_loclists)
+   14da9    14da9      aad     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_loclists)
+   15856    15856      d41     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_loclists)
+   16597    16597     2c86     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_loclists)
+   1921d    1921d       9a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_loclists)
+   192b7    192b7       44     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_loclists)
+   192fb    192fb       9a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_loclists)
+   19395    19395       35     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_loclists)
+       0        0     5bbc     1 .debug_abbrev
+       0        0       f8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_abbrev)
+      f8       f8      304     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_abbrev)
+     3fc      3fc      1d5     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_abbrev)
+     5d1      5d1      20a     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_abbrev)
+     7db      7db      1be     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_abbrev)
+     999      999      20e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_abbrev)
+     ba7      ba7      281     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_abbrev)
+     e28      e28      2b4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_abbrev)
+    10dc     10dc      16a     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_abbrev)
+    1246     1246      1d5     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_abbrev)
+    141b     141b      20d     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_abbrev)
+    1628     1628      1e5     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_abbrev)
+    180d     180d      179     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_abbrev)
+    1986     1986      275     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_abbrev)
+    1bfb     1bfb      15b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_abbrev)
+    1d56     1d56      1f0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_abbrev)
+    1f46     1f46      156     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_abbrev)
+    209c     209c      123     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_abbrev)
+    21bf     21bf      218     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_abbrev)
+    23d7     23d7      131     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_abbrev)
+    2508     2508      36c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_abbrev)
+    2874     2874      283     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_abbrev)
+    2af7     2af7      224     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_abbrev)
+    2d1b     2d1b      283     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_abbrev)
+    2f9e     2f9e      33a     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_abbrev)
+    32d8     32d8      2fc     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_abbrev)
+    35d4     35d4      165     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_abbrev)
+    3739     3739      216     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_abbrev)
+    394f     394f       99     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_abbrev)
+    39e8     39e8      1c6     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_abbrev)
+    3bae     3bae       1f     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_abbrev)
+    3bcd     3bcd      4f1     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_abbrev)
+    40be     40be      4d5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_abbrev)
+    4593     4593      2ce     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_abbrev)
+    4861     4861      22e     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_abbrev)
+    4a8f     4a8f      1b1     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_abbrev)
+    4c40     4c40      33a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_abbrev)
+    4f7a     4f7a      4e6     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_abbrev)
+    5460     5460      215     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_abbrev)
+    5675     5675      12b     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_abbrev)
+    57a0     57a0       c5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_abbrev)
+    5865     5865      19c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_abbrev)
+    5a01     5a01      1bb     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_abbrev)
+       0        0    29e31     1 .debug_info
+       0        0      8ed     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_info)
+     8ed      8ed     1047     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_info)
+    1934     1934      7a0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_info)
+    20d4     20d4     19e4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_info)
+    3ab8     3ab8      bf4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_info)
+    46ac     46ac      c75     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_info)
+    5321     5321      90c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_info)
+    5c2d     5c2d      c26     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_info)
+    6853     6853      4b3     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_info)
+    6d06     6d06      6df     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_info)
+    73e5     73e5      5dc     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_info)
+    79c1     79c1      cd6     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_info)
+    8697     8697      55f     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_info)
+    8bf6     8bf6     3051     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_info)
+    bc47     bc47      61f     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_info)
+    c266     c266      361     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_info)
+    c5c7     c5c7      314     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_info)
+    c8db     c8db      248     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_info)
+    cb23     cb23      f6c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_info)
+    da8f     da8f      6bb     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_info)
+    e14a     e14a     2fe5     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_info)
+   1112f    1112f     1661     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_info)
+   12790    12790      b60     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_info)
+   132f0    132f0     2e94     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_info)
+   16184    16184     121b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_info)
+   1739f    1739f     21f4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_info)
+   19593    19593      96a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_info)
+   19efd    19efd     15cf     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_info)
+   1b4cc    1b4cc       ae     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_info)
+   1b57a    1b57a      573     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_info)
+   1baed    1baed      1f8     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_info)
+   1bce5    1bce5     43c4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_info)
+   200a9    200a9     240d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_info)
+   224b6    224b6      b14     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_info)
+   22fca    22fca      5cf     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_info)
+   23599    23599      f05     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_info)
+   2449e    2449e     14d5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_info)
+   25973    25973     2777     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_info)
+   280ea    280ea      5b3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_info)
+   2869d    2869d      3ef     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_info)
+   28a8c    28a8c      3ed     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_info)
+   28e79    28e79      728     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_info)
+   295a1    295a1      890     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_info)
+       0        0     2202     1 .debug_rnglists
+       0        0       19     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_rnglists)
+      19       19       7d     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_rnglists)
+      96       96       65     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_rnglists)
+      fb       fb      22c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_rnglists)
+     327      327       68     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_rnglists)
+     38f      38f       77     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_rnglists)
+     406      406       57     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_rnglists)
+     45d      45d       c2     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_rnglists)
+     51f      51f       37     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_rnglists)
+     556      556       4b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_rnglists)
+     5a1      5a1       84     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_rnglists)
+     625      625       c6     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_rnglists)
+     6eb      6eb       35     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_rnglists)
+     720      720      3e2     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_rnglists)
+     b02      b02       20     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_rnglists)
+     b22      b22       47     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_rnglists)
+     b69      b69       3b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_rnglists)
+     ba4      ba4       1e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_rnglists)
+     bc2      bc2       b9     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_rnglists)
+     c7b      c7b       1c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_rnglists)
+     c97      c97      663     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_rnglists)
+    12fa     12fa      14e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_rnglists)
+    1448     1448       75     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_rnglists)
+    14bd     14bd      132     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_rnglists)
+    15ef     15ef       5c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_rnglists)
+    164b     164b       47     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_rnglists)
+    1692     1692       44     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_rnglists)
+    16d6     16d6       42     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_rnglists)
+    1718     1718       4d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_rnglists)
+    1765     1765       19     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_rnglists)
+    177e     177e      3d2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_rnglists)
+    1b50     1b50      2b2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_rnglists)
+    1e02     1e02       37     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_rnglists)
+    1e39     1e39       22     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_rnglists)
+    1e5b     1e5b       a7     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_rnglists)
+    1f02     1f02      136     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_rnglists)
+    2038     2038      11d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_rnglists)
+    2155     2155       2c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_rnglists)
+    2181     2181       23     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_rnglists)
+    21a4     21a4       17     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_rnglists)
+    21bb     21bb       1d     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_rnglists)
+    21d8     21d8       2a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_rnglists)
+       0        0     9270     1 .debug_str_offsets
+       0        0      300     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_str_offsets)
+     300      300      574     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_str_offsets)
+     874      874      230     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_str_offsets)
+     aa4      aa4      3ac     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_str_offsets)
+     e50      e50      400     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_str_offsets)
+    1250     1250      430     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_str_offsets)
+    1680     1680      224     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_str_offsets)
+    18a4     18a4      314     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_str_offsets)
+    1bb8     1bb8      160     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_str_offsets)
+    1d18     1d18      238     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_str_offsets)
+    1f50     1f50      1e4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_str_offsets)
+    2134     2134      558     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_str_offsets)
+    268c     268c      138     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_str_offsets)
+    27c4     27c4      44c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_str_offsets)
+    2c10     2c10      258     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_str_offsets)
+    2e68     2e68       f4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_str_offsets)
+    2f5c     2f5c       ec     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_str_offsets)
+    3048     3048       d8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_str_offsets)
+    3120     3120      3b8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_str_offsets)
+    34d8     34d8      288     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_str_offsets)
+    3760     3760      5f8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_str_offsets)
+    3d58     3d58      4d8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_str_offsets)
+    4230     4230      334     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_str_offsets)
+    4564     4564      454     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_str_offsets)
+    49b8     49b8      6d4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_str_offsets)
+    508c     508c      bac     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_str_offsets)
+    5c38     5c38      378     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_str_offsets)
+    5fb0     5fb0      88c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_str_offsets)
+    683c     683c       4c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_str_offsets)
+    6888     6888      1d0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_str_offsets)
+    6a58     6a58      5b0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_str_offsets)
+    7008     7008      554     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_str_offsets)
+    755c     755c      364     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_str_offsets)
+    78c0     78c0      1f0     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_str_offsets)
+    7ab0     7ab0      318     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_str_offsets)
+    7dc8     7dc8      260     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_str_offsets)
+    8028     8028      674     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_str_offsets)
+    869c     869c      1f8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_str_offsets)
+    8894     8894      178     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_str_offsets)
+    8a0c     8a0c      180     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_str_offsets)
+    8b8c     8b8c      2a8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_str_offsets)
+    8e34     8e34      43c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_str_offsets)
+       0        0     f50d     1 .debug_str
+       0        0     f50d     1         <internal>:(.debug_str)
+       0        0     24ac     1 .debug_addr
+       0        0       1c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_addr)
+      1c       1c       a0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_addr)
+      bc       bc       48     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_addr)
+     104      104      150     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_addr)
+     254      254       60     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_addr)
+     2b4      2b4       9c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_addr)
+     350      350       94     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_addr)
+     3e4      3e4       a0     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_addr)
+     484      484       3c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_addr)
+     4c0      4c0       5c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_addr)
+     51c      51c       ac     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_addr)
+     5c8      5c8      104     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_addr)
+     6cc      6cc       38     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_addr)
+     704      704      368     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_addr)
+     a6c      a6c       1c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_addr)
+     a88      a88       58     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_addr)
+     ae0      ae0       40     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_addr)
+     b20      b20       18     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_addr)
+     b38      b38      118     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_addr)
+     c50      c50       14     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_addr)
+     c64      c64      2ac     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_addr)
+     f10      f10      148     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_addr)
+    1058     1058       8c     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_addr)
+    10e4     10e4      674     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_addr)
+    1758     1758       90     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_addr)
+    17e8     17e8       b8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_addr)
+    18a0     18a0       68     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_addr)
+    1908     1908       54     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_addr)
+    195c     195c       10     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_addr)
+    196c     196c       68     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_addr)
+    19d4     19d4      3cc     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_addr)
+    1da0     1da0      16c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_addr)
+    1f0c     1f0c       48     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_addr)
+    1f54     1f54       48     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_addr)
+    1f9c     1f9c      104     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_addr)
+    20a0     20a0      164     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_addr)
+    2204     2204      1f4     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_addr)
+    23f8     23f8       30     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_addr)
+    2428     2428       28     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_addr)
+    2450     2450       10     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_addr)
+    2460     2460       20     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_addr)
+    2480     2480       2c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_addr)
+       0        0       92     1 .comment
+       0        0       92     1         <internal>:(.comment)
+       0        0     6934     4 .debug_frame
+       0        0       40     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_frame)
+      40       40      1a4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_frame)
+     1e4      1e4      178     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_frame)
+     35c      35c      414     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_frame)
+     770      770      1a0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_frame)
+     910      910      2d0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_frame)
+     be0      be0      12c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_frame)
+     d0c      d0c      1dc     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_frame)
+     ee8      ee8      114     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_frame)
+     ffc      ffc      158     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_frame)
+    1154     1154      2a4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_frame)
+    13f8     13f8      418     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_frame)
+    1810     1810      13c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_frame)
+    194c     194c      828     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_frame)
+    2174     2174       64     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_frame)
+    21d8     21d8      178     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_frame)
+    2350     2350      128     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_frame)
+    2478     2478       6c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_frame)
+    24e4     24e4      400     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_frame)
+    28e4     28e4       64     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_frame)
+    2948     2948      a6c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_frame)
+    33b4     33b4      604     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_frame)
+    39b8     39b8      18c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_frame)
+    3b44     3b44      5e0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_frame)
+    4124     4124      1e0     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_frame)
+    4304     4304       6c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_frame)
+    4370     4370      124     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_frame)
+    4494     4494      114     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_frame)
+    45a8     45a8       30     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_frame)
+    45d8     45d8      1b4     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_frame)
+    478c     478c      b10     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_frame)
+    529c     529c      40c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_frame)
+    56a8     56a8      138     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_frame)
+    57e0     57e0       94     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_frame)
+    5874     5874      4b8     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_frame)
+    5d2c     5d2c      2cc     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_frame)
+    5ff8     5ff8      670     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_frame)
+    6668     6668       e0     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_frame)
+    6748     6748       80     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_frame)
+    67c8     67c8       34     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_frame)
+    67fc     67fc       7c     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_frame)
+    6878     6878       64     4         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_frame)
+    68dc     68dc       24     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(strlen.S.o):(.debug_frame)
+    6900     6900       34     4         /home/zane/.local/share/stm32cube/bundles/st-arm-clang/21.1.1+st.6/bin/../lib/clang-runtimes/arm-none-eabi/armv8m.main_hard_fp_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_frame)
+       0        0    23036     1 .debug_line
+       0        0      188     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32h5xx.c.obj:(.debug_line)
+     188      188      594     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_cortex.c.obj:(.debug_line)
+     71c      71c      c99     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c.obj:(.debug_line)
+    13b5     13b5     253b     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma_ex.c.obj:(.debug_line)
+    38f0     38f0      dad     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc.c.obj:(.debug_line)
+    469d     469d     1f1e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rcc_ex.c.obj:(.debug_line)
+    65bb     65bb      723     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash.c.obj:(.debug_line)
+    6cde     6cde      9cb     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_flash_ex.c.obj:(.debug_line)
+    76a9     76a9      41d     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_gpio.c.obj:(.debug_line)
+    7ac6     7ac6      2f1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr.c.obj:(.debug_line)
+    7db7     7db7      5c2     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_pwr_ex.c.obj:(.debug_line)
+    8379     8379      7eb     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal.c.obj:(.debug_line)
+    8b64     8b64      4cd     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_exti.c.obj:(.debug_line)
+    9031     9031     40c9     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c.obj:(.debug_line)
+    d0fa     d0fa      27a     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c.obj:(.debug_line)
+    d374     d374      423     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_icache.c.obj:(.debug_line)
+    d797     d797      5a1     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng.c.obj:(.debug_line)
+    dd38     dd38      2a4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_rng_ex.c.obj:(.debug_line)
+    dfdc     dfdc     1d40     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi.c.obj:(.debug_line)
+    fd1c     fd1c      23e     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_spi_ex.c.obj:(.debug_line)
+    ff5a     ff5a     50b2     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c.obj:(.debug_line)
+   1500c    1500c     1c3f     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim_ex.c.obj:(.debug_line)
+   16c4b    16c4b      7c4     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c.obj:(.debug_line)
+   1740f    1740f     30dc     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c.obj:(.debug_line)
+   1a4eb    1a4eb      4d3     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/BSP/STM32H5xx_Nucleo/stm32h5xx_nucleo.c.obj:(.debug_line)
+   1a9be    1a9be      4d8     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/main.c.obj:(.debug_line)
+   1ae96    1ae96      2b3     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_it.c.obj:(.debug_line)
+   1b149    1b149      4b5     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stm32h5xx_hal_msp.c.obj:(.debug_line)
+   1b5fe    1b5fe       ef     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/sysmem.c.obj:(.debug_line)
+   1b6ed    1b6ed      34f     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/syscalls.c.obj:(.debug_line)
+   1ba3c    1ba3c       6d     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_line)
+   1baa9    1baa9     32bd     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_GFX.cpp.obj:(.debug_line)
+   1ed66    1ed66     126c     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_SPITFT.cpp.obj:(.debug_line)
+   1ffd2    1ffd2      307     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST77xx.cpp.obj:(.debug_line)
+   202d9    202d9      22a     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735.cpp.obj:(.debug_line)
+   20503    20503      638     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_ST7735_API.cpp.obj:(.debug_line)
+   20b3b    20b3b      8fd     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Print.cpp.obj:(.debug_line)
+   21438    21438     15d9     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_seesaw.cpp.obj:(.debug_line)
+   22a11    22a11      193     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18.cpp.obj:(.debug_line)
+   22ba4    22ba4      10e     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/graphics/Adafruit_TFTShield18_API.cpp.obj:(.debug_line)
+   22cb2    22cb2       a2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/dwt_module.c.obj:(.debug_line)
+   22d54    22d54      1b2     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/buzzer.c.obj:(.debug_line)
+   22f06    22f06      130     1         CMakeFiles/ece2049-starter-code.dir/Core/Src/stopwatch.c.obj:(.debug_line)
+       0        0     2d85     1 .debug_line_str
+       0        0     2d85     1         <internal>:(.debug_line_str)
+       0        0       28     1 .debug_aranges
+       0        0       28     1         CMakeFiles/ece2049-starter-code.dir/startup_stm32h533xx.s.obj:(.debug_aranges)
+       0        0     3990     4 .symtab
+       0        0     3990     4         <internal>:(.symtab)
+       0        0      14b     1 .shstrtab
+       0        0      14b     1         <internal>:(.shstrtab)
+       0        0     3052     1 .strtab
+       0        0     3052     1         <internal>:(.strtab)

@@ -1,0 +1,15 @@
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:242:HAL_DMA_Init	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:337:HAL_DMA_DeInit	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:477:HAL_DMA_Start	8	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:538:HAL_DMA_Start_IT	8	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:616:HAL_DMA_Abort	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:708:HAL_DMA_Abort_IT	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:744:HAL_DMA_PollForTransfer	32	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:916:HAL_DMA_IRQHandler	24	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1152:HAL_DMA_RegisterCallback	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1231:HAL_DMA_UnRegisterCallback	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1339:HAL_DMA_GetState	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1351:HAL_DMA_GetError	0	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1395:HAL_DMA_ConfigChannelAttributes	8	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1483:HAL_DMA_GetConfigChannelAttributes	16	static
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_dma.c:1563:HAL_DMA_GetLockChannelAttributes	8	static

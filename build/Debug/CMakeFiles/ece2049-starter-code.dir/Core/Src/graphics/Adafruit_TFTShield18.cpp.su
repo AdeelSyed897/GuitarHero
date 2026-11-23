@@ -1,0 +1,9 @@
+Core/Src/graphics/Adafruit_TFTShield18.cpp:7:_ZN20Adafruit_TFTShield18C2Ev	8	static
+Core/Src/graphics/Adafruit_TFTShield18.cpp:8:_ZN20Adafruit_TFTShield18C2EP19__I2C_HandleTypeDef	8	static
+Core/Src/graphics/Adafruit_TFTShield18.cpp:17:_ZN20Adafruit_TFTShield185beginEh	16	static
+Core/Src/graphics/Adafruit_TFTShield18.cpp:37:_ZN20Adafruit_TFTShield1812setBacklightEt	24	static
+Core/Src/graphics/Adafruit_TFTShield18.cpp:48:_ZN20Adafruit_TFTShield1816setBacklightFreqEt	24	static
+Core/Src/graphics/Adafruit_TFTShield18.cpp:59:_ZN20Adafruit_TFTShield188tftResetEb	0	static
+Core/Src/graphics/Adafruit_TFTShield18.cpp:69:_ZN20Adafruit_TFTShield1811readButtonsEv	0	static
+Core/Inc/graphics/Print.h:65:_ZN5Print17availableForWriteEv	0	static
+Core/Inc/graphics/Print.h:92:_ZN5Print5flushEv	0	static
