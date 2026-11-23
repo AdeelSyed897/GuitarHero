@@ -204,6 +204,7 @@ int main(void)
   uint32_t lastButtonState = TFTSHIELD_BUTTON_ALL;
   uint32_t timer_on = 0;
   uint32_t lastShown = 0xFFFFFFFF;
+  uint8_t testShown = 0;
 
   displayTime(0);
 
@@ -219,6 +220,16 @@ int main(void)
 
   while (1)    // Forever loop of the stop watch
   {
+    uint32_t now = timer;
+    if (timer_on && now >= 300 && !testShown)
+    {
+        Display_setTextSize(1, 1);
+        Display_setTextColor(ST7735_GREEN);
+        Display_setCursor(10, 100);
+        Display_print("3 SECONDS!");
+
+        testShown = 1;
+    }
     uint32_t buttons = TFTShield18_readButtons();   // pressed = 0
 
     if (lastButtonState != buttons)                 // act once per press
@@ -229,6 +240,7 @@ int main(void)
         stopTimer2();                    // stop and reset timer
         GPIOA->BSRR = GPIO_BSRR_BR5;     // turn LED off
         displayTime(0);
+        testShown = 0;   
       }
       if (!(buttons & TFTSHIELD_BUTTON_2) && !timer_on)
       {
