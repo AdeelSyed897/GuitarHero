@@ -106,6 +106,7 @@ typedef enum {
 #define BTN2 (1 << 1)
 #define BTN3 (1 << 2)
 #define BTN4 (1 << 3)
+#define PASS_PERCENT 80
 
 typedef struct {
     uint32_t pitch;
@@ -116,46 +117,46 @@ typedef struct {
 
 const SongNote song[] = {
     // Intro - single notes
-    {NOTE_C, 200, BTN1},
-    {NOTE_D, 200, BTN2},
-    {NOTE_E, 200, BTN3},
-    {NOTE_G, 200, BTN4},
+    {NOTE_C, 150, BTN1},
+    {NOTE_D, 150, BTN2},
+    {NOTE_E, 150, BTN3},
+    {NOTE_G, 150, BTN4},
 
     // First chord
-    {NOTE_C, 250, BTN1 | BTN3},
-    {NOTE_E, 200, BTN3},
-    {NOTE_D, 200, BTN2},
-    {NOTE_C, 200, BTN1},
+    {NOTE_C, 150, BTN1 | BTN3},
+    {NOTE_E, 150, BTN3},
+    {NOTE_D, 150, BTN2},
+    {NOTE_C, 150, BTN1},
 
     // Second section
-    {NOTE_E, 200, BTN3},
-    {NOTE_G, 200, BTN4},
-    {NOTE_E, 250, BTN2 | BTN4},
-    {NOTE_C, 200, BTN1},
+    {NOTE_E, 150, BTN3},
+    {NOTE_G, 150, BTN4},
+    {NOTE_E, 150, BTN2 | BTN4},
+    {NOTE_C, 150, BTN1},
 
     // Third section
-    {NOTE_D, 200, BTN2},
-    {NOTE_E, 200, BTN3},
-    {NOTE_G, 250, BTN1 | BTN4},
-    {NOTE_D, 200, BTN2},
+    {NOTE_D, 150, BTN2},
+    {NOTE_E, 150, BTN3},
+    {NOTE_G, 150, BTN1 | BTN4},
+    {NOTE_D, 150, BTN2},
 
     // Fourth section
-    {NOTE_C, 200, BTN1},
-    {NOTE_C, 200, BTN1},
-    {NOTE_G, 250, BTN3 | BTN4},
-    {NOTE_G, 200, BTN4},
+    {NOTE_C, 150, BTN1},
+    {NOTE_C, 150, BTN1},
+    {NOTE_G, 150, BTN3 | BTN4},
+    {NOTE_G, 150, BTN4},
 
     // Fifth section
-    {NOTE_E, 200, BTN3},
-    {NOTE_E, 250, BTN1 | BTN2},
-    {NOTE_D, 200, BTN2},
-    {NOTE_D, 200, BTN2},
+    {NOTE_E, 150, BTN3},
+    {NOTE_E, 150, BTN1 | BTN2},
+    {NOTE_D, 150, BTN2},
+    {NOTE_D, 150, BTN2},
 
     // Ending
-    {NOTE_C, 200, BTN1},
-    {NOTE_E, 200, BTN3},
-    {NOTE_G, 250, BTN2 | BTN3},
-    {NOTE_C, 300, BTN1 | BTN4}
+    {NOTE_C, 150, BTN1},
+    {NOTE_E, 150, BTN3},
+    {NOTE_G, 150, BTN2 | BTN3},
+    {NOTE_C, 150, BTN1 | BTN4}
 };
 
 #define SONG_LENGTH (sizeof(song) / sizeof(song[0]))
@@ -210,20 +211,50 @@ void playSongNote(uint32_t index)
     buzzerEnable(&buzzer1);
 }
 
-void showSongFinished(void)
-{
-    Display_fillScreen(ST77XX_BLACK);
-    Display_setTextSize(2, 2);
-    Display_setTextColor(ST7735_GREEN);
 
-    Display_setCursor(15, 40);
-    Display_print("SONG DONE!");
+void showResult(GameState result, uint32_t hits, uint32_t misses)
+{
+    char scoreText[40];
+    uint32_t accuracy = (hits * 100) / SONG_LENGTH;
+
+    Display_fillScreen(ST77XX_BLACK);
+
+    Display_setTextSize(2, 2);
+    Display_setCursor(20, 15);
+
+    if (result == WIN)
+    {
+        Display_setTextColor(ST7735_GREEN);
+        Display_print("YOU WIN!");
+    }
+    else
+    {
+        Display_setTextColor(ST7735_RED);
+        Display_print("YOU LOSE!");
+    }
 
     Display_setTextSize(1, 1);
     Display_setTextColor(ST7735_WHITE);
-    Display_setCursor(15, 100);
-    Display_print("Press SELECT to return");
+
+    Display_setCursor(20, 55);
+    snprintf(scoreText, sizeof(scoreText), "Hits: %lu/%lu",
+             (unsigned long)hits, (unsigned long)SONG_LENGTH);
+    Display_print(scoreText);
+
+    Display_setCursor(20, 70);
+    snprintf(scoreText, sizeof(scoreText), "Misses: %lu",
+             (unsigned long)misses);
+    Display_print(scoreText);
+
+    Display_setCursor(20, 85);
+    snprintf(scoreText, sizeof(scoreText), "Accuracy: %lu%%",
+             (unsigned long)accuracy);
+    Display_print(scoreText);
+
+    Display_setCursor(20, 110);
+    Display_print("SELECT to return");
 }
+
 
 
 void initGuitarButtons(void)
@@ -545,8 +576,18 @@ int main(void)
         if (noteIndex >= SONG_LENGTH)
         {
             buzzerDisable(&buzzer1);
-            gameState = WIN;  // Temporary result state
-            showSongFinished();
+
+            // Determine win or loss using the passing threshold
+            if (hits * 100 >= SONG_LENGTH * PASS_PERCENT)
+            {
+                gameState = WIN;
+            }
+            else
+            {
+                gameState = LOSE;
+            }
+
+            showResult(gameState, hits, misses);
         }
         else
         {
