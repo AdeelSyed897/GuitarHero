@@ -102,6 +102,54 @@ typedef enum {
     LOSE
 } GameState;
 
+
+typedef struct {
+    uint32_t pitch;
+    uint32_t duration;
+    uint8_t button;
+} SongNote;
+
+
+const SongNote song[] = {
+    {NOTE_C, 50, 0},
+    {NOTE_D, 50, 1},
+    {NOTE_E, 50, 2},
+    {NOTE_G, 50, 3},
+
+    {NOTE_G, 50, 3},
+    {NOTE_E, 50, 2},
+    {NOTE_D, 50, 1},
+    {NOTE_C, 75, 0},
+
+    {NOTE_E, 50, 2},
+    {NOTE_G, 50, 3},
+    {NOTE_E, 50, 2},
+    {NOTE_C, 75, 0},
+
+    {NOTE_D, 50, 1},
+    {NOTE_E, 50, 2},
+    {NOTE_G, 50, 3},
+    {NOTE_D, 75, 1},
+
+    {NOTE_C, 50, 0},
+    {NOTE_C, 50, 0},
+    {NOTE_G, 50, 3},
+    {NOTE_G, 50, 3},
+
+    {NOTE_E, 50, 2},
+    {NOTE_E, 50, 2},
+    {NOTE_D, 50, 1},
+    {NOTE_D, 50, 1},
+
+    {NOTE_C, 50, 0},
+    {NOTE_E, 50, 2},
+    {NOTE_G, 50, 3},
+    {NOTE_C, 100, 0}
+};
+
+#define SONG_LENGTH (sizeof(song) / sizeof(song[0]))
+
+
 void showWelcome(void)
 {
     Display_fillScreen(ST77XX_BLACK);
@@ -142,6 +190,30 @@ void showPlaying(void)
     Display_setCursor(15, 50);
     Display_print("PLAYING!");
 }
+
+
+void playSongNote(uint32_t index)
+{
+    buzzerDisable(&buzzer1);
+    buzzerSetNote(&buzzer1, song[index].pitch, 1);
+    buzzerEnable(&buzzer1);
+}
+
+void showSongFinished(void)
+{
+    Display_fillScreen(ST77XX_BLACK);
+    Display_setTextSize(2, 2);
+    Display_setTextColor(ST7735_GREEN);
+
+    Display_setCursor(15, 40);
+    Display_print("SONG DONE!");
+
+    Display_setTextSize(1, 1);
+    Display_setTextColor(ST7735_WHITE);
+    Display_setCursor(15, 100);
+    Display_print("Press SELECT to return");
+}
+
 
 
 /* USER CODE END 0 */
@@ -247,6 +319,9 @@ int main(void)
   uint32_t stateStart = 0;
   uint32_t lastCountdown = 3;
   uint32_t lastButtonState = TFTSHIELD_BUTTON_ALL;
+  uint32_t noteIndex = 0;
+  uint32_t noteStart = 0;
+  uint8_t noteSounding = 0;
 
   runTimer2();
   showWelcome();
@@ -286,8 +361,13 @@ int main(void)
 
       if (elapsed >= 300)
       {
-          gameState = PLAYING;
-          showPlaying();
+        gameState = PLAYING;
+        showPlaying();
+
+        noteIndex = 0;
+        noteStart = timer;
+        playSongNote(noteIndex);
+        noteSounding = 1;
       }
       else
       {
@@ -298,8 +378,40 @@ int main(void)
               lastCountdown = number;
               showCountdown(number);
           }
+      }
     }
-}
+      // Song playback
+  if (gameState == PLAYING)
+  {
+      uint32_t elapsed = timer - noteStart;
+      uint32_t duration = song[noteIndex].duration;
+
+      // Silence the final 8 ticks of each note
+      if (noteSounding && (duration <= 8 || elapsed >= duration - 8))
+      {
+          buzzerDisable(&buzzer1);
+          noteSounding = 0;
+      }
+
+      // Advance to the next note
+      if (elapsed >= duration)
+      {
+          noteIndex++;
+
+          if (noteIndex >= SONG_LENGTH)
+          {
+              buzzerDisable(&buzzer1);
+              gameState = WIN;
+              showSongFinished();
+          }
+          else
+          {
+              noteStart += duration;
+              playSongNote(noteIndex);
+              noteSounding = 1;
+          }
+      }
+  } // End of PLAYING state
 
      /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
