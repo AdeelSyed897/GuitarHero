@@ -207,6 +207,16 @@ int main(void)
 
   displayTime(0);
 
+  Display_fillScreen(ST77XX_BLACK);
+  Display_setTextSize(2, 2);
+  Display_setTextColor(ST7735_WHITE);
+
+  Display_setCursor(15, 30);
+  Display_print("Welcome to");
+
+  Display_setCursor(15, 60);
+  Display_print("Guitar Hero!");
+
   while (1)    // Forever loop of the stop watch
   {
     uint32_t buttons = TFTShield18_readButtons();   // pressed = 0
