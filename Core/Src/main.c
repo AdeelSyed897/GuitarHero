@@ -106,7 +106,7 @@ typedef enum {
 #define BTN2 (1 << 1)
 #define BTN3 (1 << 2)
 #define BTN4 (1 << 3)
-#define PASS_PERCENT 80
+#define PASS_PERCENT 50
 
 typedef struct {
     uint32_t pitch;
@@ -511,6 +511,7 @@ int main(void)
         misses = 0;
         noteHit = 0;
         noteIndex = 0;
+        lastGuitarButtons = getButtonStates();
 
         // Draw gameplay screen
         drawNoteLanes();
